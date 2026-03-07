@@ -1,0 +1,189 @@
+=====================================
+If action basic
+=====================================
+
+action def Drive {
+  if true then accelerate;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (if_action
+        (boolean_literal)
+        (qualified_name
+          (identifier))))))
+
+=====================================
+If action with else
+=====================================
+
+action def Drive {
+  if speed > 0 then accelerate else brake;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (if_action
+        (binary_expression
+          (identifier)
+          (number_literal))
+        (qualified_name
+          (identifier))
+        (qualified_name
+          (identifier))))))
+
+=====================================
+While action
+=====================================
+
+action def Drive {
+  while running do accelerate;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (while_action
+        (identifier)
+        (qualified_name
+          (identifier))))))
+
+=====================================
+For action
+=====================================
+
+action def Drive {
+  for x : Vehicle in vehicles do process;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (for_action
+        (identifier)
+        (qualified_name
+          (identifier))
+        (qualified_name
+          (identifier))
+        (qualified_name
+          (identifier))))))
+
+=====================================
+Assign action
+=====================================
+
+action def Drive {
+  assign speed := 100;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (assign_action
+        (qualified_name
+          (identifier))
+        (number_literal)))))
+
+=====================================
+Send action
+=====================================
+
+action def Drive {
+  send signal to target;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (send_action
+        (identifier)
+        (qualified_name
+          (identifier))))))
+
+=====================================
+Merge node
+=====================================
+
+action def Drive {
+  merge mergePoint;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (merge_node
+        name: (identifier)))))
+
+=====================================
+Decide node
+=====================================
+
+action def Drive {
+  decide decidePoint;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (decide_node
+        name: (identifier)))))
+
+=====================================
+Fork node
+=====================================
+
+action def Drive {
+  fork forkPoint;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (fork_node
+        name: (identifier)))))
+
+=====================================
+Join node
+=====================================
+
+action def Drive {
+  join joinPoint;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (join_node
+        name: (identifier)))))

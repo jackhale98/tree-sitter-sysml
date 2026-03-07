@@ -1,0 +1,135 @@
+=====================================
+Basic import
+=====================================
+
+import ScalarValues::Real;
+
+---
+
+(source_file
+  (import_statement
+    (qualified_name
+      (identifier)
+      (identifier))))
+
+=====================================
+Wildcard import
+=====================================
+
+import ScalarValues::Real::*;
+
+---
+
+(source_file
+  (import_statement
+    (qualified_name
+      (identifier)
+      (identifier))))
+
+=====================================
+Import all
+=====================================
+
+import all ScalarValues::Real;
+
+---
+
+(source_file
+  (import_statement
+    (qualified_name
+      (identifier)
+      (identifier))))
+
+=====================================
+Import all wildcard
+=====================================
+
+import all ISQ::Units::*;
+
+---
+
+(source_file
+  (import_statement
+    (qualified_name
+      (identifier)
+      (identifier))))
+
+=====================================
+Public import
+=====================================
+
+public import Base::Types;
+
+---
+
+(source_file
+  (import_statement
+    (visibility)
+    (qualified_name
+      (identifier)
+      (identifier))))
+
+=====================================
+Private import
+=====================================
+
+private import Internal::Helpers;
+
+---
+
+(source_file
+  (import_statement
+    (visibility)
+    (qualified_name
+      (identifier)
+      (identifier))))
+
+=====================================
+Protected import with wildcard
+=====================================
+
+protected import Models::Vehicles::*;
+
+---
+
+(source_file
+  (import_statement
+    (visibility)
+    (qualified_name
+      (identifier)
+      (identifier))))
+
+=====================================
+Import deeply qualified name
+=====================================
+
+import A::B::C::D;
+
+---
+
+(source_file
+  (import_statement
+    (qualified_name
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))))
+
+=====================================
+Multiple imports
+=====================================
+
+import ScalarValues::Real;
+import ISQ::MassValue;
+
+---
+
+(source_file
+  (import_statement
+    (qualified_name
+      (identifier)
+      (identifier)))
+  (import_statement
+    (qualified_name
+      (identifier)
+      (identifier))))

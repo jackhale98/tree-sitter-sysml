@@ -1,0 +1,74 @@
+=====================================
+Snapshot usage with semicolon
+=====================================
+
+part def Vehicle {
+  snapshot t0;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (snapshot_usage
+        name: (identifier)))))
+
+=====================================
+Timeslice usage with semicolon
+=====================================
+
+part def Vehicle {
+  timeslice phase1;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (timeslice_usage
+        name: (identifier)))))
+
+=====================================
+Snapshot usage with type
+=====================================
+
+part def Vehicle {
+  snapshot t0 : VehicleState;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (snapshot_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))))))
+
+=====================================
+Timeslice usage with body
+=====================================
+
+part def Vehicle {
+  timeslice phase1 : Phase {}
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (timeslice_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))
+        (definition_body)))))

@@ -1,0 +1,424 @@
+=====================================
+Simple part usage with semicolon
+=====================================
+
+part def Vehicle {
+  part wheel;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (part_usage
+        name: (identifier)))))
+
+=====================================
+Part usage with typed_by
+=====================================
+
+part def Vehicle {
+  part frontAxle : Axles::Axle;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (part_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Part usage with multiplicity
+=====================================
+
+part def Vehicle {
+  part wheels : Parts::Wheel [4];
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (part_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))
+        (multiplicity
+          (number_literal))))))
+
+=====================================
+Part usage with range multiplicity
+=====================================
+
+part def Vehicle {
+  part seats : Parts::Seat [2..5];
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (part_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))
+        (multiplicity
+          (number_literal)
+          (number_literal))))))
+
+=====================================
+Part usage with body
+=====================================
+
+part def Vehicle {
+  part engine : Engines::Engine {}
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (part_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))
+        (definition_body)))))
+
+=====================================
+Attribute usage with semicolon
+=====================================
+
+part def Vehicle {
+  attribute mass : ISQ::MassValue;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Attribute usage with value assignment
+=====================================
+
+part def Vehicle {
+  attribute color = "red";
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (string_literal))))))
+
+=====================================
+Attribute usage with default value
+=====================================
+
+part def Vehicle {
+  attribute speed default 0;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (number_literal))))))
+
+=====================================
+Port usage with semicolon
+=====================================
+
+part def Vehicle {
+  port fuelIn;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (port_usage
+        name: (identifier)))))
+
+=====================================
+Port usage with type
+=====================================
+
+part def Vehicle {
+  port fuelIn : Ports::FuelPort;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (port_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Port usage with conjugation
+=====================================
+
+part def Vehicle {
+  port fuelOut : ~Ports::FuelPort;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (port_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Action usage with semicolon
+=====================================
+
+part def Vehicle {
+  action drive;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (action_usage
+        name: (identifier)))))
+
+=====================================
+Action usage with body
+=====================================
+
+part def Vehicle {
+  action drive : Actions::Drive {}
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (action_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))
+        (definition_body)))))
+
+=====================================
+State usage with semicolon
+=====================================
+
+part def Vehicle {
+  state running;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (state_usage
+        name: (identifier)))))
+
+=====================================
+Item usage with semicolon
+=====================================
+
+part def Vehicle {
+  item cargo;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (item_usage
+        name: (identifier)))))
+
+=====================================
+Connection usage with semicolon
+=====================================
+
+part def Vehicle {
+  connection link;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (connection_usage
+        name: (identifier)))))
+
+=====================================
+Flow connection usage
+=====================================
+
+part def Vehicle {
+  flow connection dataLink;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (connection_usage
+        name: (identifier)))))
+
+=====================================
+Ref usage
+=====================================
+
+part def Vehicle {
+  ref target : Types::Target;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (ref_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+End feature
+=====================================
+
+part def Vehicle {
+  end src : Ports::Port;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (end_feature
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Readonly attribute usage
+=====================================
+
+part def Vehicle {
+  readonly attribute vin;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)))))
+
+=====================================
+In port usage
+=====================================
+
+part def Vehicle {
+  in port dataIn;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (port_usage
+        name: (identifier)))))
+
+=====================================
+Out port usage
+=====================================
+
+part def Vehicle {
+  out port dataOut;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (port_usage
+        name: (identifier)))))

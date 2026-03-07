@@ -1,0 +1,185 @@
+=====================================
+Render statement
+=====================================
+
+view def TreeView {
+  render asTreeDiagram;
+}
+
+---
+
+(source_file
+  (view_definition
+    name: (identifier)
+    (definition_body
+      (render_statement
+        (qualified_name
+          (identifier))))))
+
+=====================================
+Expose statement
+=====================================
+
+view vehiclePartsTree : PartsTreeView {
+  expose PartsTree;
+}
+
+---
+
+(source_file
+  (view_usage
+    name: (identifier)
+    (typed_by
+      type: (qualified_name
+        (identifier)))
+    (definition_body
+      (expose_statement
+        (qualified_name
+          (identifier))))))
+
+=====================================
+Expose statement with wildcard
+=====================================
+
+view vehiclePartsTree : PartsTreeView {
+  expose PartsTree::**;
+}
+
+---
+
+(source_file
+  (view_usage
+    name: (identifier)
+    (typed_by
+      type: (qualified_name
+        (identifier)))
+    (definition_body
+      (expose_statement
+        (qualified_name
+          (identifier))))))
+
+=====================================
+Stakeholder declaration
+=====================================
+
+concern def VehicleSafety {
+  stakeholder se : SafetyEngineer;
+}
+
+---
+
+(source_file
+  (concern_definition
+    name: (identifier)
+    (definition_body
+      (stakeholder_declaration
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))))))
+
+=====================================
+Frame concern statement
+=====================================
+
+viewpoint def SafetyViewpoint {
+  frame concern vs : VehicleSafety;
+}
+
+---
+
+(source_file
+  (viewpoint_definition
+    name: (identifier)
+    (definition_body
+      (frame_statement
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))))))
+
+=====================================
+Index expression
+=====================================
+
+part def Vehicle {
+  attribute x = items#(1);
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (index_expression
+            (identifier)
+            (number_literal)))))))
+
+=====================================
+Multiplicity with star
+=====================================
+
+part def Vehicle {
+  part wheels : Wheel [*];
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (part_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))
+        (multiplicity)))))
+
+=====================================
+Multiplicity with range and star
+=====================================
+
+part def Vehicle {
+  part passengers : Person [0..*];
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (part_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))
+        (multiplicity
+          (number_literal))))))
+
+=====================================
+Multiplicity ordered
+=====================================
+
+part def Vehicle {
+  part wheels : Wheel [4] ordered;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (part_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))
+        (multiplicity
+          (number_literal))))))

@@ -1,0 +1,85 @@
+=====================================
+Empty package
+=====================================
+
+package Vehicles {}
+
+---
+
+(source_file
+  (package_declaration
+    name: (identifier)
+    (package_body)))
+
+=====================================
+Package with nested package
+=====================================
+
+package Outer {
+  package Inner {}
+}
+
+---
+
+(source_file
+  (package_declaration
+    name: (identifier)
+    (package_body
+      (package_declaration
+        name: (identifier)
+        (package_body)))))
+
+=====================================
+Private package
+=====================================
+
+private package HiddenPkg {}
+
+---
+
+(source_file
+  (package_declaration
+    (visibility)
+    name: (identifier)
+    (package_body)))
+
+=====================================
+Package with part definition inside
+=====================================
+
+package Vehicle {
+  part def Wheel {}
+}
+
+---
+
+(source_file
+  (package_declaration
+    name: (identifier)
+    (package_body
+      (part_definition
+        name: (identifier)
+        (definition_body)))))
+
+=====================================
+Deeply nested packages
+=====================================
+
+package A {
+  package B {
+    package C {}
+  }
+}
+
+---
+
+(source_file
+  (package_declaration
+    name: (identifier)
+    (package_body
+      (package_declaration
+        name: (identifier)
+        (package_body
+          (package_declaration
+            name: (identifier)
+            (package_body)))))))

@@ -1,0 +1,440 @@
+=====================================
+Part definition
+=====================================
+
+part def Vehicle {}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Abstract part definition
+=====================================
+
+abstract part def Shape {}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Part definition with specialization
+=====================================
+
+part def Car :> Pkg::Vehicle {}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (specialization
+      target: (qualified_name
+        (identifier)
+        (identifier)))
+    (definition_body)))
+
+=====================================
+Action definition
+=====================================
+
+action def Drive {}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+State definition
+=====================================
+
+state def VehicleState {}
+
+---
+
+(source_file
+  (state_definition
+    name: (identifier)
+    (state_body)))
+
+=====================================
+Port definition
+=====================================
+
+port def FuelPort {}
+
+---
+
+(source_file
+  (port_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Connection definition
+=====================================
+
+connection def Link {}
+
+---
+
+(source_file
+  (connection_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Flow connection definition
+=====================================
+
+flow connection def FlowLink {}
+
+---
+
+(source_file
+  (connection_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Attribute definition with body
+=====================================
+
+attribute def Mass {}
+
+---
+
+(source_file
+  (attribute_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Attribute definition with semicolon
+=====================================
+
+attribute def Mass;
+
+---
+
+(source_file
+  (attribute_definition
+    name: (identifier)))
+
+=====================================
+Item definition with body
+=====================================
+
+item def Cargo {}
+
+---
+
+(source_file
+  (item_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Item definition with semicolon
+=====================================
+
+item def Cargo;
+
+---
+
+(source_file
+  (item_definition
+    name: (identifier)))
+
+=====================================
+Requirement definition
+=====================================
+
+requirement def SafetyReq {}
+
+---
+
+(source_file
+  (requirement_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Constraint definition
+=====================================
+
+constraint def MassLimit {}
+
+---
+
+(source_file
+  (constraint_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+View definition
+=====================================
+
+view def SystemView {}
+
+---
+
+(source_file
+  (view_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Viewpoint definition
+=====================================
+
+viewpoint def SafetyViewpoint {}
+
+---
+
+(source_file
+  (viewpoint_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Rendering definition
+=====================================
+
+rendering def MyRendering {}
+
+---
+
+(source_file
+  (rendering_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Concern definition
+=====================================
+
+concern def SafetyConcern {}
+
+---
+
+(source_file
+  (concern_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Use case definition
+=====================================
+
+use case def DriveVehicle {}
+
+---
+
+(source_file
+  (use_case_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Analysis case definition
+=====================================
+
+analysis case def ThermalAnalysis {}
+
+---
+
+(source_file
+  (analysis_case_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Verification case definition
+=====================================
+
+verification case def SafetyTest {}
+
+---
+
+(source_file
+  (verification_case_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Allocation definition
+=====================================
+
+allocation def FunctionAllocation {}
+
+---
+
+(source_file
+  (allocation_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Interface definition
+=====================================
+
+interface def DataInterface {}
+
+---
+
+(source_file
+  (interface_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Enumeration definition
+=====================================
+
+enumeration def Color {}
+
+---
+
+(source_file
+  (enumeration_definition
+    name: (identifier)
+    (enumeration_body)))
+
+=====================================
+Enumeration definition with members
+=====================================
+
+enumeration def Color {
+  enum Red;
+  enum Green;
+  enum Blue;
+}
+
+---
+
+(source_file
+  (enumeration_definition
+    name: (identifier)
+    (enumeration_body
+      (enum_member
+        name: (identifier))
+      (enum_member
+        name: (identifier))
+      (enum_member
+        name: (identifier)))))
+
+=====================================
+Occurrence definition
+=====================================
+
+occurrence def Accident {}
+
+---
+
+(source_file
+  (occurrence_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Metadata definition
+=====================================
+
+metadata def Rationale {}
+
+---
+
+(source_file
+  (metadata_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Calc definition
+=====================================
+
+calc def TotalMass {}
+
+---
+
+(source_file
+  (calc_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Abstract action definition with specialization
+=====================================
+
+abstract action def Accelerate :> Vehicles::Drive {}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (specialization
+      target: (qualified_name
+        (identifier)
+        (identifier)))
+    (definition_body)))
+
+=====================================
+Private part definition
+=====================================
+
+private part def InternalPart {}
+
+---
+
+(source_file
+  (visibility)
+  (part_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Definition with nested usage
+=====================================
+
+part def Vehicle {
+  part engine : Parts::Engine;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (part_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Variation part definition
+=====================================
+
+variation part def VehicleConfig {}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body)))

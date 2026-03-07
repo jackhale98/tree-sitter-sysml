@@ -1,0 +1,62 @@
+{
+  "name": "tree-sitter-sysml",
+  "version": "0.1.0",
+  "description": "Tree-sitter grammar for SysML v2 / KerML textual notation",
+  "license": "GPL-3.0-or-later",
+  "main": "bindings/node",
+  "types": "bindings/node",
+  "keywords": [
+    "tree-sitter",
+    "sysml",
+    "kerml",
+    "systems-engineering"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackhale98/tree-sitter-sysml"
+  },
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
+  ],
+  "dependencies": {
+    "node-addon-api": "^7.1.0",
+    "node-gyp-build": "^4.8.0"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "prebuildify": "^6.0.0",
+    "tree-sitter-cli": "^0.24.7"
+  },
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "parse": "tree-sitter parse",
+    "test": "tree-sitter test",
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.sysml",
+      "injection-regex": "^sysml$",
+      "file-types": [
+        "sysml",
+        "kerml"
+      ],
+      "highlights": "queries/highlights.scm",
+      "indents": "queries/indents.scm",
+      "folds": "queries/folds.scm"
+    }
+  ]
+}

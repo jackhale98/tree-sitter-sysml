@@ -1,0 +1,337 @@
+=====================================
+Number literal integer
+=====================================
+
+part def X {
+  attribute a = 42;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (number_literal))))))
+
+=====================================
+Number literal float
+=====================================
+
+part def X {
+  attribute a = 3.14;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (number_literal))))))
+
+=====================================
+Number literal scientific
+=====================================
+
+part def X {
+  attribute a = 1e10;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (number_literal))))))
+
+=====================================
+String literal
+=====================================
+
+part def X {
+  attribute name = "hello world";
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (string_literal))))))
+
+=====================================
+String literal with escape
+=====================================
+
+part def X {
+  attribute s = "line1\nline2";
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (string_literal))))))
+
+=====================================
+Boolean literal true
+=====================================
+
+part def X {
+  attribute flag = true;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (boolean_literal))))))
+
+=====================================
+Boolean literal false
+=====================================
+
+part def X {
+  attribute flag = false;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (boolean_literal))))))
+
+=====================================
+Null literal
+=====================================
+
+part def X {
+  attribute val = null;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (null_literal))))))
+
+=====================================
+Binary expression addition
+=====================================
+
+part def X {
+  attribute total = 1 + 2;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (binary_expression
+            (number_literal)
+            (number_literal)))))))
+
+=====================================
+Binary expression multiplication
+=====================================
+
+part def X {
+  attribute area = 3 * 4;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (binary_expression
+            (number_literal)
+            (number_literal)))))))
+
+=====================================
+Binary expression comparison
+=====================================
+
+part def X {
+  attribute check = 1 < 2;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (binary_expression
+            (number_literal)
+            (number_literal)))))))
+
+=====================================
+Binary expression logical and
+=====================================
+
+part def X {
+  attribute both = true and false;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (binary_expression
+            (boolean_literal)
+            (boolean_literal)))))))
+
+=====================================
+Unary expression not
+=====================================
+
+part def X {
+  attribute neg = not true;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (unary_expression
+            (boolean_literal)))))))
+
+=====================================
+Unary expression negation
+=====================================
+
+part def X {
+  attribute neg = -5;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (unary_expression
+            (number_literal)))))))
+
+=====================================
+Parenthesized expression
+=====================================
+
+part def X {
+  attribute val = (1 + 2);
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (paren_expression
+            (binary_expression
+              (number_literal)
+              (number_literal))))))))
+
+=====================================
+Bracket expression
+=====================================
+
+part def X {
+  attribute val = items[0];
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (bracket_expression
+            (identifier)
+            (number_literal)))))))
+
+=====================================
+Expression statement in constraint body
+=====================================
+
+constraint def Limit {
+  mass <= 1000;
+}
+
+---
+
+(source_file
+  (constraint_definition
+    name: (identifier)
+    (definition_body
+      (expression_statement
+        (binary_expression
+          (identifier)
+          (number_literal))))))

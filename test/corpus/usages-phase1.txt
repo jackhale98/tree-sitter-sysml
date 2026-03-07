@@ -1,0 +1,347 @@
+=====================================
+Calc usage with semicolon
+=====================================
+
+part def Vehicle {
+  calc totalMass;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (calc_usage
+        name: (identifier)))))
+
+=====================================
+Calc usage with type and body
+=====================================
+
+part def Vehicle {
+  calc totalMass : Calcs::TotalMass {}
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (calc_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))
+        (definition_body)))))
+
+=====================================
+View usage with semicolon
+=====================================
+
+part def Vehicle {
+  view structureView;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (view_usage
+        name: (identifier)))))
+
+=====================================
+View usage with type and body
+=====================================
+
+part def Vehicle {
+  view structureView : Views::StructureView {}
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (view_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))
+        (definition_body)))))
+
+=====================================
+Viewpoint usage with semicolon
+=====================================
+
+part def Vehicle {
+  viewpoint safetyVP;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (viewpoint_usage
+        name: (identifier)))))
+
+=====================================
+Viewpoint usage with type
+=====================================
+
+part def Vehicle {
+  viewpoint safetyVP : Viewpoints::SafetyVP;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (viewpoint_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Rendering usage with semicolon
+=====================================
+
+part def Vehicle {
+  rendering diagram;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (rendering_usage
+        name: (identifier)))))
+
+=====================================
+Rendering usage with type and body
+=====================================
+
+part def Vehicle {
+  rendering diagram : Renderings::BDD {}
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (rendering_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))
+        (definition_body)))))
+
+=====================================
+Concern usage with semicolon
+=====================================
+
+part def Vehicle {
+  concern safetyConcern;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (concern_usage
+        name: (identifier)))))
+
+=====================================
+Concern usage with type
+=====================================
+
+part def Vehicle {
+  concern safetyConcern : Concerns::Safety;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (concern_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Use case usage with semicolon
+=====================================
+
+part def Vehicle {
+  use case driveVehicle;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (use_case_usage
+        name: (identifier)))))
+
+=====================================
+Use case usage with type and body
+=====================================
+
+part def Vehicle {
+  use case driveVehicle : UseCases::Drive {}
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (use_case_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))
+        (definition_body)))))
+
+=====================================
+Analysis case usage with semicolon
+=====================================
+
+part def Vehicle {
+  analysis thermalAnalysis;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (analysis_usage
+        name: (identifier)))))
+
+=====================================
+Analysis case usage with type
+=====================================
+
+part def Vehicle {
+  analysis thermalAnalysis : Analyses::Thermal;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (analysis_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Verification case usage with semicolon
+=====================================
+
+part def Vehicle {
+  verification safetyTest;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (verification_usage
+        name: (identifier)))))
+
+=====================================
+Verification case usage with type and body
+=====================================
+
+part def Vehicle {
+  verification safetyTest : Verifications::SafetyTest {}
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (verification_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))
+        (definition_body)))))
+
+=====================================
+Metadata usage with semicolon
+=====================================
+
+part def Vehicle {
+  metadata rationale;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (metadata_usage
+        name: (identifier)))))
+
+=====================================
+Metadata usage with type and body
+=====================================
+
+part def Vehicle {
+  metadata rationale : Meta::Rationale {}
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (metadata_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))
+        (definition_body)))))

@@ -1,0 +1,161 @@
+=====================================
+Simple state usage with semicolon
+=====================================
+
+part def Vehicle {
+  state idle;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (state_usage
+        name: (identifier)))))
+
+=====================================
+State usage with empty body
+=====================================
+
+part def Vehicle {
+  state running {}
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (state_usage
+        name: (identifier)
+        (state_body)))))
+
+=====================================
+State usage with type
+=====================================
+
+part def Vehicle {
+  state current : States::VehicleState;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (state_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+State usage with entry and semicolon
+=====================================
+
+part def Vehicle {
+  state running {
+    entry;
+  }
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (state_usage
+        name: (identifier)
+        (state_body)))))
+
+=====================================
+State usage with entry action body
+=====================================
+
+part def Vehicle {
+  state running {
+    entry {}
+  }
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (state_usage
+        name: (identifier)
+        (state_body
+          (definition_body))))))
+
+=====================================
+State usage with entry then transition
+=====================================
+
+part def Vehicle {
+  state starting {
+    entry; then States::Running;
+  }
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (state_usage
+        name: (identifier)
+        (state_body
+          (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+State definition with nested states
+=====================================
+
+state def VehicleStates {
+  state idle;
+  state running;
+}
+
+---
+
+(source_file
+  (state_definition
+    name: (identifier)
+    (state_body
+      (state_usage
+        name: (identifier))
+      (state_usage
+        name: (identifier)))))
+
+=====================================
+State with transition inside
+=====================================
+
+state def VehicleStates {
+  transition first States::Idle then States::Running;
+}
+
+---
+
+(source_file
+  (state_definition
+    name: (identifier)
+    (state_body
+      (transition_statement
+        (qualified_name
+          (identifier)
+          (identifier))
+        (qualified_name
+          (identifier)
+          (identifier))))))

@@ -1,0 +1,129 @@
+=====================================
+Line comment
+=====================================
+
+// This is a line comment
+part def Vehicle {}
+
+---
+
+(source_file
+  (line_comment)
+  (part_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Block comment
+=====================================
+
+/* This is a block comment */
+part def Vehicle {}
+
+---
+
+(source_file
+  (block_comment)
+  (part_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Multi-line block comment
+=====================================
+
+/* This is
+   a multi-line
+   block comment */
+part def Vehicle {}
+
+---
+
+(source_file
+  (block_comment)
+  (part_definition
+    name: (identifier)
+    (definition_body)))
+
+=====================================
+Doc comment
+=====================================
+
+doc /* This documents something */
+
+---
+
+(source_file
+  (doc_comment
+    (block_comment)))
+
+=====================================
+Comment element without name
+=====================================
+
+comment /* A general comment */
+
+---
+
+(source_file
+  (comment_element
+    (block_comment)))
+
+=====================================
+Comment element with name
+=====================================
+
+comment Safety /* Safety-related note */
+
+---
+
+(source_file
+  (comment_element
+    name: (identifier)
+    (block_comment)))
+
+=====================================
+Comment element with about clause
+=====================================
+
+comment about Pkg::Vehicle /* This is about the vehicle */
+
+---
+
+(source_file
+  (comment_element
+    (qualified_name
+      (identifier)
+      (identifier))
+    (block_comment)))
+
+=====================================
+Comment element with name and about
+=====================================
+
+comment MyNote about Pkg::Vehicle /* A named note about the vehicle */
+
+---
+
+(source_file
+  (comment_element
+    name: (identifier)
+    (qualified_name
+      (identifier)
+      (identifier))
+    (block_comment)))
+
+=====================================
+Inline line comment
+=====================================
+
+part def Vehicle { // inline comment
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (line_comment))))

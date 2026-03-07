@@ -1,0 +1,229 @@
+=====================================
+Connection usage with semicolon
+=====================================
+
+part def Vehicle {
+  connection link;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (connection_usage
+        name: (identifier)))))
+
+=====================================
+Connection usage with connect clause
+=====================================
+
+part def Vehicle {
+  connection link connect Parts::PortA to Parts::PortB;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (connection_usage
+        name: (identifier)
+        (connect_clause
+          (qualified_name
+            (identifier)
+            (identifier))
+          (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Connection usage with type and connect clause
+=====================================
+
+part def Vehicle {
+  connection link : Links::DataLink connect Comp::A to Comp::B;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (connection_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))
+        (connect_clause
+          (qualified_name
+            (identifier)
+            (identifier))
+          (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Flow connection usage with connect clause
+=====================================
+
+part def Vehicle {
+  flow connection link connect Source::out to Sink::in;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (connection_usage
+        name: (identifier)
+        (connect_clause
+          (qualified_name
+            (identifier)
+            (identifier))
+          (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Connection usage with body
+=====================================
+
+part def Vehicle {
+  connection link connect Parts::A to Parts::B {}
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (connection_usage
+        name: (identifier)
+        (connect_clause
+          (qualified_name
+            (identifier)
+            (identifier))
+          (qualified_name
+            (identifier)
+            (identifier)))
+        (definition_body)))))
+
+=====================================
+Constraint usage with require
+=====================================
+
+part def Vehicle {
+  require constraint : Constraints::MassLimit;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (constraint_usage
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Constraint usage without require
+=====================================
+
+part def Vehicle {
+  constraint massCheck;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (constraint_usage
+        name: (identifier)))))
+
+=====================================
+Constraint usage with body
+=====================================
+
+part def Vehicle {
+  constraint massCheck : Constraints::MassLimit {}
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (constraint_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))
+        (constraint_body)))))
+
+=====================================
+Constraint usage with expression in body
+=====================================
+
+constraint def MassLimit {
+  mass <= 1000;
+}
+
+---
+
+(source_file
+  (constraint_definition
+    name: (identifier)
+    (definition_body
+      (expression_statement
+        (binary_expression
+          (identifier)
+          (number_literal))))))
+
+=====================================
+Multiple connections
+=====================================
+
+part def System {
+  connection c1 connect A::p1 to B::p1;
+  connection c2 connect A::p2 to C::p1;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (connection_usage
+        name: (identifier)
+        (connect_clause
+          (qualified_name
+            (identifier)
+            (identifier))
+          (qualified_name
+            (identifier)
+            (identifier))))
+      (connection_usage
+        name: (identifier)
+        (connect_clause
+          (qualified_name
+            (identifier)
+            (identifier))
+          (qualified_name
+            (identifier)
+            (identifier)))))))

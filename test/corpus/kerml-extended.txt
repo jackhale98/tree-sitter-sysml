@@ -1,0 +1,368 @@
+=====================================
+Classifier definition
+=====================================
+
+classifier def Vehicle {
+  attribute mass : Real;
+}
+
+---
+
+(source_file
+  (classifier_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))))))
+
+=====================================
+Metaclass definition
+=====================================
+
+metaclass def SafetyAnnotation {
+  attribute level : Integer;
+}
+
+---
+
+(source_file
+  (metaclass_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))))))
+
+=====================================
+Expr definition
+=====================================
+
+expr def TotalMass {
+  in x : Real;
+  in y : Real;
+  x + y;
+}
+
+---
+
+(source_file
+  (expr_definition
+    name: (identifier)
+    (definition_body
+      (feature_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier))))
+      (feature_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier))))
+      (expression_statement
+        (binary_expression
+          (identifier)
+          (identifier))))))
+
+=====================================
+Step definition
+=====================================
+
+step def Accelerate {
+  in speed : Real;
+}
+
+---
+
+(source_file
+  (step_definition
+    name: (identifier)
+    (definition_body
+      (feature_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))))))
+
+=====================================
+Classifier usage
+=====================================
+
+part def Vehicle {
+  classifier c : VehicleType;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (classifier_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))))))
+
+=====================================
+Metaclass usage
+=====================================
+
+part def Vehicle {
+  metaclass m : SafetyAnnotation;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (metaclass_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))))))
+
+=====================================
+Expr usage
+=====================================
+
+part def Vehicle {
+  expr totalMass : TotalMass;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (expr_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))))))
+
+=====================================
+Step usage
+=====================================
+
+action def Drive {
+  step accel : Accelerate;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (step_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))))))
+
+=====================================
+Conjugates relationship
+=====================================
+
+port def ControlPort {
+  attribute signal : Boolean;
+}
+port def ConjugateControl conjugates ControlPort;
+
+---
+
+(source_file
+  (port_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier))))))
+  (port_definition
+    name: (identifier)
+    (conjugates_keyword
+      target: (qualified_name
+        (identifier)))))
+
+=====================================
+Chains relationship
+=====================================
+
+part def Vehicle {
+  part f chains x.y;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (part_usage
+        name: (identifier)
+        (chains_keyword
+          target: (feature_chain
+            (qualified_name
+              (identifier))
+            (identifier)))))))
+
+=====================================
+References relationship
+=====================================
+
+part def Vehicle {
+  part engine references Engine;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (part_usage
+        name: (identifier)
+        (references_keyword
+          target: (qualified_name
+            (identifier)))))))
+
+=====================================
+Inverse of relationship
+=====================================
+
+part def Vehicle {
+  part engine : Engine inverse of Vehicle::engines;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (part_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))
+        (inverse_keyword
+          target: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Loop action
+=====================================
+
+action def Monitor {
+  loop action checkStatus {
+    step read : ReadSensor;
+  }
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (loop_action
+        name: (identifier)
+        (definition_body
+          (step_usage
+            name: (identifier)
+            (typed_by
+              type: (qualified_name
+                (identifier)))))))))
+
+=====================================
+Loop action with until
+=====================================
+
+action def Pump {
+  loop until full {
+    step pump : PumpFuel;
+  }
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (loop_action
+        (identifier)
+        (definition_body
+          (step_usage
+            name: (identifier)
+            (typed_by
+              type: (qualified_name
+                (identifier)))))))))
+
+=====================================
+Library package
+=====================================
+
+standard library package ISQ {
+  attribute def Mass;
+}
+
+---
+
+(source_file
+  (package_declaration
+    name: (identifier)
+    (package_body
+      (attribute_definition
+        name: (identifier)))))
+
+=====================================
+Library package without standard
+=====================================
+
+library package MyLib {
+  part def Base;
+}
+
+---
+
+(source_file
+  (package_declaration
+    name: (identifier)
+    (package_body
+      (part_definition
+        name: (identifier)))))
+
+=====================================
+Conditional expression
+=====================================
+
+part def Vehicle {
+  attribute status = if active ? "running" else "stopped";
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (attribute_usage
+        name: (identifier)
+        (value_assignment
+          (conditional_expression
+            (identifier)
+            (string_literal)
+            (string_literal)))))))

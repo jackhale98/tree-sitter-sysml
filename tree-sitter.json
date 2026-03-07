@@ -1,0 +1,24 @@
+{
+  "grammars": [
+    {
+      "name": "sysml",
+      "camelCase": false,
+      "scope": "source.sysml",
+      "path": ".",
+      "file-types": ["sysml", "kerml"]
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "GPL-3.0-or-later",
+    "description": "Tree-sitter grammar for SysML v2 / KerML textual notation",
+    "authors": [
+      {
+        "name": "Jack Hale"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/jackhale98/sysml2-mode"
+    }
+  }
+}

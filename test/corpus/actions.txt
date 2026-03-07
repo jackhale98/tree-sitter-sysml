@@ -1,0 +1,225 @@
+=====================================
+Succession statement
+=====================================
+
+action def Drive {
+  first Start::init then End::finish;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (succession_statement
+        (qualified_name
+          (identifier)
+          (identifier))
+        (qualified_name
+          (identifier)
+          (identifier))))))
+
+=====================================
+Perform statement
+=====================================
+
+action def Drive {
+  perform Actions::StartEngine;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (perform_statement
+        (qualified_name
+          (identifier)
+          (identifier))))))
+
+=====================================
+Exhibit statement
+=====================================
+
+action def Drive {
+  exhibit Views::Dashboard;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (exhibit_statement
+        (qualified_name
+          (identifier)
+          (identifier))))))
+
+=====================================
+Include use case statement
+=====================================
+
+action def Drive {
+  include use case accelerate;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (include_statement
+        name: (identifier)))))
+
+=====================================
+Include action statement
+=====================================
+
+action def Drive {
+  include action brake;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (include_statement
+        name: (identifier)))))
+
+=====================================
+Include state statement
+=====================================
+
+action def Drive {
+  include state idle;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (include_statement
+        name: (identifier)))))
+
+=====================================
+Transition statement basic
+=====================================
+
+action def Drive {
+  transition then States::Done;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (transition_statement
+        (qualified_name
+          (identifier)
+          (identifier))))))
+
+=====================================
+Transition statement with first and then
+=====================================
+
+action def Drive {
+  transition first States::Idle accept Events::Go then States::Running;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (transition_statement
+        (qualified_name
+          (identifier)
+          (identifier))
+        (accept_clause
+          (qualified_name
+            (identifier)
+            (identifier)))
+        (qualified_name
+          (identifier)
+          (identifier))))))
+
+=====================================
+Transition statement with name
+=====================================
+
+action def Drive {
+  transition t1 then States::Done;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (transition_statement
+        name: (identifier)
+        (qualified_name
+          (identifier)
+          (identifier))))))
+
+=====================================
+Transition with guard
+=====================================
+
+action def Drive {
+  transition if true then States::Done;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (transition_statement
+        (boolean_literal)
+        (qualified_name
+          (identifier)
+          (identifier))))))
+
+=====================================
+Multiple successions
+=====================================
+
+action def Drive {
+  first Step::a then Step::b;
+  first Step::b then Step::c;
+}
+
+---
+
+(source_file
+  (action_definition
+    name: (identifier)
+    (definition_body
+      (succession_statement
+        (qualified_name
+          (identifier)
+          (identifier))
+        (qualified_name
+          (identifier)
+          (identifier)))
+      (succession_statement
+        (qualified_name
+          (identifier)
+          (identifier))
+        (qualified_name
+          (identifier)
+          (identifier))))))

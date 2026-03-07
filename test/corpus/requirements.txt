@@ -1,0 +1,260 @@
+=====================================
+Requirement usage with semicolon
+=====================================
+
+part def Vehicle {
+  requirement safety;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (requirement_usage
+        name: (identifier)))))
+
+=====================================
+Requirement usage with name and body
+=====================================
+
+part def Vehicle {
+  requirement safety {}
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (requirement_usage
+        name: (identifier)
+        (requirement_body)))))
+
+=====================================
+Requirement usage with type
+=====================================
+
+part def Vehicle {
+  requirement safety : Reqs::SafetyReq;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (requirement_usage
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Requirement usage without name
+=====================================
+
+part def Vehicle {
+  requirement;
+}
+
+---
+
+(source_file
+  (part_definition
+    name: (identifier)
+    (definition_body
+      (requirement_usage))))
+
+=====================================
+Requirement body with subject declaration
+=====================================
+
+requirement def SafetyReq {
+  subject vehicle : Vehicles::Vehicle;
+}
+
+---
+
+(source_file
+  (requirement_definition
+    name: (identifier)
+    (definition_body
+      (subject_declaration
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Requirement body with actor declaration
+=====================================
+
+requirement def SafetyReq {
+  actor driver : Actors::Driver;
+}
+
+---
+
+(source_file
+  (requirement_definition
+    name: (identifier)
+    (definition_body
+      (actor_declaration
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Requirement body with objective declaration
+=====================================
+
+use case def DriveVehicle {
+  objective obj;
+}
+
+---
+
+(source_file
+  (use_case_definition
+    name: (identifier)
+    (definition_body
+      (objective_declaration
+        name: (identifier)))))
+
+=====================================
+Objective declaration with body
+=====================================
+
+use case def DriveVehicle {
+  objective obj {}
+}
+
+---
+
+(source_file
+  (use_case_definition
+    name: (identifier)
+    (definition_body
+      (objective_declaration
+        name: (identifier)
+        (definition_body)))))
+
+=====================================
+Objective declaration without name
+=====================================
+
+use case def DriveVehicle {
+  objective;
+}
+
+---
+
+(source_file
+  (use_case_definition
+    name: (identifier)
+    (definition_body
+      (objective_declaration))))
+
+=====================================
+Satisfy statement basic
+=====================================
+
+satisfy Reqs::SafetyReq by Parts::AirbagSystem;
+
+---
+
+(source_file
+  (satisfy_statement
+    (qualified_name
+      (identifier)
+      (identifier))
+    (qualified_name
+      (identifier)
+      (identifier))))
+
+=====================================
+Satisfy statement with requirement keyword
+=====================================
+
+satisfy requirement Reqs::SafetyReq by Parts::AirbagSystem;
+
+---
+
+(source_file
+  (satisfy_statement
+    (qualified_name
+      (identifier)
+      (identifier))
+    (qualified_name
+      (identifier)
+      (identifier))))
+
+=====================================
+Requirement definition with subject and actor
+=====================================
+
+requirement def PerformanceReq {
+  subject car : Vehicles::Vehicle;
+  actor tester : Actors::Tester;
+}
+
+---
+
+(source_file
+  (requirement_definition
+    name: (identifier)
+    (definition_body
+      (subject_declaration
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier))))
+      (actor_declaration
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))))))
+
+=====================================
+Subject declaration without type
+=====================================
+
+requirement def BasicReq {
+  subject car;
+}
+
+---
+
+(source_file
+  (requirement_definition
+    name: (identifier)
+    (definition_body
+      (subject_declaration
+        name: (identifier)))))
+
+=====================================
+Actor declaration without type
+=====================================
+
+requirement def BasicReq {
+  actor user;
+}
+
+---
+
+(source_file
+  (requirement_definition
+    name: (identifier)
+    (definition_body
+      (actor_declaration
+        name: (identifier)))))
