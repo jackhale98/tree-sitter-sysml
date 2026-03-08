@@ -73,7 +73,8 @@ action def Drive {
     name: (identifier)
     (definition_body
       (include_statement
-        name: (identifier)))))
+        (qualified_name
+          (identifier))))))
 
 =====================================
 Include action statement
@@ -90,7 +91,8 @@ action def Drive {
     name: (identifier)
     (definition_body
       (include_statement
-        name: (identifier)))))
+        (qualified_name
+          (identifier))))))
 
 =====================================
 Include state statement
@@ -107,7 +109,8 @@ action def Drive {
     name: (identifier)
     (definition_body
       (include_statement
-        name: (identifier)))))
+        (qualified_name
+          (identifier))))))
 
 =====================================
 Transition statement basic

@@ -27,7 +27,9 @@ module.exports = grammar({
     [$.standalone_redefines, $.redefines_keyword],
     [$.feature_usage, $.redefinition_statement, $._expression, $.qualified_name],
     [$.feature_usage, $._expression, $.qualified_name],
-    [$.then_succession, $.state_body],
+    [$.constraint_usage, $.require_statement],
+    [$.if_action],
+    [$.entry_action],
   ],
 
   rules: {
@@ -45,6 +47,8 @@ module.exports = grammar({
         $.satisfy_statement,
         $.filter_statement,
         $.metadata_annotation,
+        $.assignment_statement,
+        $.textual_representation,
         $._statement,
       ),
 
@@ -68,8 +72,9 @@ module.exports = grammar({
         optional($.visibility),
         optional(choice(seq("standard", "library"), "library")),
         "package",
+        optional($.short_name),
         field("name", $.identifier),
-        $.package_body,
+        choice($.package_body, ";"),
       ),
 
     package_body: ($) => seq("{", repeat($._element), "}"),
@@ -106,16 +111,31 @@ module.exports = grammar({
         "comment",
         optional(field("name", $.identifier)),
         optional(seq("about", $.qualified_name)),
+        optional(seq("locale", $.string_literal)),
         $.block_comment,
       ),
 
     doc_comment: ($) =>
-      seq("doc", $.block_comment),
+      seq("doc", optional(seq("locale", $.string_literal)), $.block_comment),
+
+    // --- Textual Representation ---
+
+    textual_representation: ($) =>
+      choice(
+        seq("rep", optional(field("name", $.identifier)),
+            optional($._type_relationships),
+            "language", $.string_literal,
+            $.block_comment),
+        seq("language", $.string_literal,
+            $.block_comment),
+      ),
 
     // --- Satisfy ---
 
     satisfy_statement: ($) =>
       seq(
+        optional("assert"),
+        optional("not"),
         "satisfy",
         optional("requirement"),
         optional($._feature_ref),
@@ -551,7 +571,10 @@ module.exports = grammar({
     // --- Definition body ---
 
     definition_body: ($) =>
-      seq("{", repeat($._body_element), "}"),
+      seq("{", repeat($._body_element), optional($.result_expression), "}"),
+
+    result_expression: ($) =>
+      prec(-1, $._expression),
 
     enumeration_body: ($) =>
       seq("{", repeat(choice($.enum_member, $._body_element)), "}"),
@@ -602,6 +625,13 @@ module.exports = grammar({
         $.metaclass_usage,
         $.expr_usage,
         $.step_usage,
+        // KerML expression types
+        $.invariant_usage,
+        $.boolean_expression_usage,
+        // Connection-related usages
+        $.binding_usage,
+        $.succession_usage,
+        $.succession_flow_usage,
         // Behavioral (unique keywords, no modifier prefix needed)
         $.succession_statement,
         $.perform_statement,
@@ -621,6 +651,7 @@ module.exports = grammar({
         $.decide_node,
         $.fork_node,
         $.join_node,
+        $.else_action,
       ),
 
     part_usage: ($) =>
@@ -661,6 +692,7 @@ module.exports = grammar({
 
     action_usage: ($) =>
       seq(
+        optional("ref"),
         "action",
         optional(field("name", $.identifier)),
         optional($.multiplicity),
@@ -668,9 +700,12 @@ module.exports = grammar({
         optional($.multiplicity),
         optional($.value_assignment),
         optional(choice(
-          seq("send", $._expression, optional(seq("via", $._feature_ref))),
+          seq("send", optional($._expression),
+              optional(seq("via", $._feature_ref)),
+              optional(seq("to", $._feature_ref))),
           seq("accept", optional(field("accept_name", $.identifier)),
               optional($._type_relationships),
+              optional(seq("after", $._expression)),
               optional(seq("via", $._feature_ref))),
         )),
         choice($._body, ";"),
@@ -933,13 +968,32 @@ module.exports = grammar({
         choice($._body, ";"),
       ),
 
+    invariant_usage: ($) =>
+      seq(
+        choice("inv", "invariant"),
+        optional(field("name", $.identifier)),
+        optional($._type_relationships),
+        choice($.constraint_body, ";"),
+      ),
+
+    boolean_expression_usage: ($) =>
+      seq(
+        choice("bool", "boolean"),
+        optional(field("name", $.identifier)),
+        optional($._type_relationships),
+        choice($.constraint_body, ";"),
+      ),
+
     end_feature: ($) =>
       seq(
         "end",
         repeat($._prefix_metadata),
+        optional($.multiplicity),
+        optional(choice("ref", "item")),
         optional(field("name", $.identifier)),
         optional($._type_relationships),
         optional($.multiplicity),
+        optional($.value_assignment),
         choice($._body, ";"),
       ),
 
@@ -967,21 +1021,53 @@ module.exports = grammar({
         ),
       ),
 
+    // --- Connection-related usages ---
+
+    binding_usage: ($) =>
+      seq(
+        "binding",
+        optional(field("name", $.identifier)),
+        optional($._type_relationships),
+        "bind", $._feature_ref, "=", $._feature_ref,
+        choice($._body, ";"),
+      ),
+
+    succession_usage: ($) =>
+      seq(
+        "succession",
+        optional(field("name", $.identifier)),
+        optional($._type_relationships),
+        "first", $._feature_ref, "then", $._feature_ref,
+        choice($._body, ";"),
+      ),
+
+    succession_flow_usage: ($) =>
+      seq(
+        "succession", "flow",
+        optional(field("name", $.identifier)),
+        optional(seq("of", $._feature_ref)),
+        optional(choice(
+          seq("from", $._feature_ref, "to", $._feature_ref),
+          seq($._feature_ref, "to", $._feature_ref),
+        )),
+        choice($._body, ";"),
+      ),
+
     // --- Behavioral ---
 
     then_succession: ($) =>
       seq(
         "then",
-        optional(choice("action", "fork", "join", "merge", "decide", "event")),
+        optional(choice("action", "fork", "join", "merge", "decide", "event", "terminate")),
         optional($._feature_ref),
         optional($.multiplicity),
         optional($._type_relationships),
         optional($.value_assignment),
         optional(choice(
-          seq("send", $._expression, optional(seq("via", $._feature_ref))),
-          seq("accept", optional(field("accept_name", $.identifier)),
-              optional($._type_relationships),
-              optional(seq("via", $._feature_ref))),
+          seq("send", optional($._expression),
+              optional(seq("via", $._feature_ref)),
+              optional(seq("to", $._feature_ref))),
+          $.accept_clause,
         )),
         choice($._body, ";"),
       ),
@@ -1014,8 +1100,8 @@ module.exports = grammar({
     include_statement: ($) =>
       seq(
         "include",
-        repeat1(choice("use", "case", "action", "state")),
-        field("name", $.identifier),
+        optional(repeat1(choice("use", "case", "action", "state"))),
+        $._feature_ref,
         optional($._type_relationships),
         optional($.multiplicity),
         choice($._body, ";"),
@@ -1028,9 +1114,28 @@ module.exports = grammar({
         optional(seq("first", $._feature_ref)),
         optional($.accept_clause),
         optional(seq("if", $._expression)),
-        optional($.do_clause),
+        optional(seq("do", choice(
+          seq("send", $._expression, choice("to", "via"), $._feature_ref),
+          seq("action", $._feature_ref, optional($._type_relationships)),
+          $._feature_ref,
+        ))),
         seq("then", $._feature_ref),
         ";",
+      ),
+
+    terminate_statement: ($) =>
+      seq("terminate", optional($._feature_ref), ";"),
+
+    // Inline transition in state bodies: accept ... [do ...] then ...;
+    inline_transition: ($) =>
+      seq(
+        $.accept_clause,
+        optional(seq("do", choice(
+          seq("send", $._expression, choice("to", "via"), $._feature_ref),
+          seq("action", $._feature_ref, optional($._type_relationships)),
+          $._feature_ref,
+        ))),
+        "then", $._feature_ref, ";",
       ),
 
     accept_clause: ($) =>
@@ -1038,10 +1143,11 @@ module.exports = grammar({
         "accept",
         choice(
           seq("when", $._expression),
-          seq("at", $._feature_ref),
+          seq("at", $._expression),
           seq(
             $._feature_ref,
             optional($._type_relationships),
+            optional(seq("after", $._expression)),
             optional(seq("via", $._feature_ref)),
           ),
         ),
@@ -1050,42 +1156,49 @@ module.exports = grammar({
     do_clause: ($) =>
       seq("do", choice(
         seq("send", $._expression, choice("to", "via"), $._feature_ref),
+        seq("action", $._feature_ref, optional($._type_relationships), choice(";", $._body)),
         seq($._feature_ref, choice(";", $._body)),
         $._body,
       )),
 
     send_action: ($) =>
-      seq("send", $._expression, "to", $._feature_ref, ";"),
+      seq("send", optional($._expression),
+          optional(seq("via", $._feature_ref)),
+          optional(seq("to", $._feature_ref)),
+          ";"),
 
     if_action: ($) =>
-      seq(
-        "if", $._expression,
-        "then", $._feature_ref,
-        optional(seq("else", $._feature_ref)),
-        ";",
+      choice(
+        seq("if", $._expression,
+            "then", $._feature_ref,
+            optional(seq("else", choice($._feature_ref, $.if_action))),
+            ";"),
+        seq("if", $._expression, $._body,
+            optional(seq("else", choice($._body, $.if_action)))),
       ),
 
+    else_action: ($) =>
+      seq("else", $._feature_ref, ";"),
+
     while_action: ($) =>
-      seq(
-        "while", $._expression,
-        "do", $._feature_ref,
-        ";",
+      choice(
+        seq("while", $._expression, "do", $._feature_ref, ";"),
+        seq("while", $._expression, $._body),
       ),
 
     for_action: ($) =>
-      seq(
-        "for", $.identifier,
-        ":", $._feature_ref,
-        "in", $._feature_ref,
-        "do", $._feature_ref,
-        ";",
+      choice(
+        seq("for", $.identifier, ":", $._feature_ref, "in", $._feature_ref,
+            "do", $._feature_ref, ";"),
+        seq("for", $.identifier, ":", $._feature_ref, "in", $._feature_ref,
+            $._body),
       ),
 
     assign_action: ($) =>
       seq(
         "assign", $._feature_ref,
         ":=", $._expression,
-        ";",
+        choice($._body, ";"),
       ),
 
     loop_action: ($) =>
@@ -1099,16 +1212,16 @@ module.exports = grammar({
       ),
 
     merge_node: ($) =>
-      seq("merge", field("name", $.identifier), ";"),
+      seq("merge", optional(field("name", $.identifier)), choice($._body, ";")),
 
     decide_node: ($) =>
-      seq("decide", field("name", $.identifier), ";"),
+      seq("decide", optional(field("name", $.identifier)), choice($._body, ";")),
 
     fork_node: ($) =>
-      seq("fork", field("name", $.identifier), ";"),
+      seq("fork", optional(field("name", $.identifier)), choice($._body, ";")),
 
     join_node: ($) =>
-      seq("join", field("name", $.identifier), ";"),
+      seq("join", optional(field("name", $.identifier)), choice($._body, ";")),
 
     // --- Statements ---
 
@@ -1125,8 +1238,8 @@ module.exports = grammar({
 
     dependency_statement: ($) =>
       seq("dependency", optional(field("name", $.identifier)),
-          optional(seq("from", $._feature_ref)),
-          "to", $._feature_ref, ";"),
+          optional(seq("from", commaSep1($._feature_ref))),
+          "to", commaSep1($._feature_ref), ";"),
 
     allocate_statement: ($) =>
       seq("allocate", $._feature_ref, "to", $._feature_ref,
@@ -1136,9 +1249,10 @@ module.exports = grammar({
       seq(
         "message",
         optional(field("name", $.identifier)),
+        optional($._type_relationships),
         optional(seq("of", $._feature_ref, optional($._type_relationships))),
         optional(seq("from", $._feature_ref, "to", $._feature_ref)),
-        ";",
+        choice($._body, ";"),
       ),
 
     flow_statement: ($) =>
@@ -1163,25 +1277,38 @@ module.exports = grammar({
     state_body: ($) =>
       seq(
         "{",
-        optional(seq("entry", optional("action"), choice(
-          seq(";", optional(seq("then", $._feature_ref, ";"))),
-          $.definition_body,
-          seq($._feature_ref, choice(
-            seq(";", optional(seq("then", $._feature_ref, ";"))),
-            $.definition_body,
-          )),
-        ))),
-        optional(seq("do", choice(
-          seq($._feature_ref, choice(";", $._body)),
-          $._body,
-        ))),
-        optional(seq("exit", choice(
-          seq($._feature_ref, ";"),
-          ";",
-        ))),
-        repeat($._body_element),
+        repeat(choice(
+          $._body_element,
+          $.entry_action,
+          $.do_action,
+          $.exit_action,
+        )),
         "}",
       ),
+
+    entry_action: ($) =>
+      seq("entry", optional("action"), choice(
+        seq(";", optional(seq("then", $._feature_ref, ";"))),
+        $.definition_body,
+        seq($._feature_ref, choice(
+          seq(";", optional(seq("then", $._feature_ref, ";"))),
+          $.definition_body,
+        )),
+      )),
+
+    do_action: ($) =>
+      seq("do", choice(
+        seq("send", $._expression, choice("to", "via"), $._feature_ref, ";"),
+        seq("action", $._feature_ref, optional($._type_relationships), choice(";", $._body)),
+        seq($._feature_ref, choice(";", $._body)),
+        $._body,
+      )),
+
+    exit_action: ($) =>
+      seq("exit", choice(
+        seq($._feature_ref, ";"),
+        ";",
+      )),
 
     requirement_body: ($) =>
       seq("{", repeat($._body_element), "}"),
@@ -1223,6 +1350,9 @@ module.exports = grammar({
         $.frame_statement,
         $.expression_statement,
         $.assignment_statement,
+        $.terminate_statement,
+        $.inline_transition,
+        $.textual_representation,
       ),
 
     assignment_statement: ($) =>
@@ -1251,7 +1381,11 @@ module.exports = grammar({
           ";"),
 
     require_statement: ($) =>
-      seq("require", $._feature_ref, ";"),
+      seq("require",
+          optional("constraint"),
+          optional(field("name", $.identifier)),
+          optional($._type_relationships),
+          ";"),
 
     return_statement: ($) =>
       seq("return",
@@ -1262,7 +1396,12 @@ module.exports = grammar({
           ";"),
 
     render_statement: ($) =>
-      seq("render", $._feature_ref, ";"),
+      seq("render",
+          optional("rendering"),
+          $._feature_ref,
+          optional($._type_relationships),
+          optional($.multiplicity),
+          ";"),
 
     expose_statement: ($) =>
       seq(
@@ -1311,7 +1450,7 @@ module.exports = grammar({
           optional($.value_assignment), ";"),
 
     actor_declaration: ($) =>
-      seq("actor", field("name", $.identifier),
+      seq("actor", optional(field("name", $.identifier)),
           optional($._type_relationships),
           optional($.multiplicity),
           optional($.value_assignment), ";"),
@@ -1355,6 +1494,13 @@ module.exports = grammar({
         $.references_keyword,
         $.chains_keyword,
         $.inverse_keyword,
+        $.specializes_keyword,
+        $.typed_by_keyword,
+        $.crosses_keyword,
+        $.unions_keyword,
+        $.intersects_keyword,
+        $.differences_keyword,
+        $.featuring_keyword,
       ),
 
     _colon_type_rel: ($) =>
@@ -1397,17 +1543,41 @@ module.exports = grammar({
     inverse_keyword: ($) =>
       seq("inverse", "of", field("target", $._feature_ref)),
 
+    specializes_keyword: ($) =>
+      seq("specializes", field("target", $._feature_ref)),
+
+    typed_by_keyword: ($) =>
+      seq(choice(seq("typed", "by"), seq("defined", "by")), field("type", $.qualified_name)),
+
+    crosses_keyword: ($) =>
+      seq(choice("crosses", "=>"), field("target", $._feature_ref)),
+
+    unions_keyword: ($) =>
+      seq("unions", field("target", $._feature_ref)),
+
+    intersects_keyword: ($) =>
+      seq("intersects", field("target", $._feature_ref)),
+
+    differences_keyword: ($) =>
+      seq("differences", field("target", $._feature_ref)),
+
+    featuring_keyword: ($) =>
+      seq(choice(seq("featuring", "by"), seq("featured", "by")), field("target", $._feature_ref)),
+
     multiplicity: ($) =>
       seq("[", choice("*", seq($._expression, optional(seq("..", choice("*", $._expression))))), "]",
           optional(choice("ordered", "nonunique"))),
 
     value_assignment: ($) =>
-      seq(choice("=", ":=", "default"), $._expression),
+      seq(choice("=", ":=", seq("default", optional(choice("=", ":=")))), $._expression),
 
     connect_clause: ($) =>
-      seq("connect", optional($.multiplicity),
-          $._feature_ref, optional($._type_relationships), "to",
-          optional($.multiplicity), $._feature_ref, optional($._type_relationships)),
+      choice(
+        seq("connect", optional($.multiplicity),
+            $._feature_ref, optional($._type_relationships), "to",
+            optional($.multiplicity), $._feature_ref, optional($._type_relationships)),
+        seq("connect", "(", commaSep1($._feature_ref), ")"),
+      ),
 
     // --- Short name ---
 
@@ -1515,7 +1685,7 @@ module.exports = grammar({
       prec(3, seq($.identifier, "(", commaSep($._expression), ")")),
 
     new_expression: ($) =>
-      seq("new", $.identifier, "(", commaSep($._argument), ")"),
+      seq("new", choice($.qualified_name, $.identifier), "(", commaSep($._argument), ")"),
 
     _argument: ($) =>
       choice(

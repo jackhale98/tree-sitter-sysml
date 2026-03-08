@@ -72,7 +72,8 @@ part def Vehicle {
     (definition_body
       (state_usage
         name: (identifier)
-        (state_body)))))
+        (state_body
+          (entry_action))))))
 
 =====================================
 State usage with entry action body
@@ -93,7 +94,8 @@ part def Vehicle {
       (state_usage
         name: (identifier)
         (state_body
-          (definition_body))))))
+          (entry_action
+            (definition_body)))))))
 
 =====================================
 State usage with entry then transition
@@ -114,9 +116,10 @@ part def Vehicle {
       (state_usage
         name: (identifier)
         (state_body
-          (qualified_name
-            (identifier)
-            (identifier)))))))
+          (entry_action
+            (qualified_name
+              (identifier)
+              (identifier))))))))
 
 =====================================
 State definition with nested states

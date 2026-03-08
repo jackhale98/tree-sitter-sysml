@@ -36,7 +36,19 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
           "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -45,6 +57,10 @@
         },
         {
           "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -96,6 +112,10 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "string_literal",
           "named": true
         },
@@ -108,7 +128,15 @@
           "named": true
         },
         {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
           "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -146,7 +174,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -174,11 +218,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -242,11 +298,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
           "named": true
         },
         {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
           "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -255,6 +323,10 @@
         },
         {
           "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -310,6 +382,10 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "string_literal",
           "named": true
         },
@@ -322,7 +398,15 @@
           "named": true
         },
         {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
           "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -338,7 +422,7 @@
     "fields": {
       "name": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
             "type": "identifier",
@@ -361,6 +445,22 @@
         },
         {
           "type": "conjugates_keyword",
+          "named": true
+        },
+        {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -388,11 +488,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -506,7 +618,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -534,11 +662,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -580,7 +720,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -604,11 +760,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -646,7 +814,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -674,11 +858,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -716,7 +912,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -744,11 +956,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -776,6 +1000,10 @@
         },
         {
           "type": "conditional_expression",
+          "named": true
+        },
+        {
+          "type": "definition_body",
           "named": true
         },
         {
@@ -891,7 +1119,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -919,11 +1163,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -961,7 +1217,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -989,11 +1261,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -1031,7 +1315,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -1063,11 +1363,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -1109,7 +1421,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -1137,11 +1465,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -1262,6 +1602,202 @@
     }
   },
   {
+    "type": "binding_usage",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "chains_keyword",
+          "named": true
+        },
+        {
+          "type": "conjugates_keyword",
+          "named": true
+        },
+        {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "redefines_keyword",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "references_keyword",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
+          "type": "subsets_keyword",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "boolean_expression_usage",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "chains_keyword",
+          "named": true
+        },
+        {
+          "type": "conjugates_keyword",
+          "named": true
+        },
+        {
+          "type": "constraint_body",
+          "named": true
+        },
+        {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "redefines_keyword",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "references_keyword",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
+          "type": "subsets_keyword",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "boolean_literal",
     "named": true,
     "fields": {}
@@ -1373,7 +1909,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -1401,11 +1953,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -1443,7 +2007,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -1471,11 +2051,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -1517,7 +2109,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -1545,11 +2153,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -1607,7 +2227,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -1635,11 +2271,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -1677,7 +2325,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -1705,11 +2369,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -1747,7 +2423,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -1775,11 +2467,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -1814,6 +2518,10 @@
         },
         {
           "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "string_literal",
           "named": true
         }
       ]
@@ -1851,7 +2559,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -1879,11 +2603,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -1921,7 +2657,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -1949,11 +2701,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -2075,7 +2839,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
           "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -2107,11 +2887,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -2138,11 +2930,27 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
           "named": true
         },
         {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
           "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -2174,11 +2982,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -2216,7 +3036,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -2244,11 +3080,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -2290,7 +3138,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -2314,11 +3178,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -2356,7 +3232,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -2384,11 +3276,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -2468,6 +3372,14 @@
         },
         {
           "type": "bind_statement",
+          "named": true
+        },
+        {
+          "type": "binding_usage",
+          "named": true
+        },
+        {
+          "type": "boolean_expression_usage",
           "named": true
         },
         {
@@ -2556,6 +3468,10 @@
         },
         {
           "type": "doc_comment",
+          "named": true
+        },
+        {
+          "type": "else_action",
           "named": true
         },
         {
@@ -2663,6 +3579,10 @@
           "named": true
         },
         {
+          "type": "inline_transition",
+          "named": true
+        },
+        {
           "type": "interaction_definition",
           "named": true
         },
@@ -2676,6 +3596,10 @@
         },
         {
           "type": "interface_usage",
+          "named": true
+        },
+        {
+          "type": "invariant_usage",
           "named": true
         },
         {
@@ -2875,7 +3799,23 @@
           "named": true
         },
         {
+          "type": "succession_flow_usage",
+          "named": true
+        },
+        {
           "type": "succession_statement",
+          "named": true
+        },
+        {
+          "type": "succession_usage",
+          "named": true
+        },
+        {
+          "type": "terminate_statement",
+          "named": true
+        },
+        {
+          "type": "textual_representation",
           "named": true
         },
         {
@@ -2977,7 +3917,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -3005,11 +3961,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -3051,6 +4019,22 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
           "type": "inverse_keyword",
           "named": true
         },
@@ -3071,14 +4055,46 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
           "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
+          "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "crosses_keyword",
+    "named": true,
+    "fields": {
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "feature_chain",
+            "named": true
+          },
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -3113,7 +4129,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -3141,11 +4173,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -3157,7 +4201,7 @@
     "fields": {
       "name": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
             "type": "identifier",
@@ -3165,6 +4209,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "definition_body",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -3237,6 +4291,14 @@
         },
         {
           "type": "bind_statement",
+          "named": true
+        },
+        {
+          "type": "binding_usage",
+          "named": true
+        },
+        {
+          "type": "boolean_expression_usage",
           "named": true
         },
         {
@@ -3313,6 +4375,10 @@
         },
         {
           "type": "doc_comment",
+          "named": true
+        },
+        {
+          "type": "else_action",
           "named": true
         },
         {
@@ -3408,6 +4474,10 @@
           "named": true
         },
         {
+          "type": "inline_transition",
+          "named": true
+        },
+        {
           "type": "interaction_definition",
           "named": true
         },
@@ -3421,6 +4491,10 @@
         },
         {
           "type": "interface_usage",
+          "named": true
+        },
+        {
+          "type": "invariant_usage",
           "named": true
         },
         {
@@ -3540,6 +4614,10 @@
           "named": true
         },
         {
+          "type": "result_expression",
+          "named": true
+        },
+        {
           "type": "return_statement",
           "named": true
         },
@@ -3588,7 +4666,23 @@
           "named": true
         },
         {
+          "type": "succession_flow_usage",
+          "named": true
+        },
+        {
           "type": "succession_statement",
+          "named": true
+        },
+        {
+          "type": "succession_usage",
+          "named": true
+        },
+        {
+          "type": "terminate_statement",
+          "named": true
+        },
+        {
+          "type": "textual_representation",
           "named": true
         },
         {
@@ -3685,7 +4779,27 @@
     }
   },
   {
-    "type": "do_clause",
+    "type": "differences_keyword",
+    "named": true,
+    "fields": {
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "feature_chain",
+            "named": true
+          },
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "do_action",
     "named": true,
     "fields": {},
     "children": {
@@ -3697,6 +4811,10 @@
           "named": true
         },
         {
+          "type": "binding",
+          "named": true
+        },
+        {
           "type": "boolean_literal",
           "named": true
         },
@@ -3705,7 +4823,19 @@
           "named": true
         },
         {
+          "type": "chains_keyword",
+          "named": true
+        },
+        {
           "type": "conditional_expression",
+          "named": true
+        },
+        {
+          "type": "conjugates_keyword",
+          "named": true
+        },
+        {
+          "type": "crosses_keyword",
           "named": true
         },
         {
@@ -3713,7 +4843,15 @@
           "named": true
         },
         {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
           "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -3722,6 +4860,14 @@
         },
         {
           "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
           "named": true
         },
         {
@@ -3753,11 +4899,47 @@
           "named": true
         },
         {
+          "type": "redefines_keyword",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "references_keyword",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "string_literal",
           "named": true
         },
         {
+          "type": "subsets_keyword",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
           "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -3768,11 +4950,34 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "block_comment",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "else_action",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
           "named": true
         }
       ]
@@ -3810,11 +5015,27 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
           "named": true
         },
         {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
           "type": "hash_tag",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -3842,11 +5063,50 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
+          "named": true
+        },
+        {
+          "type": "value_assignment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "entry_action",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
           "named": true
         }
       ]
@@ -3884,6 +5144,22 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
           "type": "inverse_keyword",
           "named": true
         },
@@ -3904,11 +5180,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -3991,6 +5279,14 @@
           "named": true
         },
         {
+          "type": "binding_usage",
+          "named": true
+        },
+        {
+          "type": "boolean_expression_usage",
+          "named": true
+        },
+        {
           "type": "calc_definition",
           "named": true
         },
@@ -4064,6 +5360,10 @@
         },
         {
           "type": "doc_comment",
+          "named": true
+        },
+        {
+          "type": "else_action",
           "named": true
         },
         {
@@ -4163,6 +5463,10 @@
           "named": true
         },
         {
+          "type": "inline_transition",
+          "named": true
+        },
+        {
           "type": "interaction_definition",
           "named": true
         },
@@ -4176,6 +5480,10 @@
         },
         {
           "type": "interface_usage",
+          "named": true
+        },
+        {
+          "type": "invariant_usage",
           "named": true
         },
         {
@@ -4343,7 +5651,23 @@
           "named": true
         },
         {
+          "type": "succession_flow_usage",
+          "named": true
+        },
+        {
           "type": "succession_statement",
+          "named": true
+        },
+        {
+          "type": "succession_usage",
+          "named": true
+        },
+        {
+          "type": "terminate_statement",
+          "named": true
+        },
+        {
+          "type": "textual_representation",
           "named": true
         },
         {
@@ -4441,7 +5765,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
           "type": "enumeration_body",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -4469,11 +5809,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -4500,11 +5852,27 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
           "named": true
         },
         {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
           "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -4536,11 +5904,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -4568,6 +5948,25 @@
         },
         {
           "type": "state_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "exit_action",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
           "named": true
         }
       ]
@@ -4628,7 +6027,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -4656,11 +6071,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -4698,7 +6125,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -4726,11 +6169,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -4866,7 +6321,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -4894,11 +6365,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -4936,11 +6419,27 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
           "named": true
         },
         {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
           "type": "hash_tag",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -4968,11 +6467,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -4984,6 +6495,26 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "featuring_keyword",
+    "named": true,
+    "fields": {
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "feature_chain",
+            "named": true
+          },
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -5108,7 +6639,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -5136,11 +6683,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -5219,6 +6778,10 @@
       "required": true,
       "types": [
         {
+          "type": "definition_body",
+          "named": true
+        },
+        {
           "type": "feature_chain",
           "named": true
         },
@@ -5239,7 +6802,7 @@
     "fields": {
       "name": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
             "type": "identifier",
@@ -5247,6 +6810,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "definition_body",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -5281,6 +6854,22 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
           "type": "inverse_keyword",
           "named": true
         },
@@ -5301,11 +6890,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -5343,7 +6944,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -5371,11 +6988,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -5436,11 +7065,19 @@
           "named": true
         },
         {
+          "type": "definition_body",
+          "named": true
+        },
+        {
           "type": "feature_chain",
           "named": true
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "if_action",
           "named": true
         },
         {
@@ -5512,21 +7149,10 @@
   {
     "type": "include_statement",
     "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "binding",
@@ -5541,7 +7167,27 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -5550,6 +7196,10 @@
         },
         {
           "type": "multiplicity",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
           "named": true
         },
         {
@@ -5569,11 +7219,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -5686,7 +7348,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -5714,11 +7392,170 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "inline_transition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "accept_clause",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "bracket_expression",
+          "named": true
+        },
+        {
+          "type": "chains_keyword",
+          "named": true
+        },
+        {
+          "type": "conditional_expression",
+          "named": true
+        },
+        {
+          "type": "conjugates_keyword",
+          "named": true
+        },
+        {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "meta_expression",
+          "named": true
+        },
+        {
+          "type": "new_expression",
+          "named": true
+        },
+        {
+          "type": "null_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "redefines_keyword",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "references_keyword",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "subsets_keyword",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -5756,7 +7593,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -5784,11 +7637,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -5826,7 +7691,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -5854,11 +7735,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -5919,7 +7812,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -5947,11 +7856,137 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "intersects_keyword",
+    "named": true,
+    "fields": {
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "feature_chain",
+            "named": true
+          },
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "invariant_usage",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "chains_keyword",
+          "named": true
+        },
+        {
+          "type": "conjugates_keyword",
+          "named": true
+        },
+        {
+          "type": "constraint_body",
+          "named": true
+        },
+        {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "redefines_keyword",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "references_keyword",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
+          "type": "subsets_keyword",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -6084,7 +8119,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -6112,11 +8163,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -6154,7 +8217,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -6182,11 +8261,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -6202,7 +8293,7 @@
     "fields": {
       "name": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
             "type": "identifier",
@@ -6210,6 +8301,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "definition_body",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -6260,11 +8361,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
           "named": true
         },
         {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
           "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -6273,6 +8386,10 @@
         },
         {
           "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -6324,6 +8441,10 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "string_literal",
           "named": true
         },
@@ -6336,7 +8457,15 @@
           "named": true
         },
         {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
           "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -6348,7 +8477,7 @@
     "fields": {
       "name": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
             "type": "identifier",
@@ -6356,6 +8485,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "definition_body",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -6390,7 +8529,27 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
           "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -6418,11 +8577,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -6479,7 +8650,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -6507,11 +8694,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -6549,7 +8748,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -6577,11 +8792,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -6669,7 +8896,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -6697,11 +8940,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -6739,7 +8994,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -6767,11 +9038,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -6884,7 +9167,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -6912,11 +9211,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -7029,7 +9340,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -7053,11 +9380,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -7095,7 +9434,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -7123,11 +9478,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -7165,7 +9532,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -7193,11 +9576,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -7252,6 +9647,10 @@
           "named": true
         },
         {
+          "type": "assignment_statement",
+          "named": true
+        },
+        {
           "type": "assoc_definition",
           "named": true
         },
@@ -7265,6 +9664,14 @@
         },
         {
           "type": "behavior_definition",
+          "named": true
+        },
+        {
+          "type": "binding_usage",
+          "named": true
+        },
+        {
+          "type": "boolean_expression_usage",
           "named": true
         },
         {
@@ -7337,6 +9744,10 @@
         },
         {
           "type": "doc_comment",
+          "named": true
+        },
+        {
+          "type": "else_action",
           "named": true
         },
         {
@@ -7429,6 +9840,10 @@
         },
         {
           "type": "interface_usage",
+          "named": true
+        },
+        {
+          "type": "invariant_usage",
           "named": true
         },
         {
@@ -7568,7 +9983,19 @@
           "named": true
         },
         {
+          "type": "succession_flow_usage",
+          "named": true
+        },
+        {
           "type": "succession_statement",
+          "named": true
+        },
+        {
+          "type": "succession_usage",
+          "named": true
+        },
+        {
+          "type": "textual_representation",
           "named": true
         },
         {
@@ -7647,10 +10074,14 @@
     },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "package_body",
+          "named": true
+        },
+        {
+          "type": "short_name",
           "named": true
         },
         {
@@ -7767,7 +10198,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -7795,11 +10242,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -7837,7 +10296,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -7869,11 +10344,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -7938,7 +10425,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -7966,11 +10469,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -8008,7 +10523,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -8040,11 +10571,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -8086,7 +10629,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -8114,11 +10673,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -8216,11 +10787,27 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
           "named": true
         },
         {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
           "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -8252,11 +10839,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -8298,7 +10897,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -8326,11 +10941,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -8365,15 +10992,87 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "chains_keyword",
+          "named": true
+        },
+        {
+          "type": "conjugates_keyword",
+          "named": true
+        },
+        {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
         {
           "type": "feature_chain",
           "named": true
         },
         {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "multiplicity",
+          "named": true
+        },
+        {
           "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "redefines_keyword",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "references_keyword",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
+          "type": "subsets_keyword",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -8411,7 +11110,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -8439,11 +11154,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -8481,7 +11208,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -8509,11 +11252,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -8522,17 +11277,88 @@
   {
     "type": "require_statement",
     "named": true,
-    "fields": {},
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
-      "multiple": false,
-      "required": true,
+      "multiple": true,
+      "required": false,
       "types": [
         {
-          "type": "feature_chain",
+          "type": "binding",
           "named": true
         },
         {
-          "type": "qualified_name",
+          "type": "chains_keyword",
+          "named": true
+        },
+        {
+          "type": "conjugates_keyword",
+          "named": true
+        },
+        {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "redefines_keyword",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "references_keyword",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
+          "type": "subsets_keyword",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -8611,6 +11437,14 @@
           "named": true
         },
         {
+          "type": "binding_usage",
+          "named": true
+        },
+        {
+          "type": "boolean_expression_usage",
+          "named": true
+        },
+        {
           "type": "calc_definition",
           "named": true
         },
@@ -8684,6 +11518,10 @@
         },
         {
           "type": "doc_comment",
+          "named": true
+        },
+        {
+          "type": "else_action",
           "named": true
         },
         {
@@ -8779,6 +11617,10 @@
           "named": true
         },
         {
+          "type": "inline_transition",
+          "named": true
+        },
+        {
           "type": "interaction_definition",
           "named": true
         },
@@ -8792,6 +11634,10 @@
         },
         {
           "type": "interface_usage",
+          "named": true
+        },
+        {
+          "type": "invariant_usage",
           "named": true
         },
         {
@@ -8959,7 +11805,23 @@
           "named": true
         },
         {
+          "type": "succession_flow_usage",
+          "named": true
+        },
+        {
           "type": "succession_statement",
+          "named": true
+        },
+        {
+          "type": "succession_usage",
+          "named": true
+        },
+        {
+          "type": "terminate_statement",
+          "named": true
+        },
+        {
+          "type": "textual_representation",
           "named": true
         },
         {
@@ -9057,7 +11919,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -9085,11 +11963,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -9127,6 +12017,22 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
           "type": "inverse_keyword",
           "named": true
         },
@@ -9155,11 +12061,98 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "result_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "bracket_expression",
+          "named": true
+        },
+        {
+          "type": "conditional_expression",
+          "named": true
+        },
+        {
+          "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "meta_expression",
+          "named": true
+        },
+        {
+          "type": "new_expression",
+          "named": true
+        },
+        {
+          "type": "null_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
           "named": true
         }
       ]
@@ -9197,6 +12190,22 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
           "type": "inverse_keyword",
           "named": true
         },
@@ -9217,11 +12226,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -9260,7 +12281,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "binary_expression",
@@ -9376,7 +12397,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -9404,11 +12441,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -9464,6 +12513,10 @@
           "named": true
         },
         {
+          "type": "assignment_statement",
+          "named": true
+        },
+        {
           "type": "assoc_definition",
           "named": true
         },
@@ -9477,6 +12530,14 @@
         },
         {
           "type": "behavior_definition",
+          "named": true
+        },
+        {
+          "type": "binding_usage",
+          "named": true
+        },
+        {
+          "type": "boolean_expression_usage",
           "named": true
         },
         {
@@ -9549,6 +12610,10 @@
         },
         {
           "type": "doc_comment",
+          "named": true
+        },
+        {
+          "type": "else_action",
           "named": true
         },
         {
@@ -9641,6 +12706,10 @@
         },
         {
           "type": "interface_usage",
+          "named": true
+        },
+        {
+          "type": "invariant_usage",
           "named": true
         },
         {
@@ -9780,7 +12849,19 @@
           "named": true
         },
         {
+          "type": "succession_flow_usage",
+          "named": true
+        },
+        {
           "type": "succession_statement",
+          "named": true
+        },
+        {
+          "type": "succession_usage",
+          "named": true
+        },
+        {
+          "type": "textual_representation",
           "named": true
         },
         {
@@ -9863,6 +12944,26 @@
     }
   },
   {
+    "type": "specializes_keyword",
+    "named": true,
+    "fields": {
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "feature_chain",
+            "named": true
+          },
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "stakeholder_declaration",
     "named": true,
     "fields": {
@@ -9894,6 +12995,22 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
           "type": "inverse_keyword",
           "named": true
         },
@@ -9914,11 +13031,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -10020,6 +13149,14 @@
           "named": true
         },
         {
+          "type": "binding_usage",
+          "named": true
+        },
+        {
+          "type": "boolean_expression_usage",
+          "named": true
+        },
+        {
           "type": "calc_definition",
           "named": true
         },
@@ -10088,11 +13225,11 @@
           "named": true
         },
         {
-          "type": "definition_body",
+          "type": "dependency_statement",
           "named": true
         },
         {
-          "type": "dependency_statement",
+          "type": "do_action",
           "named": true
         },
         {
@@ -10100,7 +13237,15 @@
           "named": true
         },
         {
+          "type": "else_action",
+          "named": true
+        },
+        {
           "type": "end_feature",
+          "named": true
+        },
+        {
+          "type": "entry_action",
           "named": true
         },
         {
@@ -10113,6 +13258,10 @@
         },
         {
           "type": "exhibit_statement",
+          "named": true
+        },
+        {
+          "type": "exit_action",
           "named": true
         },
         {
@@ -10129,10 +13278,6 @@
         },
         {
           "type": "expression_statement",
-          "named": true
-        },
-        {
-          "type": "feature_chain",
           "named": true
         },
         {
@@ -10196,6 +13341,10 @@
           "named": true
         },
         {
+          "type": "inline_transition",
+          "named": true
+        },
+        {
           "type": "interaction_definition",
           "named": true
         },
@@ -10209,6 +13358,10 @@
         },
         {
           "type": "interface_usage",
+          "named": true
+        },
+        {
+          "type": "invariant_usage",
           "named": true
         },
         {
@@ -10296,10 +13449,6 @@
           "named": true
         },
         {
-          "type": "qualified_name",
-          "named": true
-        },
-        {
           "type": "redefinition_statement",
           "named": true
         },
@@ -10380,7 +13529,23 @@
           "named": true
         },
         {
+          "type": "succession_flow_usage",
+          "named": true
+        },
+        {
           "type": "succession_statement",
+          "named": true
+        },
+        {
+          "type": "succession_usage",
+          "named": true
+        },
+        {
+          "type": "terminate_statement",
+          "named": true
+        },
+        {
+          "type": "textual_representation",
           "named": true
         },
         {
@@ -10478,6 +13643,22 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
           "type": "inverse_keyword",
           "named": true
         },
@@ -10502,6 +13683,10 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "state_body",
           "named": true
         },
@@ -10511,6 +13696,14 @@
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -10548,6 +13741,22 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
           "type": "inverse_keyword",
           "named": true
         },
@@ -10572,6 +13781,10 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "state_body",
           "named": true
         },
@@ -10581,6 +13794,14 @@
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -10618,7 +13839,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -10646,11 +13883,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -10688,7 +13937,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -10716,11 +13981,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -10762,7 +14039,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -10790,11 +14083,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -10832,6 +14137,22 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
           "type": "inverse_keyword",
           "named": true
         },
@@ -10856,11 +14177,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -10891,6 +14224,40 @@
     }
   },
   {
+    "type": "succession_flow_usage",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "succession_statement",
     "named": true,
     "fields": {},
@@ -10910,10 +14277,10 @@
     }
   },
   {
-    "type": "then_succession",
+    "type": "succession_usage",
     "named": true,
     "fields": {
-      "accept_name": {
+      "name": {
         "multiple": false,
         "required": false,
         "types": [
@@ -10926,8 +14293,220 @@
     },
     "children": {
       "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "chains_keyword",
+          "named": true
+        },
+        {
+          "type": "conjugates_keyword",
+          "named": true
+        },
+        {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "redefines_keyword",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "references_keyword",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
+          "type": "subsets_keyword",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "terminate_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
       "required": false,
       "types": [
+        {
+          "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "textual_representation",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "block_comment",
+          "named": true
+        },
+        {
+          "type": "chains_keyword",
+          "named": true
+        },
+        {
+          "type": "conjugates_keyword",
+          "named": true
+        },
+        {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "redefines_keyword",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "references_keyword",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "subsets_keyword",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "then_succession",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "accept_clause",
+          "named": true
+        },
         {
           "type": "binary_expression",
           "named": true
@@ -10957,11 +14536,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
           "named": true
         },
         {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
           "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -10970,6 +14561,10 @@
         },
         {
           "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -11025,6 +14620,10 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "string_literal",
           "named": true
         },
@@ -11037,7 +14636,15 @@
           "named": true
         },
         {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
           "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -11079,7 +14686,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -11107,11 +14730,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -11149,6 +14784,10 @@
           "named": true
         },
         {
+          "type": "binding",
+          "named": true
+        },
+        {
           "type": "boolean_literal",
           "named": true
         },
@@ -11157,15 +14796,31 @@
           "named": true
         },
         {
+          "type": "chains_keyword",
+          "named": true
+        },
+        {
           "type": "conditional_expression",
           "named": true
         },
         {
-          "type": "do_clause",
+          "type": "conjugates_keyword",
+          "named": true
+        },
+        {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
           "named": true
         },
         {
           "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -11174,6 +14829,14 @@
         },
         {
           "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
           "named": true
         },
         {
@@ -11205,11 +14868,47 @@
           "named": true
         },
         {
+          "type": "redefines_keyword",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "references_keyword",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "string_literal",
           "named": true
         },
         {
+          "type": "subsets_keyword",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
           "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -11247,7 +14946,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -11275,11 +14990,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -11287,6 +15014,22 @@
   },
   {
     "type": "typed_by",
+    "named": true,
+    "fields": {
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "typed_by_keyword",
     "named": true,
     "fields": {
       "type": {
@@ -11377,6 +15120,26 @@
     }
   },
   {
+    "type": "unions_keyword",
+    "named": true,
+    "fields": {
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "feature_chain",
+            "named": true
+          },
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "use_case_definition",
     "named": true,
     "fields": {
@@ -11408,7 +15171,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -11436,11 +15215,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -11478,7 +15269,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -11506,11 +15313,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -11623,7 +15442,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -11651,11 +15486,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -11693,7 +15540,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -11721,11 +15584,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -11790,7 +15665,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -11818,11 +15709,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -11860,7 +15763,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -11888,11 +15807,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -11930,7 +15861,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -11958,11 +15905,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -12000,7 +15959,23 @@
           "named": true
         },
         {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -12028,11 +16003,23 @@
           "named": true
         },
         {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
           "type": "subsets_keyword",
           "named": true
         },
         {
           "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -12065,6 +16052,10 @@
         },
         {
           "type": "conditional_expression",
+          "named": true
+        },
+        {
+          "type": "definition_body",
           "named": true
         },
         {
@@ -12207,6 +16198,10 @@
     "named": false
   },
   {
+    "type": "=>",
+    "named": false
+  },
+  {
     "type": ">",
     "named": false
   },
@@ -12252,6 +16247,10 @@
   },
   {
     "type": "actor",
+    "named": false
+  },
+  {
+    "type": "after",
     "named": false
   },
   {
@@ -12315,8 +16314,20 @@
     "named": false
   },
   {
+    "type": "binding",
+    "named": false
+  },
+  {
     "type": "block_comment",
     "named": true
+  },
+  {
+    "type": "bool",
+    "named": false
+  },
+  {
+    "type": "boolean",
+    "named": false
   },
   {
     "type": "by",
@@ -12383,6 +16394,10 @@
     "named": false
   },
   {
+    "type": "crosses",
+    "named": false
+  },
+  {
     "type": "datatype",
     "named": false
   },
@@ -12399,11 +16414,19 @@
     "named": false
   },
   {
+    "type": "defined",
+    "named": false
+  },
+  {
     "type": "dependency",
     "named": false
   },
   {
     "type": "derived",
+    "named": false
+  },
+  {
+    "type": "differences",
     "named": false
   },
   {
@@ -12464,6 +16487,14 @@
   },
   {
     "type": "feature",
+    "named": false
+  },
+  {
+    "type": "featured",
+    "named": false
+  },
+  {
+    "type": "featuring",
     "named": false
   },
   {
@@ -12539,6 +16570,18 @@
     "named": false
   },
   {
+    "type": "intersects",
+    "named": false
+  },
+  {
+    "type": "inv",
+    "named": false
+  },
+  {
+    "type": "invariant",
+    "named": false
+  },
+  {
     "type": "inverse",
     "named": false
   },
@@ -12555,12 +16598,20 @@
     "named": false
   },
   {
+    "type": "language",
+    "named": false
+  },
+  {
     "type": "library",
     "named": false
   },
   {
     "type": "line_comment",
     "named": true
+  },
+  {
+    "type": "locale",
+    "named": false
   },
   {
     "type": "loop",
@@ -12703,6 +16754,10 @@
     "named": false
   },
   {
+    "type": "rep",
+    "named": false
+  },
+  {
     "type": "require",
     "named": false
   },
@@ -12724,6 +16779,10 @@
   },
   {
     "type": "snapshot",
+    "named": false
+  },
+  {
+    "type": "specializes",
     "named": false
   },
   {
@@ -12759,6 +16818,14 @@
     "named": false
   },
   {
+    "type": "succession",
+    "named": false
+  },
+  {
+    "type": "terminate",
+    "named": false
+  },
+  {
     "type": "then",
     "named": false
   },
@@ -12780,6 +16847,14 @@
   },
   {
     "type": "type",
+    "named": false
+  },
+  {
+    "type": "typed",
+    "named": false
+  },
+  {
+    "type": "unions",
     "named": false
   },
   {

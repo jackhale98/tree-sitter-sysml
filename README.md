@@ -5,13 +5,28 @@ OMG SysML v2.0 and KerML 1.0 specifications.
 
 ## Features
 
-- 41 definition types (SysML v2 + KerML)
-- 28+ usage types with full modifier support
-- Behavioral constructs: actions, states, transitions, control flow
-- Relationships: specialization, redefinition, binding, conjugation, chaining
-- Expressions: arithmetic, logical, comparison, invocation, conditional
-- Multiplicity, metadata annotations, imports, packages
-- 195 corpus tests, parses official Annex A example cleanly
+- **41 definition types** (SysML v2 + KerML)
+- **30+ usage types** including binding, succession, succession flow, invariant,
+  boolean expression, and full modifier support
+- **Behavioral constructs**: actions, states, transitions, control flow (if/while/for
+  with body and ref forms), terminate, inline transitions, send/accept/after
+- **Relationships**: specialization (`:>` / `specializes`), redefinition (`:>>` /
+  `redefines`), binding (`::>`), conjugation, chaining, crosses (`=>`),
+  `typed by` / `defined by`, `unions` / `intersects` / `differences`,
+  `featuring by`
+- **Connections**: named binding/succession usages, multi-end connections,
+  end features with multiplicity and item/ref qualifiers
+- **Expressions**: arithmetic, logical, comparison, invocation, conditional,
+  `new` with qualified names, result expressions (trailing expr without `;`)
+- **Requirements**: `assert`/`not satisfy`, `require constraint`, subject/actor/
+  objective/stakeholder/frame declarations
+- **Views**: render with rendering keyword and typing, expose, viewpoint frames
+- **Textual representation**: `rep`/`language` blocks for embedding foreign code
+- **Multiplicity**, metadata annotations, imports (with recursive `**`), packages
+  (with short names and empty declarations), dependencies (comma-separated targets)
+- **195 corpus tests** + **12 official OMG example files** from the
+  [SysML-v2-Release](https://github.com/Systems-Modeling/SysML-v2-Release)
+  repository, all parsing cleanly
 
 ## Editor support
 

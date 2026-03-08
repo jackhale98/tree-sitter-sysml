@@ -88,6 +88,11 @@
 (metaclass_usage name: (identifier) @variable)
 (expr_usage name: (identifier) @variable)
 (step_usage name: (identifier) @variable)
+(binding_usage name: (identifier) @variable)
+(succession_usage name: (identifier) @variable)
+(succession_flow_usage name: (identifier) @variable)
+(invariant_usage name: (identifier) @variable)
+(boolean_expression_usage name: (identifier) @variable)
 
 
 ; Type references
@@ -95,7 +100,7 @@
 (specialization target: (qualified_name) @type)
 
 ; Operators
-["~" "::" "==" "!=" "<=" ">=" "+" "-" "*" "/" "%" "**" "=" ":="] @operator
+["~" "::" "==" "!=" "<=" ">=" "+" "-" "*" "/" "%" "**" "=" ":=" "=>"] @operator
 ["not" "or" "and" "xor" "implies" "hastype" "istype" "as"] @keyword.operator
 
 ; Metadata
@@ -107,10 +112,12 @@
 ; Modifiers
 ["abstract" "variation" "variant" "individual" "readonly"
  "derived" "nonunique" "ordered" "in" "out" "inout" "return"
- "composite" "conjugate" "const" "disjoint" "portion" "var"] @keyword.modifier
+ "composite" "conjugate" "const" "disjoint" "portion" "var"
+ "parallel"] @keyword.modifier
 
 ; Structural keywords
-["package" "import" "alias" "comment" "doc" "about" "filter"] @keyword
+["package" "import" "alias" "comment" "doc" "about" "filter"
+ "language" "rep" "locale" "new"] @keyword
 
 ; Definition keyword
 "def" @keyword
@@ -120,7 +127,8 @@
  "requirement" "constraint" "view" "viewpoint" "rendering" "concern"
  "allocation" "interface" "occurrence" "metadata" "calc"
  "ref" "exhibit" "perform" "include"
- "enum" "enumeration" "flow"
+ "enum" "enumeration" "flow" "binding" "succession"
+ "inv" "invariant" "bool" "boolean"
  ; KerML
  "assoc" "behavior" "class" "connector"
  "datatype" "feature" "function" "interaction"
@@ -129,10 +137,10 @@
  ] @keyword
 
 ; Behavioral keywords
-["entry" "first" "then" "accept"
- "for" "transition"
+["entry" "first" "then" "accept" "after"
+ "for" "transition" "terminate"
  "if" "else" "while" "do" "assign" "send"
- "merge" "decide" "fork" "join"
+ "merge" "decide" "fork" "join" "exit"
 ] @keyword
 
 ; Relationship keywords
@@ -144,7 +152,11 @@
  "render" "expose" "stakeholder" "frame"
  "event" "return" "redefines" "subsets" "via"
  "conjugates" "references" "chains" "inverse"
- "library" "standard" "loop" "until"] @keyword
+ "library" "standard" "loop" "until"
+ "specializes" "typed" "defined" "crosses" "unions" "intersects"
+ "differences" "featuring" "featured" "bind"
+ "dependency" "from" "allocate" "message"
+ "assert" "not" "when" "at"] @keyword
 
 ; Punctuation
 ["{" "}"] @punctuation.bracket
