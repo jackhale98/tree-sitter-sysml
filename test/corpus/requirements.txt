@@ -258,3 +258,89 @@ requirement def BasicReq {
     (definition_body
       (actor_declaration
         name: (identifier)))))
+
+=====================================
+Actor declaration with body
+=====================================
+
+requirement def SafetyReq {
+  actor driver : Actors::Driver {
+    attribute name : String;
+  }
+}
+
+---
+
+(source_file
+  (requirement_definition
+    name: (identifier)
+    (definition_body
+      (actor_declaration
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))
+        (definition_body
+          (attribute_usage
+            name: (identifier)
+            (typed_by
+              type: (qualified_name
+                (identifier)))))))))
+
+=====================================
+Subject declaration with body
+=====================================
+
+requirement def TestReq {
+  subject vehicle : Vehicle {
+    attribute vin : String;
+  }
+}
+
+---
+
+(source_file
+  (requirement_definition
+    name: (identifier)
+    (definition_body
+      (subject_declaration
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)))
+        (definition_body
+          (attribute_usage
+            name: (identifier)
+            (typed_by
+              type: (qualified_name
+                (identifier)))))))))
+
+=====================================
+Stakeholder declaration with body
+=====================================
+
+requirement def SafetyReq {
+  stakeholder regulator : Regulators::Agency {
+    attribute jurisdiction : String;
+  }
+}
+
+---
+
+(source_file
+  (requirement_definition
+    name: (identifier)
+    (definition_body
+      (stakeholder_declaration
+        name: (identifier)
+        (typed_by
+          type: (qualified_name
+            (identifier)
+            (identifier)))
+        (definition_body
+          (attribute_usage
+            name: (identifier)
+            (typed_by
+              type: (qualified_name
+                (identifier)))))))))

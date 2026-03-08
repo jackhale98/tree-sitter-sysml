@@ -1416,13 +1416,15 @@ module.exports = grammar({
     stakeholder_declaration: ($) =>
       seq("stakeholder", optional(field("name", $.identifier)),
           optional($._type_relationships),
-          ";"),
+          optional($.multiplicity),
+          optional($.value_assignment), choice($._body, ";")),
 
     frame_statement: ($) =>
       seq("frame", optional("concern"),
           optional(field("name", $.identifier)),
           optional($._type_relationships),
-          ";"),
+          optional($.multiplicity),
+          optional($.value_assignment), choice($._body, ";")),
 
     verify_statement: ($) =>
       seq("verify", optional("requirement"), $._feature_ref,
@@ -1447,13 +1449,13 @@ module.exports = grammar({
       seq("subject", optional(field("name", $.identifier)),
           optional($.multiplicity),
           optional($._type_relationships),
-          optional($.value_assignment), ";"),
+          optional($.value_assignment), choice($._body, ";")),
 
     actor_declaration: ($) =>
       seq("actor", optional(field("name", $.identifier)),
           optional($._type_relationships),
           optional($.multiplicity),
-          optional($.value_assignment), ";"),
+          optional($.value_assignment), choice($._body, ";")),
 
     objective_declaration: ($) =>
       seq("objective", optional(field("name", $.identifier)),

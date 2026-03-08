@@ -452,6 +452,10 @@
           "named": true
         },
         {
+          "type": "definition_body",
+          "named": true
+        },
+        {
           "type": "differences_keyword",
           "named": true
         },
@@ -6858,6 +6862,10 @@
           "named": true
         },
         {
+          "type": "definition_body",
+          "named": true
+        },
+        {
           "type": "differences_keyword",
           "named": true
         },
@@ -6871,6 +6879,10 @@
         },
         {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "multiplicity",
           "named": true
         },
         {
@@ -6907,6 +6919,10 @@
         },
         {
           "type": "unions_keyword",
+          "named": true
+        },
+        {
+          "type": "value_assignment",
           "named": true
         }
       ]
@@ -12999,6 +13015,10 @@
           "named": true
         },
         {
+          "type": "definition_body",
+          "named": true
+        },
+        {
           "type": "differences_keyword",
           "named": true
         },
@@ -13012,6 +13032,10 @@
         },
         {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "multiplicity",
           "named": true
         },
         {
@@ -13048,6 +13072,10 @@
         },
         {
           "type": "unions_keyword",
+          "named": true
+        },
+        {
+          "type": "value_assignment",
           "named": true
         }
       ]
@@ -14138,6 +14166,10 @@
         },
         {
           "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "definition_body",
           "named": true
         },
         {
