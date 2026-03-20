@@ -1656,23 +1656,31 @@ module.exports = grammar({
       ),
 
     binary_expression: ($) =>
-      prec.left(
-        1,
-        seq(
-          $._expression,
-          choice(
-            "==", "!=", "<", ">", "<=", ">=",
-            "+", "-", "*", "/", "%", "**",
-            "and", "or", "xor", "implies",
-            "hastype", "istype", "as",
-            ".", "::",
-          ),
-          $._expression,
-        ),
+      choice(
+        // implies — lowest precedence, right-associative
+        prec.right(1, seq($._expression, "implies", $._expression)),
+        // or, xor
+        prec.left(2, seq($._expression, choice("or", "xor"), $._expression)),
+        // and
+        prec.left(3, seq($._expression, "and", $._expression)),
+        // equality
+        prec.left(4, seq($._expression, choice("==", "!="), $._expression)),
+        // comparison
+        prec.left(5, seq($._expression, choice("<", ">", "<=", ">="), $._expression)),
+        // additive
+        prec.left(6, seq($._expression, choice("+", "-"), $._expression)),
+        // multiplicative
+        prec.left(7, seq($._expression, choice("*", "/", "%"), $._expression)),
+        // exponentiation — right-associative
+        prec.right(8, seq($._expression, "**", $._expression)),
+        // type operators
+        prec.left(9, seq($._expression, choice("hastype", "istype", "as"), $._expression)),
+        // member access — highest
+        prec.left(10, seq($._expression, choice(".", "::"), $._expression)),
       ),
 
     unary_expression: ($) =>
-      prec(2, seq(choice("not", "-", "~"), $._expression)),
+      prec(11, seq(choice("not", "-", "~"), $._expression)),
 
     paren_expression: ($) =>
       seq("(", commaSep1($._expression), ")"),
