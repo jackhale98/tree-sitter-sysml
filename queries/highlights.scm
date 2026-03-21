@@ -60,6 +60,9 @@
 (expr_definition name: (identifier) @type.definition)
 (step_definition name: (identifier) @type.definition)
 
+; Namespace names
+(namespace_declaration name: (identifier) @module)
+
 ; Package names
 (package_declaration name: (identifier) @module)
 
@@ -112,8 +115,8 @@
 ; Modifiers
 ["abstract" "variation" "variant" "individual" "readonly"
  "derived" "nonunique" "ordered" "in" "out" "inout" "return"
- "composite" "conjugate" "const" "disjoint" "portion" "var"
- "parallel"] @keyword.modifier
+ "composite" "conjugate" "const" "constant" "disjoint" "portion" "var"
+ "ref" "parallel"] @keyword.modifier
 
 ; Structural keywords
 ["package" "import" "alias" "comment" "doc" "about" "filter"

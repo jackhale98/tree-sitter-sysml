@@ -77,8 +77,7 @@ action def Drive {
         (identifier)
         (qualified_name
           (identifier))
-        (qualified_name
-          (identifier))
+        (identifier)
         (qualified_name
           (identifier))))))
 

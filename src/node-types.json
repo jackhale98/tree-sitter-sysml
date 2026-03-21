@@ -1,5 +1,148 @@
 [
   {
+    "type": "accept_action",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "bracket_expression",
+          "named": true
+        },
+        {
+          "type": "chains_keyword",
+          "named": true
+        },
+        {
+          "type": "conditional_expression",
+          "named": true
+        },
+        {
+          "type": "conjugates_keyword",
+          "named": true
+        },
+        {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "meta_expression",
+          "named": true
+        },
+        {
+          "type": "new_expression",
+          "named": true
+        },
+        {
+          "type": "null_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "redefines_keyword",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "references_keyword",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "subsets_keyword",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "accept_clause",
     "named": true,
     "fields": {},
@@ -561,6 +704,10 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "qualified_name",
           "named": true
         }
@@ -977,6 +1124,29 @@
         },
         {
           "type": "unions_keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "assert_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "constraint_body",
+          "named": true
+        },
+        {
+          "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
           "named": true
         }
       ]
@@ -3311,6 +3481,10 @@
       "required": false,
       "types": [
         {
+          "type": "accept_action",
+          "named": true
+        },
+        {
           "type": "action_definition",
           "named": true
         },
@@ -3344,6 +3518,10 @@
         },
         {
           "type": "analysis_usage",
+          "named": true
+        },
+        {
+          "type": "assert_statement",
           "named": true
         },
         {
@@ -3480,6 +3658,10 @@
         },
         {
           "type": "end_feature",
+          "named": true
+        },
+        {
+          "type": "enum_usage",
           "named": true
         },
         {
@@ -3684,6 +3866,10 @@
         },
         {
           "type": "occurrence_usage",
+          "named": true
+        },
+        {
+          "type": "package_declaration",
           "named": true
         },
         {
@@ -4234,6 +4420,10 @@
       "required": false,
       "types": [
         {
+          "type": "accept_action",
+          "named": true
+        },
+        {
           "type": "action_definition",
           "named": true
         },
@@ -4267,6 +4457,10 @@
         },
         {
           "type": "analysis_usage",
+          "named": true
+        },
+        {
+          "type": "assert_statement",
           "named": true
         },
         {
@@ -4387,6 +4581,10 @@
         },
         {
           "type": "end_feature",
+          "named": true
+        },
+        {
+          "type": "enum_usage",
           "named": true
         },
         {
@@ -4559,6 +4757,10 @@
         },
         {
           "type": "occurrence_usage",
+          "named": true
+        },
+        {
+          "type": "package_declaration",
           "named": true
         },
         {
@@ -5102,6 +5304,22 @@
       "required": false,
       "types": [
         {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "bracket_expression",
+          "named": true
+        },
+        {
+          "type": "conditional_expression",
+          "named": true
+        },
+        {
           "type": "definition_body",
           "named": true
         },
@@ -5110,7 +5328,47 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "meta_expression",
+          "named": true
+        },
+        {
+          "type": "new_expression",
+          "named": true
+        },
+        {
+          "type": "null_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
           "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
           "named": true
         }
       ]
@@ -5149,6 +5407,108 @@
         },
         {
           "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "redefines_keyword",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "references_keyword",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
+          "type": "subsets_keyword",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
+          "named": true
+        },
+        {
+          "type": "value_assignment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enum_usage",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "chains_keyword",
+          "named": true
+        },
+        {
+          "type": "conjugates_keyword",
+          "named": true
+        },
+        {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "definition_body",
           "named": true
         },
         {
@@ -5219,6 +5579,10 @@
       "required": false,
       "types": [
         {
+          "type": "accept_action",
+          "named": true
+        },
+        {
           "type": "action_definition",
           "named": true
         },
@@ -5252,6 +5616,10 @@
         },
         {
           "type": "analysis_usage",
+          "named": true
+        },
+        {
+          "type": "assert_statement",
           "named": true
         },
         {
@@ -5376,6 +5744,10 @@
         },
         {
           "type": "enum_member",
+          "named": true
+        },
+        {
+          "type": "enum_usage",
           "named": true
         },
         {
@@ -5548,6 +5920,10 @@
         },
         {
           "type": "occurrence_usage",
+          "named": true
+        },
+        {
+          "type": "package_declaration",
           "named": true
         },
         {
@@ -5754,7 +6130,7 @@
     },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "binding",
@@ -6782,6 +7158,22 @@
       "required": true,
       "types": [
         {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "bracket_expression",
+          "named": true
+        },
+        {
+          "type": "conditional_expression",
+          "named": true
+        },
+        {
           "type": "definition_body",
           "named": true
         },
@@ -6794,7 +7186,43 @@
           "named": true
         },
         {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "meta_expression",
+          "named": true
+        },
+        {
+          "type": "new_expression",
+          "named": true
+        },
+        {
+          "type": "null_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
           "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
           "named": true
         }
       ]
@@ -8893,6 +9321,10 @@
       "required": false,
       "types": [
         {
+          "type": "accept_action",
+          "named": true
+        },
+        {
           "type": "action_definition",
           "named": true
         },
@@ -8926,6 +9358,10 @@
         },
         {
           "type": "analysis_usage",
+          "named": true
+        },
+        {
+          "type": "assert_statement",
           "named": true
         },
         {
@@ -9046,6 +9482,10 @@
         },
         {
           "type": "end_feature",
+          "named": true
+        },
+        {
+          "type": "enum_usage",
           "named": true
         },
         {
@@ -9222,6 +9662,10 @@
         },
         {
           "type": "occurrence_usage",
+          "named": true
+        },
+        {
+          "type": "package_declaration",
           "named": true
         },
         {
@@ -9640,11 +10084,11 @@
           "named": true
         },
         {
-          "type": "definition_body",
+          "type": "differences_keyword",
           "named": true
         },
         {
-          "type": "differences_keyword",
+          "type": "feature_chain",
           "named": true
         },
         {
@@ -9660,7 +10104,15 @@
           "named": true
         },
         {
+          "type": "metadata_body",
+          "named": true
+        },
+        {
           "type": "multiplicity",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
           "named": true
         },
         {
@@ -10287,6 +10739,10 @@
       "required": false,
       "types": [
         {
+          "type": "accept_action",
+          "named": true
+        },
+        {
           "type": "action_definition",
           "named": true
         },
@@ -10316,6 +10772,10 @@
         },
         {
           "type": "analysis_usage",
+          "named": true
+        },
+        {
+          "type": "assert_statement",
           "named": true
         },
         {
@@ -10387,6 +10847,10 @@
           "named": true
         },
         {
+          "type": "connect_statement",
+          "named": true
+        },
+        {
           "type": "connection_definition",
           "named": true
         },
@@ -10428,6 +10892,10 @@
         },
         {
           "type": "end_feature",
+          "named": true
+        },
+        {
+          "type": "enum_usage",
           "named": true
         },
         {
@@ -11017,6 +11485,10 @@
         },
         {
           "type": "references_keyword",
+          "named": true
+        },
+        {
+          "type": "short_name",
           "named": true
         },
         {
@@ -12053,6 +12525,10 @@
       "required": false,
       "types": [
         {
+          "type": "accept_action",
+          "named": true
+        },
+        {
           "type": "action_definition",
           "named": true
         },
@@ -12086,6 +12562,10 @@
         },
         {
           "type": "analysis_usage",
+          "named": true
+        },
+        {
+          "type": "assert_statement",
           "named": true
         },
         {
@@ -12206,6 +12686,10 @@
         },
         {
           "type": "end_feature",
+          "named": true
+        },
+        {
+          "type": "enum_usage",
           "named": true
         },
         {
@@ -12378,6 +12862,10 @@
         },
         {
           "type": "occurrence_usage",
+          "named": true
+        },
+        {
+          "type": "package_declaration",
           "named": true
         },
         {
@@ -13157,6 +13645,10 @@
       "required": false,
       "types": [
         {
+          "type": "accept_action",
+          "named": true
+        },
+        {
           "type": "action_definition",
           "named": true
         },
@@ -13186,6 +13678,10 @@
         },
         {
           "type": "analysis_usage",
+          "named": true
+        },
+        {
+          "type": "assert_statement",
           "named": true
         },
         {
@@ -13257,6 +13753,10 @@
           "named": true
         },
         {
+          "type": "connect_statement",
+          "named": true
+        },
+        {
           "type": "connection_definition",
           "named": true
         },
@@ -13298,6 +13798,10 @@
         },
         {
           "type": "end_feature",
+          "named": true
+        },
+        {
+          "type": "enum_usage",
           "named": true
         },
         {
@@ -13781,6 +14285,10 @@
       "required": false,
       "types": [
         {
+          "type": "accept_action",
+          "named": true
+        },
+        {
           "type": "action_definition",
           "named": true
         },
@@ -13814,6 +14322,10 @@
         },
         {
           "type": "analysis_usage",
+          "named": true
+        },
+        {
+          "type": "assert_statement",
           "named": true
         },
         {
@@ -13942,6 +14454,10 @@
         },
         {
           "type": "entry_action",
+          "named": true
+        },
+        {
+          "type": "enum_usage",
           "named": true
         },
         {
@@ -14118,6 +14634,10 @@
         },
         {
           "type": "occurrence_usage",
+          "named": true
+        },
+        {
+          "type": "package_declaration",
           "named": true
         },
         {
@@ -14960,17 +15480,84 @@
   {
     "type": "succession_statement",
     "named": true,
-    "fields": {},
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
         {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "bracket_expression",
+          "named": true
+        },
+        {
+          "type": "conditional_expression",
+          "named": true
+        },
+        {
           "type": "feature_chain",
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "meta_expression",
+          "named": true
+        },
+        {
+          "type": "new_expression",
+          "named": true
+        },
+        {
+          "type": "null_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
           "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
           "named": true
         }
       ]
@@ -16312,10 +16899,30 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "chains_keyword",
+          "named": true
+        },
+        {
+          "type": "conjugates_keyword",
+          "named": true
+        },
+        {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
           "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
           "named": true
         },
         {
@@ -16323,7 +16930,55 @@
           "named": true
         },
         {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
           "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "redefines_keyword",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "references_keyword",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
+          "type": "subsets_keyword",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         },
         {
@@ -17087,6 +17742,10 @@
   },
   {
     "type": "const",
+    "named": false
+  },
+  {
+    "type": "constant",
     "named": false
   },
   {

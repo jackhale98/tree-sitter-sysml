@@ -8,6 +8,7 @@
   (state_body)
   (requirement_body)
   (constraint_body)
+  (metadata_body)
 ] @indent
 
 ; Dedent closing braces

@@ -21,9 +21,9 @@ package RequirementTest {
 		satisfy r by p;
 		assert satisfy r by q;
 	}
-
+	
 	requirement r1 : R1;
 	not satisfy r1 by p;
 	assert not satisfy r1 by q;
-
+	
 }

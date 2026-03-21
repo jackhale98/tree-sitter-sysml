@@ -31,6 +31,15 @@ module.exports = grammar({
     [$.if_action],
     [$.entry_action],
     [$.definition_body, $.metadata_body],
+    [$.metadata_usage],
+    [$.metadata_usage, $.qualified_name],
+    [$.multiplicity],
+    [$.assert_statement],
+    [$.succession_usage, $.succession_statement],
+    [$.accept_clause, $.accept_action],
+    [$.feature_usage],
+    [$.feature_usage, $._declaration, $.namespace_declaration, $._statement],
+    [$.feature_usage, $._declaration],
   ],
 
   rules: {
@@ -51,6 +60,9 @@ module.exports = grammar({
         $.metadata_annotation,
         $.assignment_statement,
         $.textual_representation,
+        $.connect_statement,
+        $.assert_statement,
+        $.ref_usage,
         $._statement,
       ),
 
@@ -120,12 +132,18 @@ module.exports = grammar({
     // --- Comments ---
 
     comment_element: ($) =>
-      seq(
-        "comment",
-        optional(field("name", $.identifier)),
-        optional(seq("about", commaSep1($.qualified_name))),
-        optional(seq("locale", $.string_literal)),
-        $.block_comment,
+      choice(
+        seq(
+          "comment",
+          optional(field("name", $.identifier)),
+          optional(seq("about", commaSep1($.qualified_name))),
+          optional(seq("locale", $.string_literal)),
+          $.block_comment,
+        ),
+        seq(
+          "locale", $.string_literal,
+          $.block_comment,
+        ),
       ),
 
     doc_comment: ($) =>
@@ -141,6 +159,17 @@ module.exports = grammar({
             $.block_comment),
         seq("language", $.string_literal,
             $.block_comment),
+      ),
+
+    // --- Assert (standalone, without constraint keyword) ---
+
+    assert_statement: ($) =>
+      seq(
+        "assert",
+        optional("not"),
+        $._feature_ref,
+        optional($.constraint_body),
+        optional(";"),
       ),
 
     // --- Satisfy ---
@@ -380,13 +409,13 @@ module.exports = grammar({
       ),
 
     enumeration_definition: ($) =>
-      seq(
+      prec(1, seq(
         choice("enum", "enumeration"), "def",
         optional($.short_name),
         optional(field("name", $.identifier)),
         optional($._type_relationships),
-        $.enumeration_body,
-      ),
+        choice($.enumeration_body, ";"),
+      )),
 
     individual_definition: ($) =>
       seq(
@@ -598,7 +627,7 @@ module.exports = grammar({
         optional(field("name", $.identifier)),
         optional($._type_relationships),
         optional($.value_assignment),
-        ";",
+        choice(";", $._body),
       )),
 
     // =================================================================
@@ -617,7 +646,7 @@ module.exports = grammar({
         $.interface_usage,
         $.constraint_usage,
         $.requirement_usage,
-        $.ref_usage,
+        // ref_usage is handled directly in _element/_body_element, not through _declaration
         $.event_usage,
         $.occurrence_usage,
         $.allocation_usage,
@@ -665,11 +694,14 @@ module.exports = grammar({
         $.fork_node,
         $.join_node,
         $.else_action,
+        $.accept_action,
+        $.enum_usage,
       ),
 
     part_usage: ($) =>
       seq(
         "part",
+        optional($.short_name),
         optional(field("name", $.identifier)),
         optional($.multiplicity),
         optional($._type_relationships),
@@ -705,7 +737,6 @@ module.exports = grammar({
 
     action_usage: ($) =>
       seq(
-        optional("ref"),
         "action",
         optional(field("name", $.identifier)),
         optional($.multiplicity),
@@ -737,7 +768,6 @@ module.exports = grammar({
 
     item_usage: ($) =>
       seq(
-        optional("ref"),
         "item",
         optional(field("name", $.identifier)),
         optional($.multiplicity),
@@ -786,14 +816,14 @@ module.exports = grammar({
       ),
 
     ref_usage: ($) =>
-      seq(
+      prec(1, seq(
         "ref",
         optional(field("name", $.identifier)),
         optional($._type_relationships),
         optional($.multiplicity),
         optional($.value_assignment),
         choice($._body, ";"),
-      ),
+      )),
 
     event_usage: ($) =>
       seq(
@@ -934,9 +964,11 @@ module.exports = grammar({
       seq(
         "metadata",
         optional(field("name", $.identifier)),
+        optional($._feature_ref),
         optional($._type_relationships),
         optional($.multiplicity),
-        choice($._body, ";"),
+        optional($.metadata_body),
+        optional(";"),
       ),
 
     // Additional KerML usages
@@ -1002,7 +1034,7 @@ module.exports = grammar({
         "end",
         repeat($._prefix_metadata),
         optional($.multiplicity),
-        optional(choice("ref", "item")),
+        optional(choice("ref", "item", "port", "part", "attribute")),
         optional(field("name", $.identifier)),
         optional($._type_relationships),
         optional($.multiplicity),
@@ -1015,8 +1047,9 @@ module.exports = grammar({
       choice(
         // With modifiers: name and type are optional
         seq(
-          repeat($._prefix_metadata),
+          repeat(choice($._prefix_metadata, $._modifier)),
           repeat1($._modifier),
+          repeat($._prefix_metadata),
           optional(field("name", $.identifier)),
           optional($._type_relationships),
           optional($.multiplicity),
@@ -1071,24 +1104,31 @@ module.exports = grammar({
     then_succession: ($) =>
       seq(
         "then",
-        optional(choice("action", "fork", "join", "merge", "decide", "event", "terminate")),
+        optional(choice("action", "state", "fork", "join", "merge", "decide", "event", "terminate")),
         optional($._feature_ref),
         optional($.multiplicity),
         optional($._type_relationships),
         optional($.value_assignment),
-        optional(choice(
+        choice(
           seq("send", optional($._expression),
               optional(seq("via", $._feature_ref)),
-              optional(seq("to", $._feature_ref))),
-          $.accept_clause,
-        )),
-        choice($._body, ";"),
+              optional(seq("to", $._feature_ref)),
+              choice($._body, ";")),
+          seq($.accept_clause, choice($._body, ";")),
+          seq("while", $._expression, $._body, optional(seq("until", $._expression, ";"))),
+          $._body,
+          ";",
+        ),
       ),
 
     succession_statement: ($) =>
       choice(
         seq("first", $._feature_ref, "then", $._feature_ref, ";"),
         seq("first", $._feature_ref, ";"),
+        seq("succession", optional(field("name", $.identifier)),
+            "first", $._feature_ref,
+            optional(seq("if", $._expression)),
+            "then", $._feature_ref, ";"),
       ),
 
     perform_statement: ($) =>
@@ -1180,6 +1220,25 @@ module.exports = grammar({
           optional(seq("to", $._feature_ref)),
           ";"),
 
+    accept_action: ($) =>
+      seq(
+        "accept",
+        choice(
+          seq("when", $._expression),
+          seq("at", $._expression),
+          seq(
+            $._feature_ref,
+            optional($._type_relationships),
+            optional(seq("after", $._expression)),
+            optional(seq("via", $._feature_ref)),
+          ),
+        ),
+        choice(
+          seq("then", $._feature_ref, ";"),
+          ";",
+        ),
+      ),
+
     if_action: ($) =>
       choice(
         seq("if", $._expression,
@@ -1196,14 +1255,14 @@ module.exports = grammar({
     while_action: ($) =>
       choice(
         seq("while", $._expression, "do", $._feature_ref, ";"),
-        seq("while", $._expression, $._body),
+        seq("while", $._expression, $._body, optional(seq("until", $._expression, ";"))),
       ),
 
     for_action: ($) =>
       choice(
-        seq("for", $.identifier, ":", $._feature_ref, "in", $._feature_ref,
+        seq("for", $.identifier, ":", $._feature_ref, "in", $._expression,
             "do", $._feature_ref, ";"),
-        seq("for", $.identifier, ":", $._feature_ref, "in", $._feature_ref,
+        seq("for", $.identifier, ":", $._feature_ref, "in", $._expression,
             $._body),
       ),
 
@@ -1220,8 +1279,12 @@ module.exports = grammar({
         optional("action"),
         optional(field("name", $.identifier)),
         optional($._type_relationships),
-        optional(seq("until", $._expression)),
-        choice($._body, ";"),
+        choice(
+          seq($._body, optional(seq("until", $._expression, ";"))),
+          seq("until", $._expression, $._body),
+          seq("until", $._expression, ";"),
+          ";",
+        ),
       ),
 
     merge_node: ($) =>
@@ -1281,7 +1344,12 @@ module.exports = grammar({
       ),
 
     allocate_clause: ($) =>
-      seq("allocate", $._feature_ref, "to", $._feature_ref),
+      choice(
+        seq("allocate", $._feature_ref, "to", $._feature_ref),
+        seq("allocate", "(", commaSep1(seq(
+          $.identifier, token(seq("::", ">")), $._feature_ref,
+        )), ")"),
+      ),
 
     // --- Body variants ---
 
@@ -1303,6 +1371,7 @@ module.exports = grammar({
       seq("entry", optional("action"), choice(
         seq(";", optional(seq("then", $._feature_ref, ";"))),
         $.definition_body,
+        seq("assign", $._feature_ref, ":=", $._expression, ";"),
         seq($._feature_ref, choice(
           seq(";", optional(seq("then", $._feature_ref, ";"))),
           $.definition_body,
@@ -1312,6 +1381,7 @@ module.exports = grammar({
     do_action: ($) =>
       seq("do", choice(
         seq("send", $._expression, choice("to", "via"), $._feature_ref, ";"),
+        seq("assign", $._feature_ref, ":=", $._expression, ";"),
         seq("action", $._feature_ref, optional($._type_relationships), choice(";", $._body)),
         seq($._feature_ref, choice(";", $._body)),
         $._body,
@@ -1333,13 +1403,16 @@ module.exports = grammar({
 
     _body_element: ($) =>
       choice(
+        $.package_declaration,
         $._declaration,
         $.feature_usage,
+        $.ref_usage,
         $.import_statement,
         $.alias_declaration,
         $.comment_element,
         $.doc_comment,
         $.satisfy_statement,
+        $.assert_statement,
         $.subject_declaration,
         $.actor_declaration,
         $.objective_declaration,
@@ -1440,7 +1513,9 @@ module.exports = grammar({
           optional($.value_assignment), choice($._body, ";")),
 
     verify_statement: ($) =>
-      seq("verify", optional("requirement"), $._feature_ref,
+      seq("verify", optional("requirement"),
+          optional($._feature_ref),
+          optional($._type_relationships),
           optional($.value_assignment), choice($._body, ";")),
 
     bind_statement: ($) =>
@@ -1462,6 +1537,7 @@ module.exports = grammar({
       seq("subject", optional(field("name", $.identifier)),
           optional($.multiplicity),
           optional($._type_relationships),
+          optional($.multiplicity),
           optional($.value_assignment), choice($._body, ";")),
 
     actor_declaration: ($) =>
@@ -1474,6 +1550,17 @@ module.exports = grammar({
       seq("objective", optional(field("name", $.identifier)),
           optional($._type_relationships),
           choice($._body, ";")),
+
+    // --- Standalone enum usage (e.g. `enum color : ColorKind;`) ---
+
+    enum_usage: ($) =>
+      seq(
+        "enum",
+        optional(field("name", $.identifier)),
+        optional($._type_relationships),
+        optional($.value_assignment),
+        choice($._body, ";"),
+      ),
 
     filter_expression: ($) =>
       choice(
@@ -1653,9 +1740,11 @@ module.exports = grammar({
         "composite",
         "conjugate",
         "const",
+        "constant",
         "disjoint",
         "portion",
         "var",
+        "ref",
       ),
 
     // --- Feature reference ---
@@ -1725,7 +1814,7 @@ module.exports = grammar({
       prec(3, seq($._expression, "#", "(", $._expression, ")")),
 
     invocation_expression: ($) =>
-      prec(3, seq($.identifier, "(", commaSep($._expression), ")")),
+      prec(3, seq(choice($.qualified_name, $.identifier), "(", commaSep($._argument), ")")),
 
     new_expression: ($) =>
       seq("new", choice($.qualified_name, $.identifier), "(", commaSep($._argument), ")"),
