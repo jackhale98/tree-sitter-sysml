@@ -1,0 +1,102 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install dependencies
+        run: npm install
+      - name: Generate parser
+        run: npx tree-sitter generate
+      - name: Run corpus tests
+        run: npx tree-sitter test
+      - name: Parse official examples
+        run: |
+          for f in test/examples/*.sysml; do
+            echo "Parsing $f..."
+            npx tree-sitter parse "$f" > /dev/null
+          done
+
+  build-wasm:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install dependencies
+        run: npm install
+      - name: Generate parser
+        run: npx tree-sitter generate
+      - name: Build WASM
+        run: npx tree-sitter build --wasm -o tree-sitter-sysml.wasm
+      - name: Upload WASM artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: wasm
+          path: tree-sitter-sysml.wasm
+
+  build-native:
+    needs: test
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            target: linux-x64
+          - os: macos-latest
+            target: macos-arm64
+          - os: windows-latest
+            target: windows-x64
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install dependencies
+        run: npm install
+      - name: Generate parser
+        run: npx tree-sitter generate
+      - name: Build native parser
+        run: npx tree-sitter build -o tree-sitter-sysml-${{ matrix.target }}${{ matrix.os == 'windows-latest' && '.dll' || (matrix.os == 'macos-latest' && '.dylib' || '.so') }}
+      - name: Upload native artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-${{ matrix.target }}
+          path: tree-sitter-sysml-${{ matrix.target }}.*
+
+  release:
+    needs: [build-wasm, build-native]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: Collect release assets
+        run: |
+          mkdir -p release
+          cp artifacts/wasm/tree-sitter-sysml.wasm release/
+          for dir in artifacts/native-*/; do
+            cp "$dir"* release/
+          done
+          ls -la release/
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: release/*

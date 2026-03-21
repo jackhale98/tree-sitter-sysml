@@ -20,3 +20,9 @@ jobs:
         run: npx tree-sitter generate
       - name: Run corpus tests
         run: npx tree-sitter test
+      - name: Parse official examples
+        run: |
+          for f in test/examples/*.sysml; do
+            echo "Parsing $f..."
+            npx tree-sitter parse "$f" > /dev/null
+          done
