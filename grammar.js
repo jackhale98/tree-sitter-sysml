@@ -30,6 +30,7 @@ module.exports = grammar({
     [$.constraint_usage, $.require_statement],
     [$.if_action],
     [$.entry_action],
+    [$.definition_body, $.metadata_body],
   ],
 
   rules: {
@@ -38,6 +39,7 @@ module.exports = grammar({
     _element: ($) =>
       choice(
         $.package_declaration,
+        $.namespace_declaration,
         $._declaration,
         $.feature_usage,
         $.import_statement,
@@ -79,6 +81,17 @@ module.exports = grammar({
 
     package_body: ($) => seq("{", repeat($._element), "}"),
 
+    // --- Namespace (KerML bare namespace without def) ---
+
+    namespace_declaration: ($) =>
+      seq(
+        repeat($._prefix_metadata),
+        "namespace",
+        optional($.short_name),
+        optional(field("name", $.identifier)),
+        choice($.package_body, ";"),
+      ),
+
     // --- Import ---
 
     import_statement: ($) =>
@@ -110,7 +123,7 @@ module.exports = grammar({
       seq(
         "comment",
         optional(field("name", $.identifier)),
-        optional(seq("about", $.qualified_name)),
+        optional(seq("about", commaSep1($.qualified_name))),
         optional(seq("locale", $.string_literal)),
         $.block_comment,
       ),
@@ -198,7 +211,7 @@ module.exports = grammar({
       seq(
         "part", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -207,7 +220,7 @@ module.exports = grammar({
       seq(
         "action", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -216,7 +229,7 @@ module.exports = grammar({
       seq(
         "state", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.state_body, ";"),
       ),
@@ -225,7 +238,7 @@ module.exports = grammar({
       seq(
         "port", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -235,7 +248,7 @@ module.exports = grammar({
         optional("flow"),
         "connection", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -244,7 +257,7 @@ module.exports = grammar({
       seq(
         "flow", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -253,7 +266,7 @@ module.exports = grammar({
       seq(
         "attribute", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -262,7 +275,7 @@ module.exports = grammar({
       seq(
         "item", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -271,7 +284,7 @@ module.exports = grammar({
       seq(
         "requirement", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -280,7 +293,7 @@ module.exports = grammar({
       seq(
         "constraint", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -289,7 +302,7 @@ module.exports = grammar({
       seq(
         "view", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -298,7 +311,7 @@ module.exports = grammar({
       seq(
         "viewpoint", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -307,7 +320,7 @@ module.exports = grammar({
       seq(
         "rendering", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -316,7 +329,7 @@ module.exports = grammar({
       seq(
         "concern", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -325,7 +338,7 @@ module.exports = grammar({
       seq(
         "use", "case", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -334,7 +347,7 @@ module.exports = grammar({
       seq(
         "analysis", optional("case"), "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -343,7 +356,7 @@ module.exports = grammar({
       seq(
         "verification", optional("case"), "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -352,7 +365,7 @@ module.exports = grammar({
       seq(
         "allocation", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -361,7 +374,7 @@ module.exports = grammar({
       seq(
         "interface", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -370,7 +383,7 @@ module.exports = grammar({
       seq(
         choice("enum", "enumeration"), "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         $.enumeration_body,
       ),
@@ -379,7 +392,7 @@ module.exports = grammar({
       seq(
         "individual", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -388,7 +401,7 @@ module.exports = grammar({
       seq(
         "occurrence", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -397,7 +410,7 @@ module.exports = grammar({
       seq(
         "metadata", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -406,7 +419,7 @@ module.exports = grammar({
       seq(
         "calc", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -417,7 +430,7 @@ module.exports = grammar({
       seq(
         "case", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -426,7 +439,7 @@ module.exports = grammar({
       seq(
         "class", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -435,7 +448,7 @@ module.exports = grammar({
       seq(
         "struct", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -444,7 +457,7 @@ module.exports = grammar({
       seq(
         "assoc", optional("struct"), "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -453,7 +466,7 @@ module.exports = grammar({
       seq(
         "behavior", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -462,7 +475,7 @@ module.exports = grammar({
       seq(
         "datatype", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -471,7 +484,7 @@ module.exports = grammar({
       seq(
         "feature", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -480,7 +493,7 @@ module.exports = grammar({
       seq(
         "function", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -489,7 +502,7 @@ module.exports = grammar({
       seq(
         "predicate", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -498,7 +511,7 @@ module.exports = grammar({
       seq(
         "connector", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -507,7 +520,7 @@ module.exports = grammar({
       seq(
         "interaction", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -516,7 +529,7 @@ module.exports = grammar({
       seq(
         "type", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -525,7 +538,7 @@ module.exports = grammar({
       seq(
         "namespace", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -536,7 +549,7 @@ module.exports = grammar({
       seq(
         "classifier", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -545,7 +558,7 @@ module.exports = grammar({
       seq(
         "metaclass", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -554,7 +567,7 @@ module.exports = grammar({
       seq(
         "expr", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -563,7 +576,7 @@ module.exports = grammar({
       seq(
         "step", "def",
         optional($.short_name),
-        field("name", $.identifier),
+        optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
@@ -1474,10 +1487,27 @@ module.exports = grammar({
           ";"),
 
     metadata_annotation: ($) =>
-      seq("@", $._feature_ref, optional(seq("about", $._feature_ref)), optional($._body), optional(";")),
+      seq("@", $._feature_ref, optional(seq("about", $._feature_ref)), optional($.metadata_body), optional(";")),
+
+    metadata_body: ($) =>
+      seq("{", repeat(choice(
+        $.metadata_body_usage,
+        $._body_element,
+      )), "}"),
+
+    metadata_body_usage: ($) =>
+      prec(1, seq(
+        optional("ref"),
+        choice(seq(":", token.immediate(prec(2, ">>"))), "redefines"),
+        $._feature_ref,
+        optional($._type_relationships),
+        optional($.value_assignment),
+        optional($.metadata_body),
+        ";",
+      )),
 
     metadata_annotation_list: ($) =>
-      prec.left(repeat1(seq("{", "@", $._feature_ref, optional($._body), "}"))),
+      prec.left(repeat1(seq("{", "@", $._feature_ref, optional($.metadata_body), "}"))),
 
     expression_statement: ($) =>
       seq($._expression, ";"),
@@ -1516,59 +1546,62 @@ module.exports = grammar({
       ),
 
     redefinition: ($) =>
-      seq(token.immediate(prec(2, ">>")), field("target", $._feature_ref)),
+      seq(token.immediate(prec(2, ">>")), commaSep1(field("target", $._feature_ref))),
 
     specialization: ($) =>
-      seq(token.immediate(prec(1, ">")), field("target", $._feature_ref)),
+      seq(token.immediate(prec(1, ">")), commaSep1(field("target", $._feature_ref))),
 
     binding: ($) =>
       seq(token(seq("::", ">")), field("target", $._feature_ref)),
 
     typed_by: ($) =>
-      seq(optional("~"), field("type", $.qualified_name)),
+      seq(optional("~"), commaSep1(field("type", $.qualified_name))),
 
     redefines_keyword: ($) =>
-      seq("redefines", field("target", $._feature_ref)),
+      seq("redefines", commaSep1(field("target", $._feature_ref))),
 
     subsets_keyword: ($) =>
-      seq("subsets", field("target", $._feature_ref)),
+      seq("subsets", commaSep1(field("target", $._feature_ref))),
 
     conjugates_keyword: ($) =>
-      seq("conjugates", field("target", $._feature_ref)),
+      seq("conjugates", commaSep1(field("target", $._feature_ref))),
 
     references_keyword: ($) =>
-      seq("references", field("target", $._feature_ref)),
+      seq("references", commaSep1(field("target", $._feature_ref))),
 
     chains_keyword: ($) =>
-      seq("chains", field("target", $._feature_ref)),
+      seq("chains", commaSep1(field("target", $._feature_ref))),
 
     inverse_keyword: ($) =>
       seq("inverse", "of", field("target", $._feature_ref)),
 
     specializes_keyword: ($) =>
-      seq("specializes", field("target", $._feature_ref)),
+      seq("specializes", commaSep1(field("target", $._feature_ref))),
 
     typed_by_keyword: ($) =>
-      seq(choice(seq("typed", "by"), seq("defined", "by")), field("type", $.qualified_name)),
+      seq(choice(seq("typed", "by"), seq("defined", "by")), commaSep1(field("type", $.qualified_name))),
 
     crosses_keyword: ($) =>
-      seq(choice("crosses", "=>"), field("target", $._feature_ref)),
+      seq(choice("crosses", "=>"), commaSep1(field("target", $._feature_ref))),
 
     unions_keyword: ($) =>
-      seq("unions", field("target", $._feature_ref)),
+      seq("unions", commaSep1(field("target", $._feature_ref))),
 
     intersects_keyword: ($) =>
-      seq("intersects", field("target", $._feature_ref)),
+      seq("intersects", commaSep1(field("target", $._feature_ref))),
 
     differences_keyword: ($) =>
-      seq("differences", field("target", $._feature_ref)),
+      seq("differences", commaSep1(field("target", $._feature_ref))),
 
     featuring_keyword: ($) =>
-      seq(choice(seq("featuring", "by"), seq("featured", "by")), field("target", $._feature_ref)),
+      seq(choice(seq("featuring", "by"), seq("featured", "by")), commaSep1(field("target", $._feature_ref))),
 
     multiplicity: ($) =>
       seq("[", choice("*", seq($._expression, optional(seq("..", choice("*", $._expression))))), "]",
-          optional(choice("ordered", "nonunique"))),
+          optional(choice(
+            seq("ordered", optional("nonunique")),
+            seq("nonunique", optional("ordered")),
+          ))),
 
     value_assignment: ($) =>
       seq(choice("=", ":=", seq("default", optional(choice("=", ":=")))), $._expression),
@@ -1595,7 +1628,7 @@ module.exports = grammar({
       $.hash_tag,
 
     hash_tag: ($) =>
-      seq("#", $.identifier),
+      prec(1, seq("#", choice($.qualified_name, $.identifier))),
 
     // --- Visibility ---
 
