@@ -366,7 +366,7 @@ part def Vehicle {
     name: (identifier)
     (definition_body
       (end_feature
-        name: (identifier)
+        end_name: (identifier)
         (typed_by
           type: (qualified_name
             (identifier)

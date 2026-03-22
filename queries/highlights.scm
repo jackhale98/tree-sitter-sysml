@@ -103,7 +103,7 @@
 (specialization target: (qualified_name) @type)
 
 ; Operators
-["~" "::" "==" "!=" "<=" ">=" "+" "-" "*" "/" "%" "**" "=" ":=" "=>"] @operator
+["~" "::" "==" "!=" "<=" ">=" "+" "-" "*" "/" "%" "**" "=" ":=" "=>" "->" "&" ".." ".?"] @operator
 ["not" "or" "and" "xor" "implies" "hastype" "istype" "as"] @keyword.operator
 
 ; Metadata
