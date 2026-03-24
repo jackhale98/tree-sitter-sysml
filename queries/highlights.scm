@@ -103,7 +103,7 @@
 (specialization target: (qualified_name) @type)
 
 ; Operators
-["~" "::" "==" "!=" "<=" ">=" "+" "-" "*" "/" "%" "**" "=" ":=" "=>" "->" "&" ".." ".?"] @operator
+["~" "::" "==" "!=" "===" "!==" "<=" ">=" "+" "-" "*" "/" "%" "**" "=" ":=" "=>" "->" "&" ".." ".?" "??" "^" "|" "$"] @operator
 ["not" "or" "and" "xor" "implies" "hastype" "istype" "as"] @keyword.operator
 
 ; Metadata
@@ -159,7 +159,10 @@
  "specializes" "typed" "defined" "crosses" "unions" "intersects"
  "differences" "featuring" "featured" "bind"
  "dependency" "from" "allocate" "message"
- "assert" "not" "when" "at"] @keyword
+ "assert" "not" "when" "at"
+ "specialization" "conjugation" "disjoining" "inverting"
+ "subtype" "subclassifier" "subset" "redefinition" "typing"
+ "conjugate"] @keyword
 
 ; Punctuation
 ["{" "}"] @punctuation.bracket
