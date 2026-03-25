@@ -1006,10 +1006,6 @@
           "named": true
         },
         {
-          "type": "boolean_expression_usage",
-          "named": true
-        },
-        {
           "type": "boolean_literal",
           "named": true
         },
@@ -1038,11 +1034,15 @@
           "named": true
         },
         {
+          "type": "constraint_expression_usage",
+          "named": true
+        },
+        {
           "type": "constraint_usage",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "control_node",
           "named": true
         },
         {
@@ -1118,10 +1118,6 @@
           "named": true
         },
         {
-          "type": "fork_node",
-          "named": true
-        },
-        {
           "type": "frame_statement",
           "named": true
         },
@@ -1166,10 +1162,6 @@
           "named": true
         },
         {
-          "type": "invariant_usage",
-          "named": true
-        },
-        {
           "type": "inverse_statement",
           "named": true
         },
@@ -1178,19 +1170,11 @@
           "named": true
         },
         {
-          "type": "join_node",
-          "named": true
-        },
-        {
           "type": "kerml_usage",
           "named": true
         },
         {
           "type": "loop_action",
-          "named": true
-        },
-        {
-          "type": "merge_node",
           "named": true
         },
         {
@@ -1251,10 +1235,6 @@
         },
         {
           "type": "redefinition_statement",
-          "named": true
-        },
-        {
-          "type": "ref_usage",
           "named": true
         },
         {
@@ -1468,108 +1448,6 @@
         },
         {
           "type": "qualified_name",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "boolean_expression_usage",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "constraint_body",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
           "named": true
         },
         {
@@ -2271,10 +2149,6 @@
           "named": true
         },
         {
-          "type": "boolean_expression_usage",
-          "named": true
-        },
-        {
           "type": "boolean_literal",
           "named": true
         },
@@ -2303,11 +2177,15 @@
           "named": true
         },
         {
+          "type": "constraint_expression_usage",
+          "named": true
+        },
+        {
           "type": "constraint_usage",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "control_node",
           "named": true
         },
         {
@@ -2383,10 +2261,6 @@
           "named": true
         },
         {
-          "type": "fork_node",
-          "named": true
-        },
-        {
           "type": "frame_statement",
           "named": true
         },
@@ -2431,10 +2305,6 @@
           "named": true
         },
         {
-          "type": "invariant_usage",
-          "named": true
-        },
-        {
           "type": "inverse_statement",
           "named": true
         },
@@ -2443,19 +2313,11 @@
           "named": true
         },
         {
-          "type": "join_node",
-          "named": true
-        },
-        {
           "type": "kerml_usage",
           "named": true
         },
         {
           "type": "loop_action",
-          "named": true
-        },
-        {
-          "type": "merge_node",
           "named": true
         },
         {
@@ -2512,10 +2374,6 @@
         },
         {
           "type": "redefinition_statement",
-          "named": true
-        },
-        {
-          "type": "ref_usage",
           "named": true
         },
         {
@@ -2620,6 +2478,108 @@
         },
         {
           "type": "while_action",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "constraint_expression_usage",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "chains_keyword",
+          "named": true
+        },
+        {
+          "type": "conjugates_keyword",
+          "named": true
+        },
+        {
+          "type": "constraint_body",
+          "named": true
+        },
+        {
+          "type": "crosses_keyword",
+          "named": true
+        },
+        {
+          "type": "differences_keyword",
+          "named": true
+        },
+        {
+          "type": "disjoint_from_keyword",
+          "named": true
+        },
+        {
+          "type": "featuring_keyword",
+          "named": true
+        },
+        {
+          "type": "intersects_keyword",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "redefines_keyword",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "references_keyword",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "specializes_keyword",
+          "named": true
+        },
+        {
+          "type": "subsets_keyword",
+          "named": true
+        },
+        {
+          "type": "tilde_conjugation",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -2732,27 +2692,7 @@
     }
   },
   {
-    "type": "crosses_keyword",
-    "named": true,
-    "fields": {
-      "target": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "feature_chain",
-            "named": true
-          },
-          {
-            "type": "qualified_name",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "decide_node",
+    "type": "control_node",
     "named": true,
     "fields": {
       "name": {
@@ -2775,6 +2715,26 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "crosses_keyword",
+    "named": true,
+    "fields": {
+      "target": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "feature_chain",
+            "named": true
+          },
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -2936,10 +2896,6 @@
           "named": true
         },
         {
-          "type": "boolean_expression_usage",
-          "named": true
-        },
-        {
           "type": "comment_element",
           "named": true
         },
@@ -2956,11 +2912,15 @@
           "named": true
         },
         {
+          "type": "constraint_expression_usage",
+          "named": true
+        },
+        {
           "type": "constraint_usage",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "control_node",
           "named": true
         },
         {
@@ -3032,10 +2992,6 @@
           "named": true
         },
         {
-          "type": "fork_node",
-          "named": true
-        },
-        {
           "type": "frame_statement",
           "named": true
         },
@@ -3072,15 +3028,7 @@
           "named": true
         },
         {
-          "type": "invariant_usage",
-          "named": true
-        },
-        {
           "type": "inverse_statement",
-          "named": true
-        },
-        {
-          "type": "join_node",
           "named": true
         },
         {
@@ -3089,10 +3037,6 @@
         },
         {
           "type": "loop_action",
-          "named": true
-        },
-        {
-          "type": "merge_node",
           "named": true
         },
         {
@@ -3121,10 +3065,6 @@
         },
         {
           "type": "redefinition_statement",
-          "named": true
-        },
-        {
-          "type": "ref_usage",
           "named": true
         },
         {
@@ -3916,10 +3856,6 @@
           "named": true
         },
         {
-          "type": "boolean_expression_usage",
-          "named": true
-        },
-        {
           "type": "comment_element",
           "named": true
         },
@@ -3936,11 +3872,15 @@
           "named": true
         },
         {
+          "type": "constraint_expression_usage",
+          "named": true
+        },
+        {
           "type": "constraint_usage",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "control_node",
           "named": true
         },
         {
@@ -4016,10 +3956,6 @@
           "named": true
         },
         {
-          "type": "fork_node",
-          "named": true
-        },
-        {
           "type": "frame_statement",
           "named": true
         },
@@ -4056,15 +3992,7 @@
           "named": true
         },
         {
-          "type": "invariant_usage",
-          "named": true
-        },
-        {
           "type": "inverse_statement",
-          "named": true
-        },
-        {
-          "type": "join_node",
           "named": true
         },
         {
@@ -4073,10 +4001,6 @@
         },
         {
           "type": "loop_action",
-          "named": true
-        },
-        {
-          "type": "merge_node",
           "named": true
         },
         {
@@ -4105,10 +4029,6 @@
         },
         {
           "type": "redefinition_statement",
-          "named": true
-        },
-        {
-          "type": "ref_usage",
           "named": true
         },
         {
@@ -5092,32 +5012,6 @@
     }
   },
   {
-    "type": "fork_node",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "definition_body",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "frame_statement",
     "named": true,
     "fields": {
@@ -6011,108 +5905,6 @@
     }
   },
   {
-    "type": "invariant_usage",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "constraint_body",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "inverse_keyword",
     "named": true,
     "fields": {
@@ -6240,32 +6032,6 @@
         },
         {
           "type": "unary_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "join_node",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "definition_body",
           "named": true
         }
       ]
@@ -6568,32 +6334,6 @@
     }
   },
   {
-    "type": "merge_node",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "definition_body",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "message_statement",
     "named": true,
     "fields": {
@@ -6858,10 +6598,6 @@
           "named": true
         },
         {
-          "type": "boolean_expression_usage",
-          "named": true
-        },
-        {
           "type": "comment_element",
           "named": true
         },
@@ -6878,11 +6614,15 @@
           "named": true
         },
         {
+          "type": "constraint_expression_usage",
+          "named": true
+        },
+        {
           "type": "constraint_usage",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "control_node",
           "named": true
         },
         {
@@ -6954,10 +6694,6 @@
           "named": true
         },
         {
-          "type": "fork_node",
-          "named": true
-        },
-        {
           "type": "frame_statement",
           "named": true
         },
@@ -6994,15 +6730,7 @@
           "named": true
         },
         {
-          "type": "invariant_usage",
-          "named": true
-        },
-        {
           "type": "inverse_statement",
-          "named": true
-        },
-        {
-          "type": "join_node",
           "named": true
         },
         {
@@ -7011,10 +6739,6 @@
         },
         {
           "type": "loop_action",
-          "named": true
-        },
-        {
-          "type": "merge_node",
           "named": true
         },
         {
@@ -7047,10 +6771,6 @@
         },
         {
           "type": "redefinition_statement",
-          "named": true
-        },
-        {
-          "type": "ref_usage",
           "named": true
         },
         {
@@ -7712,10 +7432,6 @@
           "named": true
         },
         {
-          "type": "boolean_expression_usage",
-          "named": true
-        },
-        {
           "type": "comment_element",
           "named": true
         },
@@ -7732,11 +7448,15 @@
           "named": true
         },
         {
+          "type": "constraint_expression_usage",
+          "named": true
+        },
+        {
           "type": "constraint_usage",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "control_node",
           "named": true
         },
         {
@@ -7804,10 +7524,6 @@
           "named": true
         },
         {
-          "type": "fork_node",
-          "named": true
-        },
-        {
           "type": "generic_definition",
           "named": true
         },
@@ -7832,15 +7548,7 @@
           "named": true
         },
         {
-          "type": "invariant_usage",
-          "named": true
-        },
-        {
           "type": "inverse_statement",
-          "named": true
-        },
-        {
-          "type": "join_node",
           "named": true
         },
         {
@@ -7849,10 +7557,6 @@
         },
         {
           "type": "loop_action",
-          "named": true
-        },
-        {
-          "type": "merge_node",
           "named": true
         },
         {
@@ -7877,10 +7581,6 @@
         },
         {
           "type": "perform_statement",
-          "named": true
-        },
-        {
-          "type": "ref_usage",
           "named": true
         },
         {
@@ -8345,120 +8045,6 @@
     }
   },
   {
-    "type": "ref_usage",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "multiplicity",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        },
-        {
-          "type": "value_assignment",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "references_keyword",
     "named": true,
     "fields": {
@@ -8740,10 +8326,6 @@
           "named": true
         },
         {
-          "type": "boolean_expression_usage",
-          "named": true
-        },
-        {
           "type": "comment_element",
           "named": true
         },
@@ -8760,11 +8342,15 @@
           "named": true
         },
         {
+          "type": "constraint_expression_usage",
+          "named": true
+        },
+        {
           "type": "constraint_usage",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "control_node",
           "named": true
         },
         {
@@ -8836,10 +8422,6 @@
           "named": true
         },
         {
-          "type": "fork_node",
-          "named": true
-        },
-        {
           "type": "frame_statement",
           "named": true
         },
@@ -8876,15 +8458,7 @@
           "named": true
         },
         {
-          "type": "invariant_usage",
-          "named": true
-        },
-        {
           "type": "inverse_statement",
-          "named": true
-        },
-        {
-          "type": "join_node",
           "named": true
         },
         {
@@ -8893,10 +8467,6 @@
         },
         {
           "type": "loop_action",
-          "named": true
-        },
-        {
-          "type": "merge_node",
           "named": true
         },
         {
@@ -8925,10 +8495,6 @@
         },
         {
           "type": "redefinition_statement",
-          "named": true
-        },
-        {
-          "type": "ref_usage",
           "named": true
         },
         {
@@ -9485,10 +9051,6 @@
           "named": true
         },
         {
-          "type": "boolean_expression_usage",
-          "named": true
-        },
-        {
           "type": "boolean_literal",
           "named": true
         },
@@ -9517,11 +9079,15 @@
           "named": true
         },
         {
+          "type": "constraint_expression_usage",
+          "named": true
+        },
+        {
           "type": "constraint_usage",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "control_node",
           "named": true
         },
         {
@@ -9597,10 +9163,6 @@
           "named": true
         },
         {
-          "type": "fork_node",
-          "named": true
-        },
-        {
           "type": "frame_statement",
           "named": true
         },
@@ -9645,10 +9207,6 @@
           "named": true
         },
         {
-          "type": "invariant_usage",
-          "named": true
-        },
-        {
           "type": "inverse_statement",
           "named": true
         },
@@ -9657,19 +9215,11 @@
           "named": true
         },
         {
-          "type": "join_node",
-          "named": true
-        },
-        {
           "type": "kerml_usage",
           "named": true
         },
         {
           "type": "loop_action",
-          "named": true
-        },
-        {
-          "type": "merge_node",
           "named": true
         },
         {
@@ -9726,10 +9276,6 @@
         },
         {
           "type": "redefinition_statement",
-          "named": true
-        },
-        {
-          "type": "ref_usage",
           "named": true
         },
         {
@@ -9983,10 +9529,6 @@
           "named": true
         },
         {
-          "type": "boolean_expression_usage",
-          "named": true
-        },
-        {
           "type": "comment_element",
           "named": true
         },
@@ -10003,11 +9545,15 @@
           "named": true
         },
         {
+          "type": "constraint_expression_usage",
+          "named": true
+        },
+        {
           "type": "constraint_usage",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "control_node",
           "named": true
         },
         {
@@ -10075,10 +9621,6 @@
           "named": true
         },
         {
-          "type": "fork_node",
-          "named": true
-        },
-        {
           "type": "generic_definition",
           "named": true
         },
@@ -10103,15 +9645,7 @@
           "named": true
         },
         {
-          "type": "invariant_usage",
-          "named": true
-        },
-        {
           "type": "inverse_statement",
-          "named": true
-        },
-        {
-          "type": "join_node",
           "named": true
         },
         {
@@ -10120,10 +9654,6 @@
         },
         {
           "type": "loop_action",
-          "named": true
-        },
-        {
-          "type": "merge_node",
           "named": true
         },
         {
@@ -10148,10 +9678,6 @@
         },
         {
           "type": "perform_statement",
-          "named": true
-        },
-        {
-          "type": "ref_usage",
           "named": true
         },
         {
@@ -10549,10 +10075,6 @@
           "named": true
         },
         {
-          "type": "boolean_expression_usage",
-          "named": true
-        },
-        {
           "type": "comment_element",
           "named": true
         },
@@ -10569,11 +10091,15 @@
           "named": true
         },
         {
+          "type": "constraint_expression_usage",
+          "named": true
+        },
+        {
           "type": "constraint_usage",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "control_node",
           "named": true
         },
         {
@@ -10657,10 +10183,6 @@
           "named": true
         },
         {
-          "type": "fork_node",
-          "named": true
-        },
-        {
           "type": "frame_statement",
           "named": true
         },
@@ -10697,15 +10219,7 @@
           "named": true
         },
         {
-          "type": "invariant_usage",
-          "named": true
-        },
-        {
           "type": "inverse_statement",
-          "named": true
-        },
-        {
-          "type": "join_node",
           "named": true
         },
         {
@@ -10714,10 +10228,6 @@
         },
         {
           "type": "loop_action",
-          "named": true
-        },
-        {
-          "type": "merge_node",
           "named": true
         },
         {
@@ -10746,10 +10256,6 @@
         },
         {
           "type": "redefinition_statement",
-          "named": true
-        },
-        {
-          "type": "ref_usage",
           "named": true
         },
         {

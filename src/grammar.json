@@ -75,10 +75,6 @@
         },
         {
           "type": "SYMBOL",
-          "name": "ref_usage"
-        },
-        {
-          "type": "SYMBOL",
           "name": "expression_statement"
         },
         {
@@ -1678,11 +1674,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "invariant_usage"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "boolean_expression_usage"
+          "name": "constraint_expression_usage"
         },
         {
           "type": "SYMBOL",
@@ -1750,19 +1742,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "merge_node"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "decide_node"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "fork_node"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "join_node"
+          "name": "control_node"
         },
         {
           "type": "SYMBOL",
@@ -1942,6 +1922,10 @@
         {
           "type": "STRING",
           "value": "occurrence"
+        },
+        {
+          "type": "STRING",
+          "value": "ref"
         },
         {
           "type": "STRING",
@@ -2759,120 +2743,6 @@
         }
       ]
     },
-    "ref_usage": {
-      "type": "PREC",
-      "value": 1,
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "STRING",
-            "value": "ref"
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "short_name"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "FIELD",
-                "name": "name",
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "identifier"
-                }
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "multiplicity"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "_type_relationships"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "multiplicity"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "_type_relationships"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "value_assignment"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "_body"
-              },
-              {
-                "type": "STRING",
-                "value": ";"
-              }
-            ]
-          }
-        ]
-      }
-    },
     "event_usage": {
       "type": "SEQ",
       "members": [
@@ -3302,7 +3172,7 @@
         }
       ]
     },
-    "invariant_usage": {
+    "constraint_expression_usage": {
       "type": "SEQ",
       "members": [
         {
@@ -3315,58 +3185,7 @@
             {
               "type": "STRING",
               "value": "invariant"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "FIELD",
-              "name": "name",
-              "content": {
-                "type": "SYMBOL",
-                "name": "identifier"
-              }
             },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_type_relationships"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "constraint_body"
-            },
-            {
-              "type": "STRING",
-              "value": ";"
-            }
-          ]
-        }
-      ]
-    },
-    "boolean_expression_usage": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "CHOICE",
-          "members": [
             {
               "type": "STRING",
               "value": "bool"
@@ -6406,126 +6225,29 @@
         }
       ]
     },
-    "merge_node": {
+    "control_node": {
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "merge"
-        },
-        {
           "type": "CHOICE",
           "members": [
             {
-              "type": "FIELD",
-              "name": "name",
-              "content": {
-                "type": "SYMBOL",
-                "name": "identifier"
-              }
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_body"
+              "type": "STRING",
+              "value": "merge"
             },
             {
               "type": "STRING",
-              "value": ";"
-            }
-          ]
-        }
-      ]
-    },
-    "decide_node": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "decide"
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "FIELD",
-              "name": "name",
-              "content": {
-                "type": "SYMBOL",
-                "name": "identifier"
-              }
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_body"
+              "value": "decide"
             },
             {
               "type": "STRING",
-              "value": ";"
-            }
-          ]
-        }
-      ]
-    },
-    "fork_node": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "fork"
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "FIELD",
-              "name": "name",
-              "content": {
-                "type": "SYMBOL",
-                "name": "identifier"
-              }
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_body"
+              "value": "fork"
             },
             {
               "type": "STRING",
-              "value": ";"
+              "value": "join"
             }
           ]
-        }
-      ]
-    },
-    "join_node": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "join"
         },
         {
           "type": "CHOICE",
@@ -7614,10 +7336,6 @@
         {
           "type": "SYMBOL",
           "name": "feature_usage"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "ref_usage"
         },
         {
           "type": "SYMBOL",

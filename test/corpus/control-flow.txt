@@ -133,7 +133,7 @@ action def Drive {
   (definition
     name: (identifier)
     (definition_body
-      (merge_node
+      (control_node
         name: (identifier)))))
 
 =====================================
@@ -150,7 +150,7 @@ action def Drive {
   (definition
     name: (identifier)
     (definition_body
-      (decide_node
+      (control_node
         name: (identifier)))))
 
 =====================================
@@ -167,7 +167,7 @@ action def Drive {
   (definition
     name: (identifier)
     (definition_body
-      (fork_node
+      (control_node
         name: (identifier)))))
 
 =====================================
@@ -184,5 +184,5 @@ action def Drive {
   (definition
     name: (identifier)
     (definition_body
-      (join_node
+      (control_node
         name: (identifier)))))

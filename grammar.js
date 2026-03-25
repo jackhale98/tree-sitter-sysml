@@ -80,7 +80,6 @@ module.exports = grammar({
         $.textual_representation,
         $.connect_statement,
         $.assert_statement,
-        $.ref_usage,
         $.expression_statement,
         $._statement,
       ),
@@ -324,14 +323,12 @@ module.exports = grammar({
         $.interface_usage,
         $.constraint_usage,
         $.requirement_usage,
-        // ref_usage is handled directly in _element/_body_element, not through _declaration
         $.event_usage,
         $.allocation_usage,
         $.flow_usage,
         $.metadata_usage,
         // KerML expression types
-        $.invariant_usage,
-        $.boolean_expression_usage,
+        $.constraint_expression_usage,
         // Connection-related usages
         $.binding_usage,
         $.succession_usage,
@@ -351,10 +348,7 @@ module.exports = grammar({
         $.assign_action,
         $.send_action,
         $.loop_action,
-        $.merge_node,
-        $.decide_node,
-        $.fork_node,
-        $.join_node,
+        $.control_node,
         $.else_action,
         $.accept_action,
         // KerML bare keyword usages (without "def")
@@ -388,7 +382,7 @@ module.exports = grammar({
 
     _usage_keyword: ($) =>
       choice(
-        "part", "attribute", "port", "item", "occurrence",
+        "part", "attribute", "port", "item", "occurrence", "ref",
         "calc", "view", "viewpoint", "rendering", "concern",
         "analysis", "verification", "enum",
         "classifier", "metaclass", "expr", "step",
@@ -475,19 +469,6 @@ module.exports = grammar({
         choice($.requirement_body, ";"),
       ),
 
-    ref_usage: ($) =>
-      prec(1, seq(
-        "ref",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($.multiplicity),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        optional($._type_relationships),
-        optional($.value_assignment),
-        choice($._body, ";"),
-      )),
-
     event_usage: ($) =>
       seq(
         "event",
@@ -535,17 +516,9 @@ module.exports = grammar({
         optional(";"),
       ),
 
-    invariant_usage: ($) =>
+    constraint_expression_usage: ($) =>
       seq(
-        choice("inv", "invariant"),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.constraint_body, ";"),
-      ),
-
-    boolean_expression_usage: ($) =>
-      seq(
-        choice("bool", "boolean"),
+        choice("inv", "invariant", "bool", "boolean"),
         optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.constraint_body, ";"),
@@ -845,17 +818,8 @@ module.exports = grammar({
         ),
       ),
 
-    merge_node: ($) =>
-      seq("merge", optional(field("name", $.identifier)), choice($._body, ";")),
-
-    decide_node: ($) =>
-      seq("decide", optional(field("name", $.identifier)), choice($._body, ";")),
-
-    fork_node: ($) =>
-      seq("fork", optional(field("name", $.identifier)), choice($._body, ";")),
-
-    join_node: ($) =>
-      seq("join", optional(field("name", $.identifier)), choice($._body, ";")),
+    control_node: ($) =>
+      seq(choice("merge", "decide", "fork", "join"), optional(field("name", $.identifier)), choice($._body, ";")),
 
     // --- Statements ---
 
@@ -970,7 +934,6 @@ module.exports = grammar({
         $.package_declaration,
         $._declaration,
         $.feature_usage,
-        $.ref_usage,
         $.import_statement,
         $.alias_declaration,
         $.comment_element,

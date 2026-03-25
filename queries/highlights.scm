@@ -37,8 +37,7 @@
 (binding_usage name: (identifier) @variable)
 (succession_usage name: (identifier) @variable)
 (succession_flow_usage name: (identifier) @variable)
-(invariant_usage name: (identifier) @variable)
-(boolean_expression_usage name: (identifier) @variable)
+(constraint_expression_usage name: (identifier) @variable)
 
 
 ; Type references
