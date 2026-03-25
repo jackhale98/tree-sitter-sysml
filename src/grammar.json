@@ -8699,26 +8699,8 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "connector"
-                },
-                {
-                  "type": "SEQ",
-                  "members": [
-                    {
-                      "type": "STRING",
-                      "value": "assoc"
-                    },
-                    {
-                      "type": "STRING",
-                      "value": "struct"
-                    }
-                  ]
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "_kerml_connector_keyword"
             },
             {
               "type": "CHOICE",
@@ -8941,49 +8923,8 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "class"
-                },
-                {
-                  "type": "STRING",
-                  "value": "struct"
-                },
-                {
-                  "type": "STRING",
-                  "value": "datatype"
-                },
-                {
-                  "type": "STRING",
-                  "value": "type"
-                },
-                {
-                  "type": "STRING",
-                  "value": "behavior"
-                },
-                {
-                  "type": "STRING",
-                  "value": "function"
-                },
-                {
-                  "type": "STRING",
-                  "value": "predicate"
-                },
-                {
-                  "type": "STRING",
-                  "value": "interaction"
-                },
-                {
-                  "type": "STRING",
-                  "value": "feature"
-                },
-                {
-                  "type": "STRING",
-                  "value": "assoc"
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "_kerml_keyword"
             },
             {
               "type": "CHOICE",
@@ -9099,6 +9040,73 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    "_kerml_connector_keyword": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "connector"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "assoc"
+            },
+            {
+              "type": "STRING",
+              "value": "struct"
+            }
+          ]
+        }
+      ]
+    },
+    "_kerml_keyword": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "class"
+        },
+        {
+          "type": "STRING",
+          "value": "struct"
+        },
+        {
+          "type": "STRING",
+          "value": "datatype"
+        },
+        {
+          "type": "STRING",
+          "value": "type"
+        },
+        {
+          "type": "STRING",
+          "value": "behavior"
+        },
+        {
+          "type": "STRING",
+          "value": "function"
+        },
+        {
+          "type": "STRING",
+          "value": "predicate"
+        },
+        {
+          "type": "STRING",
+          "value": "interaction"
+        },
+        {
+          "type": "STRING",
+          "value": "feature"
+        },
+        {
+          "type": "STRING",
+          "value": "assoc"
         }
       ]
     },
@@ -12699,20 +12707,6 @@
     [
       "_usage_keyword",
       "_modifier"
-    ],
-    [
-      "_def_keyword",
-      "_usage_keyword"
-    ],
-    [
-      "_def_keyword",
-      "_usage_keyword",
-      "_modifier"
-    ],
-    [
-      "_def_keyword",
-      "_usage_keyword",
-      "metadata_usage"
     ],
     [
       "kerml_usage"

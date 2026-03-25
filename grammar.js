@@ -50,9 +50,6 @@ module.exports = grammar({
     [$._def_keyword, $._modifier],
     [$._def_keyword, $.metadata_usage],
     [$._usage_keyword, $._modifier],
-    [$._def_keyword, $._usage_keyword],
-    [$._def_keyword, $._usage_keyword, $._modifier],
-    [$._def_keyword, $._usage_keyword, $.metadata_usage],
     [$.kerml_usage],
     [$._feature_ref, $._expression],
     [$.redefinition_statement, $.specialization],
@@ -1091,9 +1088,9 @@ module.exports = grammar({
     // KerML bare keyword usage (e.g. `class A { }`, `feature f;`, `type T;`)
     kerml_usage: ($) =>
       choice(
-        // Connector/binding forms with from/to/=
+        // Connector/binding forms with endpoint clauses
         seq(
-          choice("connector", seq("assoc", "struct")),
+          $._kerml_connector_keyword,
           optional("all"),
           optional($.short_name),
           optional(field("name", $.identifier)),
@@ -1111,13 +1108,9 @@ module.exports = grammar({
           )),
           choice($._body, ";"),
         ),
-        // All other KerML keywords
+        // All other KerML keywords (no endpoint clause)
         seq(
-          choice(
-            "class", "struct", "datatype", "type",
-            "behavior", "function", "predicate",
-            "interaction", "feature", "assoc",
-          ),
+          $._kerml_keyword,
           optional("all"),
           optional($.short_name),
           optional(field("name", $.identifier)),
@@ -1128,6 +1121,16 @@ module.exports = grammar({
           optional($.value_assignment),
           choice($._body, ";"),
         ),
+      ),
+
+    _kerml_connector_keyword: ($) =>
+      choice("connector", seq("assoc", "struct")),
+
+    _kerml_keyword: ($) =>
+      choice(
+        "class", "struct", "datatype", "type",
+        "behavior", "function", "predicate",
+        "interaction", "feature", "assoc",
       ),
 
     // KerML standalone relationship statements
