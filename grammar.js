@@ -48,8 +48,8 @@ module.exports = grammar({
     [$.end_feature, $.end_feature],
     [$.definition_body, $.constraint_body],
     [$.event_usage],
-    [$.individual_definition, $._modifier],
-    [$.metadata_definition, $.metadata_usage],
+    [$._def_keyword, $._modifier],
+    [$._def_keyword, $.metadata_usage],
     [$.kerml_usage],
     [$._feature_ref, $._expression],
     [$.redefinition_statement, $.specialization],
@@ -220,70 +220,17 @@ module.exports = grammar({
     // Definitions — no prefix (provided by _declaration wrapper)
     // =================================================================
 
+    // =================================================================
+    // Definitions — unified rule with keyword dispatch
+    // All definitions follow: KEYWORD "def" [short_name] [name] [type_rels] BODY
+    // =================================================================
+
     _definition_type: ($) =>
       choice(
-        $.part_definition,
-        $.action_definition,
+        $.definition,
         $.state_definition,
-        $.port_definition,
-        $.connection_definition,
-        $.flow_definition,
-        $.attribute_definition,
-        $.item_definition,
-        $.requirement_definition,
-        $.constraint_definition,
-        $.view_definition,
-        $.viewpoint_definition,
-        $.rendering_definition,
-        $.concern_definition,
-        $.use_case_definition,
-        $.analysis_case_definition,
-        $.verification_case_definition,
-        $.allocation_definition,
-        $.interface_definition,
         $.enumeration_definition,
-        $.individual_definition,
-        $.occurrence_definition,
-        $.metadata_definition,
-        $.calc_definition,
-        $.case_definition,
-        $.class_definition,
-        $.struct_definition,
-        $.assoc_definition,
-        $.behavior_definition,
-        $.datatype_definition,
-        $.feature_definition,
-        $.function_definition,
-        $.predicate_definition,
-        $.connector_definition,
-        $.interaction_definition,
-        $.type_definition,
-        $.namespace_definition,
-        // Additional KerML definitions
-        $.classifier_definition,
-        $.metaclass_definition,
-        $.expr_definition,
-        $.step_definition,
-        // Bare "def" for extension metaclasses (e.g., #service def)
         $.generic_definition,
-      ),
-
-    part_definition: ($) =>
-      seq(
-        "part", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    action_definition: ($) =>
-      seq(
-        "action", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
       ),
 
     state_definition: ($) =>
@@ -295,149 +242,31 @@ module.exports = grammar({
         choice($.state_body, ";"),
       ),
 
-    port_definition: ($) =>
+    definition: ($) =>
       seq(
-        "port", "def",
+        $._def_keyword,
+        "def",
         optional($.short_name),
         optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
       ),
 
-    connection_definition: ($) =>
-      seq(
-        optional("flow"),
-        "connection", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    flow_definition: ($) =>
-      seq(
-        "flow", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    attribute_definition: ($) =>
-      seq(
-        "attribute", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    item_definition: ($) =>
-      seq(
-        "item", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    requirement_definition: ($) =>
-      seq(
-        "requirement", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    constraint_definition: ($) =>
-      seq(
-        "constraint", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    view_definition: ($) =>
-      seq(
-        "view", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    viewpoint_definition: ($) =>
-      seq(
-        "viewpoint", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    rendering_definition: ($) =>
-      seq(
-        "rendering", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    concern_definition: ($) =>
-      seq(
-        "concern", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    use_case_definition: ($) =>
-      seq(
-        "use", "case", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    analysis_case_definition: ($) =>
-      seq(
-        "analysis", optional("case"), "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    verification_case_definition: ($) =>
-      seq(
-        "verification", optional("case"), "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    allocation_definition: ($) =>
-      seq(
-        "allocation", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    interface_definition: ($) =>
-      seq(
-        "interface", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
+    _def_keyword: ($) =>
+      choice(
+        "part", "action", "port", "attribute", "item",
+        "requirement", "constraint", "view", "viewpoint", "rendering",
+        "concern", "allocation", "interface", "occurrence", "metadata",
+        "calc", "case", "class", "struct", "behavior", "datatype",
+        "feature", "function", "predicate", "connector", "interaction",
+        "type", "namespace", "classifier", "metaclass", "expr", "step",
+        seq("flow", optional("connection")),
+        seq(optional("flow"), "connection"),
+        seq("use", "case"),
+        seq("analysis", optional("case")),
+        seq("verification", optional("case")),
+        "individual",
+        seq("assoc", optional("struct")),
       ),
 
     enumeration_definition: ($) =>
@@ -448,199 +277,6 @@ module.exports = grammar({
         optional($._type_relationships),
         choice($.enumeration_body, ";"),
       )),
-
-    individual_definition: ($) =>
-      seq(
-        "individual", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    occurrence_definition: ($) =>
-      seq(
-        "occurrence", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    metadata_definition: ($) =>
-      seq(
-        "metadata", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    calc_definition: ($) =>
-      seq(
-        "calc", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    // --- KerML definitions ---
-
-    case_definition: ($) =>
-      seq(
-        "case", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    class_definition: ($) =>
-      seq(
-        "class", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    struct_definition: ($) =>
-      seq(
-        "struct", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    assoc_definition: ($) =>
-      seq(
-        "assoc", optional("struct"), "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    behavior_definition: ($) =>
-      seq(
-        "behavior", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    datatype_definition: ($) =>
-      seq(
-        "datatype", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    feature_definition: ($) =>
-      seq(
-        "feature", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    function_definition: ($) =>
-      seq(
-        "function", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    predicate_definition: ($) =>
-      seq(
-        "predicate", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    connector_definition: ($) =>
-      seq(
-        "connector", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    interaction_definition: ($) =>
-      seq(
-        "interaction", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    type_definition: ($) =>
-      seq(
-        "type", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    namespace_definition: ($) =>
-      seq(
-        "namespace", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    // Additional KerML definitions
-
-    classifier_definition: ($) =>
-      seq(
-        "classifier", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    metaclass_definition: ($) =>
-      seq(
-        "metaclass", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    expr_definition: ($) =>
-      seq(
-        "expr", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
-
-    step_definition: ($) =>
-      seq(
-        "step", "def",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        choice($.definition_body, ";"),
-      ),
 
     generic_definition: ($) =>
       prec(-1, seq(

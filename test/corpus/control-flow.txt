@@ -9,7 +9,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (if_action
@@ -28,7 +28,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (if_action
@@ -51,7 +51,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (while_action
@@ -70,7 +70,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (for_action
@@ -92,7 +92,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (assign_action
@@ -111,7 +111,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (send_action
@@ -130,7 +130,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (merge_node
@@ -147,7 +147,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (decide_node
@@ -164,7 +164,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (fork_node
@@ -181,7 +181,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (join_node

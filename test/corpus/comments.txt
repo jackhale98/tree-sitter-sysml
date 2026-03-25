@@ -9,7 +9,7 @@ part def Vehicle {}
 
 (source_file
   (line_comment)
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -24,7 +24,7 @@ part def Vehicle {}
 
 (source_file
   (block_comment)
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -41,7 +41,7 @@ part def Vehicle {}
 
 (source_file
   (block_comment)
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -123,7 +123,7 @@ part def Vehicle { // inline comment
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (line_comment))))

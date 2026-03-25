@@ -9,7 +9,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (succession_statement
@@ -31,7 +31,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (perform_statement
@@ -50,7 +50,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (exhibit_statement
@@ -69,7 +69,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (include_statement
@@ -87,7 +87,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (include_statement
@@ -105,7 +105,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (include_statement
@@ -123,7 +123,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (transition_statement
@@ -142,7 +142,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (transition_statement
@@ -168,7 +168,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (transition_statement
@@ -188,7 +188,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (transition_statement
@@ -209,7 +209,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (succession_statement

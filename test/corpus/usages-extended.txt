@@ -9,7 +9,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (snapshot_usage
@@ -26,7 +26,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (timeslice_usage
@@ -43,7 +43,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (snapshot_usage
@@ -63,7 +63,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (timeslice_usage

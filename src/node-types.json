@@ -318,112 +318,6 @@
     }
   },
   {
-    "type": "action_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "action_usage",
     "named": true,
     "fields": {
@@ -810,112 +704,6 @@
     }
   },
   {
-    "type": "allocation_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "allocation_usage",
     "named": true,
     "fields": {
@@ -988,112 +776,6 @@
         },
         {
           "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "analysis_case_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
           "named": true
         },
         {
@@ -1374,218 +1056,6 @@
     }
   },
   {
-    "type": "assoc_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "attribute_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "attribute_usage",
     "named": true,
     "fields": {
@@ -1704,112 +1174,6 @@
     }
   },
   {
-    "type": "behavior_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "binary_expression",
     "named": true,
     "fields": {},
@@ -1819,10 +1183,6 @@
       "types": [
         {
           "type": "accept_action",
-          "named": true
-        },
-        {
-          "type": "action_definition",
           "named": true
         },
         {
@@ -1842,15 +1202,7 @@
           "named": true
         },
         {
-          "type": "allocation_definition",
-          "named": true
-        },
-        {
           "type": "allocation_usage",
-          "named": true
-        },
-        {
-          "type": "analysis_case_definition",
           "named": true
         },
         {
@@ -1870,19 +1222,7 @@
           "named": true
         },
         {
-          "type": "assoc_definition",
-          "named": true
-        },
-        {
-          "type": "attribute_definition",
-          "named": true
-        },
-        {
           "type": "attribute_usage",
-          "named": true
-        },
-        {
-          "type": "behavior_definition",
           "named": true
         },
         {
@@ -1910,23 +1250,7 @@
           "named": true
         },
         {
-          "type": "calc_definition",
-          "named": true
-        },
-        {
           "type": "calc_usage",
-          "named": true
-        },
-        {
-          "type": "case_definition",
-          "named": true
-        },
-        {
-          "type": "class_definition",
-          "named": true
-        },
-        {
-          "type": "classifier_definition",
           "named": true
         },
         {
@@ -1935,10 +1259,6 @@
         },
         {
           "type": "comment_element",
-          "named": true
-        },
-        {
-          "type": "concern_definition",
           "named": true
         },
         {
@@ -1958,19 +1278,7 @@
           "named": true
         },
         {
-          "type": "connection_definition",
-          "named": true
-        },
-        {
           "type": "connection_usage",
-          "named": true
-        },
-        {
-          "type": "connector_definition",
-          "named": true
-        },
-        {
-          "type": "constraint_definition",
           "named": true
         },
         {
@@ -1978,11 +1286,11 @@
           "named": true
         },
         {
-          "type": "datatype_definition",
+          "type": "decide_node",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "definition",
           "named": true
         },
         {
@@ -2026,10 +1334,6 @@
           "named": true
         },
         {
-          "type": "expr_definition",
-          "named": true
-        },
-        {
           "type": "expr_usage",
           "named": true
         },
@@ -2042,10 +1346,6 @@
           "named": true
         },
         {
-          "type": "feature_definition",
-          "named": true
-        },
-        {
           "type": "feature_usage",
           "named": true
         },
@@ -2055,10 +1355,6 @@
         },
         {
           "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "flow_definition",
           "named": true
         },
         {
@@ -2079,10 +1375,6 @@
         },
         {
           "type": "frame_statement",
-          "named": true
-        },
-        {
-          "type": "function_definition",
           "named": true
         },
         {
@@ -2114,19 +1406,7 @@
           "named": true
         },
         {
-          "type": "individual_definition",
-          "named": true
-        },
-        {
           "type": "inline_transition",
-          "named": true
-        },
-        {
-          "type": "interaction_definition",
-          "named": true
-        },
-        {
-          "type": "interface_definition",
           "named": true
         },
         {
@@ -2147,10 +1427,6 @@
         },
         {
           "type": "invocation_expression",
-          "named": true
-        },
-        {
-          "type": "item_definition",
           "named": true
         },
         {
@@ -2182,10 +1458,6 @@
           "named": true
         },
         {
-          "type": "metaclass_definition",
-          "named": true
-        },
-        {
           "type": "metaclass_usage",
           "named": true
         },
@@ -2198,15 +1470,7 @@
           "named": true
         },
         {
-          "type": "metadata_definition",
-          "named": true
-        },
-        {
           "type": "metadata_usage",
-          "named": true
-        },
-        {
-          "type": "namespace_definition",
           "named": true
         },
         {
@@ -2226,10 +1490,6 @@
           "named": true
         },
         {
-          "type": "occurrence_definition",
-          "named": true
-        },
-        {
           "type": "occurrence_usage",
           "named": true
         },
@@ -2242,10 +1502,6 @@
           "named": true
         },
         {
-          "type": "part_definition",
-          "named": true
-        },
-        {
           "type": "part_usage",
           "named": true
         },
@@ -2254,15 +1510,7 @@
           "named": true
         },
         {
-          "type": "port_definition",
-          "named": true
-        },
-        {
           "type": "port_usage",
-          "named": true
-        },
-        {
-          "type": "predicate_definition",
           "named": true
         },
         {
@@ -2286,19 +1534,11 @@
           "named": true
         },
         {
-          "type": "rendering_definition",
-          "named": true
-        },
-        {
           "type": "rendering_usage",
           "named": true
         },
         {
           "type": "require_statement",
-          "named": true
-        },
-        {
-          "type": "requirement_definition",
           "named": true
         },
         {
@@ -2346,19 +1586,11 @@
           "named": true
         },
         {
-          "type": "step_definition",
-          "named": true
-        },
-        {
           "type": "step_usage",
           "named": true
         },
         {
           "type": "string_literal",
-          "named": true
-        },
-        {
-          "type": "struct_definition",
           "named": true
         },
         {
@@ -2398,23 +1630,11 @@
           "named": true
         },
         {
-          "type": "type_definition",
-          "named": true
-        },
-        {
           "type": "unary_expression",
           "named": true
         },
         {
-          "type": "use_case_definition",
-          "named": true
-        },
-        {
           "type": "use_case_usage",
-          "named": true
-        },
-        {
-          "type": "verification_case_definition",
           "named": true
         },
         {
@@ -2426,15 +1646,7 @@
           "named": true
         },
         {
-          "type": "view_definition",
-          "named": true
-        },
-        {
           "type": "view_usage",
-          "named": true
-        },
-        {
-          "type": "viewpoint_definition",
           "named": true
         },
         {
@@ -2792,112 +2004,6 @@
     }
   },
   {
-    "type": "calc_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "calc_usage",
     "named": true,
     "fields": {
@@ -3008,112 +2114,6 @@
     }
   },
   {
-    "type": "case_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "chains_keyword",
     "named": true,
     "fields": {
@@ -3131,218 +2131,6 @@
           }
         ]
       }
-    }
-  },
-  {
-    "type": "class_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "classifier_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
     }
   },
   {
@@ -3484,112 +2272,6 @@
         },
         {
           "type": "string_literal",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "concern_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -4049,112 +2731,6 @@
     }
   },
   {
-    "type": "connection_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "connection_usage",
     "named": true,
     "fields": {
@@ -4265,112 +2841,6 @@
     }
   },
   {
-    "type": "connector_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "constraint_body",
     "named": true,
     "fields": {},
@@ -4380,10 +2850,6 @@
       "types": [
         {
           "type": "accept_action",
-          "named": true
-        },
-        {
-          "type": "action_definition",
           "named": true
         },
         {
@@ -4403,15 +2869,7 @@
           "named": true
         },
         {
-          "type": "allocation_definition",
-          "named": true
-        },
-        {
           "type": "allocation_usage",
-          "named": true
-        },
-        {
-          "type": "analysis_case_definition",
           "named": true
         },
         {
@@ -4431,19 +2889,7 @@
           "named": true
         },
         {
-          "type": "assoc_definition",
-          "named": true
-        },
-        {
-          "type": "attribute_definition",
-          "named": true
-        },
-        {
           "type": "attribute_usage",
-          "named": true
-        },
-        {
-          "type": "behavior_definition",
           "named": true
         },
         {
@@ -4471,23 +2917,7 @@
           "named": true
         },
         {
-          "type": "calc_definition",
-          "named": true
-        },
-        {
           "type": "calc_usage",
-          "named": true
-        },
-        {
-          "type": "case_definition",
-          "named": true
-        },
-        {
-          "type": "class_definition",
-          "named": true
-        },
-        {
-          "type": "classifier_definition",
           "named": true
         },
         {
@@ -4496,10 +2926,6 @@
         },
         {
           "type": "comment_element",
-          "named": true
-        },
-        {
-          "type": "concern_definition",
           "named": true
         },
         {
@@ -4519,19 +2945,7 @@
           "named": true
         },
         {
-          "type": "connection_definition",
-          "named": true
-        },
-        {
           "type": "connection_usage",
-          "named": true
-        },
-        {
-          "type": "connector_definition",
-          "named": true
-        },
-        {
-          "type": "constraint_definition",
           "named": true
         },
         {
@@ -4539,11 +2953,11 @@
           "named": true
         },
         {
-          "type": "datatype_definition",
+          "type": "decide_node",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "definition",
           "named": true
         },
         {
@@ -4587,10 +3001,6 @@
           "named": true
         },
         {
-          "type": "expr_definition",
-          "named": true
-        },
-        {
           "type": "expr_usage",
           "named": true
         },
@@ -4603,10 +3013,6 @@
           "named": true
         },
         {
-          "type": "feature_definition",
-          "named": true
-        },
-        {
           "type": "feature_usage",
           "named": true
         },
@@ -4616,10 +3022,6 @@
         },
         {
           "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "flow_definition",
           "named": true
         },
         {
@@ -4640,10 +3042,6 @@
         },
         {
           "type": "frame_statement",
-          "named": true
-        },
-        {
-          "type": "function_definition",
           "named": true
         },
         {
@@ -4675,19 +3073,7 @@
           "named": true
         },
         {
-          "type": "individual_definition",
-          "named": true
-        },
-        {
           "type": "inline_transition",
-          "named": true
-        },
-        {
-          "type": "interaction_definition",
-          "named": true
-        },
-        {
-          "type": "interface_definition",
           "named": true
         },
         {
@@ -4708,10 +3094,6 @@
         },
         {
           "type": "invocation_expression",
-          "named": true
-        },
-        {
-          "type": "item_definition",
           "named": true
         },
         {
@@ -4743,10 +3125,6 @@
           "named": true
         },
         {
-          "type": "metaclass_definition",
-          "named": true
-        },
-        {
           "type": "metaclass_usage",
           "named": true
         },
@@ -4759,15 +3137,7 @@
           "named": true
         },
         {
-          "type": "metadata_definition",
-          "named": true
-        },
-        {
           "type": "metadata_usage",
-          "named": true
-        },
-        {
-          "type": "namespace_definition",
           "named": true
         },
         {
@@ -4787,10 +3157,6 @@
           "named": true
         },
         {
-          "type": "occurrence_definition",
-          "named": true
-        },
-        {
           "type": "occurrence_usage",
           "named": true
         },
@@ -4803,10 +3169,6 @@
           "named": true
         },
         {
-          "type": "part_definition",
-          "named": true
-        },
-        {
           "type": "part_usage",
           "named": true
         },
@@ -4815,15 +3177,7 @@
           "named": true
         },
         {
-          "type": "port_definition",
-          "named": true
-        },
-        {
           "type": "port_usage",
-          "named": true
-        },
-        {
-          "type": "predicate_definition",
           "named": true
         },
         {
@@ -4843,19 +3197,11 @@
           "named": true
         },
         {
-          "type": "rendering_definition",
-          "named": true
-        },
-        {
           "type": "rendering_usage",
           "named": true
         },
         {
           "type": "require_statement",
-          "named": true
-        },
-        {
-          "type": "requirement_definition",
           "named": true
         },
         {
@@ -4903,19 +3249,11 @@
           "named": true
         },
         {
-          "type": "step_definition",
-          "named": true
-        },
-        {
           "type": "step_usage",
           "named": true
         },
         {
           "type": "string_literal",
-          "named": true
-        },
-        {
-          "type": "struct_definition",
           "named": true
         },
         {
@@ -4955,23 +3293,11 @@
           "named": true
         },
         {
-          "type": "type_definition",
-          "named": true
-        },
-        {
           "type": "unary_expression",
           "named": true
         },
         {
-          "type": "use_case_definition",
-          "named": true
-        },
-        {
           "type": "use_case_usage",
-          "named": true
-        },
-        {
-          "type": "verification_case_definition",
           "named": true
         },
         {
@@ -4983,15 +3309,7 @@
           "named": true
         },
         {
-          "type": "view_definition",
-          "named": true
-        },
-        {
           "type": "view_usage",
-          "named": true
-        },
-        {
-          "type": "viewpoint_definition",
           "named": true
         },
         {
@@ -5004,112 +3322,6 @@
         },
         {
           "type": "while_action",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "constraint_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -5242,7 +3454,33 @@
     }
   },
   {
-    "type": "datatype_definition",
+    "type": "decide_node",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "definition_body",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "definition",
     "named": true,
     "fields": {
       "name": {
@@ -5348,32 +3586,6 @@
     }
   },
   {
-    "type": "decide_node",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "definition_body",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "definition_body",
     "named": true,
     "fields": {},
@@ -5383,10 +3595,6 @@
       "types": [
         {
           "type": "accept_action",
-          "named": true
-        },
-        {
-          "type": "action_definition",
           "named": true
         },
         {
@@ -5406,15 +3614,7 @@
           "named": true
         },
         {
-          "type": "allocation_definition",
-          "named": true
-        },
-        {
           "type": "allocation_usage",
-          "named": true
-        },
-        {
-          "type": "analysis_case_definition",
           "named": true
         },
         {
@@ -5434,19 +3634,7 @@
           "named": true
         },
         {
-          "type": "assoc_definition",
-          "named": true
-        },
-        {
-          "type": "attribute_definition",
-          "named": true
-        },
-        {
           "type": "attribute_usage",
-          "named": true
-        },
-        {
-          "type": "behavior_definition",
           "named": true
         },
         {
@@ -5462,23 +3650,7 @@
           "named": true
         },
         {
-          "type": "calc_definition",
-          "named": true
-        },
-        {
           "type": "calc_usage",
-          "named": true
-        },
-        {
-          "type": "case_definition",
-          "named": true
-        },
-        {
-          "type": "class_definition",
-          "named": true
-        },
-        {
-          "type": "classifier_definition",
           "named": true
         },
         {
@@ -5487,10 +3659,6 @@
         },
         {
           "type": "comment_element",
-          "named": true
-        },
-        {
-          "type": "concern_definition",
           "named": true
         },
         {
@@ -5506,19 +3674,7 @@
           "named": true
         },
         {
-          "type": "connection_definition",
-          "named": true
-        },
-        {
           "type": "connection_usage",
-          "named": true
-        },
-        {
-          "type": "connector_definition",
-          "named": true
-        },
-        {
-          "type": "constraint_definition",
           "named": true
         },
         {
@@ -5526,11 +3682,11 @@
           "named": true
         },
         {
-          "type": "datatype_definition",
+          "type": "decide_node",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "definition",
           "named": true
         },
         {
@@ -5574,19 +3730,11 @@
           "named": true
         },
         {
-          "type": "expr_definition",
-          "named": true
-        },
-        {
           "type": "expr_usage",
           "named": true
         },
         {
           "type": "expression_statement",
-          "named": true
-        },
-        {
-          "type": "feature_definition",
           "named": true
         },
         {
@@ -5599,10 +3747,6 @@
         },
         {
           "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "flow_definition",
           "named": true
         },
         {
@@ -5626,10 +3770,6 @@
           "named": true
         },
         {
-          "type": "function_definition",
-          "named": true
-        },
-        {
           "type": "generic_definition",
           "named": true
         },
@@ -5650,19 +3790,7 @@
           "named": true
         },
         {
-          "type": "individual_definition",
-          "named": true
-        },
-        {
           "type": "inline_transition",
-          "named": true
-        },
-        {
-          "type": "interaction_definition",
-          "named": true
-        },
-        {
-          "type": "interface_definition",
           "named": true
         },
         {
@@ -5679,10 +3807,6 @@
         },
         {
           "type": "inverse_statement",
-          "named": true
-        },
-        {
-          "type": "item_definition",
           "named": true
         },
         {
@@ -5710,10 +3834,6 @@
           "named": true
         },
         {
-          "type": "metaclass_definition",
-          "named": true
-        },
-        {
           "type": "metaclass_usage",
           "named": true
         },
@@ -5722,23 +3842,11 @@
           "named": true
         },
         {
-          "type": "metadata_definition",
-          "named": true
-        },
-        {
           "type": "metadata_usage",
           "named": true
         },
         {
-          "type": "namespace_definition",
-          "named": true
-        },
-        {
           "type": "objective_declaration",
-          "named": true
-        },
-        {
-          "type": "occurrence_definition",
           "named": true
         },
         {
@@ -5750,10 +3858,6 @@
           "named": true
         },
         {
-          "type": "part_definition",
-          "named": true
-        },
-        {
           "type": "part_usage",
           "named": true
         },
@@ -5762,15 +3866,7 @@
           "named": true
         },
         {
-          "type": "port_definition",
-          "named": true
-        },
-        {
           "type": "port_usage",
-          "named": true
-        },
-        {
-          "type": "predicate_definition",
           "named": true
         },
         {
@@ -5786,19 +3882,11 @@
           "named": true
         },
         {
-          "type": "rendering_definition",
-          "named": true
-        },
-        {
           "type": "rendering_usage",
           "named": true
         },
         {
           "type": "require_statement",
-          "named": true
-        },
-        {
-          "type": "requirement_definition",
           "named": true
         },
         {
@@ -5846,15 +3934,7 @@
           "named": true
         },
         {
-          "type": "step_definition",
-          "named": true
-        },
-        {
           "type": "step_usage",
-          "named": true
-        },
-        {
-          "type": "struct_definition",
           "named": true
         },
         {
@@ -5894,19 +3974,7 @@
           "named": true
         },
         {
-          "type": "type_definition",
-          "named": true
-        },
-        {
-          "type": "use_case_definition",
-          "named": true
-        },
-        {
           "type": "use_case_usage",
-          "named": true
-        },
-        {
-          "type": "verification_case_definition",
           "named": true
         },
         {
@@ -5918,15 +3986,7 @@
           "named": true
         },
         {
-          "type": "view_definition",
-          "named": true
-        },
-        {
           "type": "view_usage",
-          "named": true
-        },
-        {
-          "type": "viewpoint_definition",
           "named": true
         },
         {
@@ -6700,10 +4760,6 @@
           "named": true
         },
         {
-          "type": "action_definition",
-          "named": true
-        },
-        {
           "type": "action_usage",
           "named": true
         },
@@ -6720,15 +4776,7 @@
           "named": true
         },
         {
-          "type": "allocation_definition",
-          "named": true
-        },
-        {
           "type": "allocation_usage",
-          "named": true
-        },
-        {
-          "type": "analysis_case_definition",
           "named": true
         },
         {
@@ -6748,19 +4796,7 @@
           "named": true
         },
         {
-          "type": "assoc_definition",
-          "named": true
-        },
-        {
-          "type": "attribute_definition",
-          "named": true
-        },
-        {
           "type": "attribute_usage",
-          "named": true
-        },
-        {
-          "type": "behavior_definition",
           "named": true
         },
         {
@@ -6776,23 +4812,7 @@
           "named": true
         },
         {
-          "type": "calc_definition",
-          "named": true
-        },
-        {
           "type": "calc_usage",
-          "named": true
-        },
-        {
-          "type": "case_definition",
-          "named": true
-        },
-        {
-          "type": "class_definition",
-          "named": true
-        },
-        {
-          "type": "classifier_definition",
           "named": true
         },
         {
@@ -6801,10 +4821,6 @@
         },
         {
           "type": "comment_element",
-          "named": true
-        },
-        {
-          "type": "concern_definition",
           "named": true
         },
         {
@@ -6820,19 +4836,7 @@
           "named": true
         },
         {
-          "type": "connection_definition",
-          "named": true
-        },
-        {
           "type": "connection_usage",
-          "named": true
-        },
-        {
-          "type": "connector_definition",
-          "named": true
-        },
-        {
-          "type": "constraint_definition",
           "named": true
         },
         {
@@ -6840,11 +4844,11 @@
           "named": true
         },
         {
-          "type": "datatype_definition",
+          "type": "decide_node",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "definition",
           "named": true
         },
         {
@@ -6892,19 +4896,11 @@
           "named": true
         },
         {
-          "type": "expr_definition",
-          "named": true
-        },
-        {
           "type": "expr_usage",
           "named": true
         },
         {
           "type": "expression_statement",
-          "named": true
-        },
-        {
-          "type": "feature_definition",
           "named": true
         },
         {
@@ -6917,10 +4913,6 @@
         },
         {
           "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "flow_definition",
           "named": true
         },
         {
@@ -6944,10 +4936,6 @@
           "named": true
         },
         {
-          "type": "function_definition",
-          "named": true
-        },
-        {
           "type": "generic_definition",
           "named": true
         },
@@ -6968,19 +4956,7 @@
           "named": true
         },
         {
-          "type": "individual_definition",
-          "named": true
-        },
-        {
           "type": "inline_transition",
-          "named": true
-        },
-        {
-          "type": "interaction_definition",
-          "named": true
-        },
-        {
-          "type": "interface_definition",
           "named": true
         },
         {
@@ -6997,10 +4973,6 @@
         },
         {
           "type": "inverse_statement",
-          "named": true
-        },
-        {
-          "type": "item_definition",
           "named": true
         },
         {
@@ -7028,10 +5000,6 @@
           "named": true
         },
         {
-          "type": "metaclass_definition",
-          "named": true
-        },
-        {
           "type": "metaclass_usage",
           "named": true
         },
@@ -7040,23 +5008,11 @@
           "named": true
         },
         {
-          "type": "metadata_definition",
-          "named": true
-        },
-        {
           "type": "metadata_usage",
           "named": true
         },
         {
-          "type": "namespace_definition",
-          "named": true
-        },
-        {
           "type": "objective_declaration",
-          "named": true
-        },
-        {
-          "type": "occurrence_definition",
           "named": true
         },
         {
@@ -7068,10 +5024,6 @@
           "named": true
         },
         {
-          "type": "part_definition",
-          "named": true
-        },
-        {
           "type": "part_usage",
           "named": true
         },
@@ -7080,15 +5032,7 @@
           "named": true
         },
         {
-          "type": "port_definition",
-          "named": true
-        },
-        {
           "type": "port_usage",
-          "named": true
-        },
-        {
-          "type": "predicate_definition",
           "named": true
         },
         {
@@ -7104,19 +5048,11 @@
           "named": true
         },
         {
-          "type": "rendering_definition",
-          "named": true
-        },
-        {
           "type": "rendering_usage",
           "named": true
         },
         {
           "type": "require_statement",
-          "named": true
-        },
-        {
-          "type": "requirement_definition",
           "named": true
         },
         {
@@ -7160,15 +5096,7 @@
           "named": true
         },
         {
-          "type": "step_definition",
-          "named": true
-        },
-        {
           "type": "step_usage",
-          "named": true
-        },
-        {
-          "type": "struct_definition",
           "named": true
         },
         {
@@ -7208,19 +5136,7 @@
           "named": true
         },
         {
-          "type": "type_definition",
-          "named": true
-        },
-        {
-          "type": "use_case_definition",
-          "named": true
-        },
-        {
           "type": "use_case_usage",
-          "named": true
-        },
-        {
-          "type": "verification_case_definition",
           "named": true
         },
         {
@@ -7232,15 +5148,7 @@
           "named": true
         },
         {
-          "type": "view_definition",
-          "named": true
-        },
-        {
           "type": "view_usage",
-          "named": true
-        },
-        {
-          "type": "viewpoint_definition",
           "named": true
         },
         {
@@ -7545,112 +5453,6 @@
     }
   },
   {
-    "type": "expr_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "expr_usage",
     "named": true,
     "fields": {
@@ -7857,112 +5659,6 @@
         },
         {
           "type": "qualified_name",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "feature_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -8229,112 +5925,6 @@
       "types": [
         {
           "type": "filter_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "flow_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -8702,112 +6292,6 @@
         },
         {
           "type": "value_assignment",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "function_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -9273,112 +6757,6 @@
     }
   },
   {
-    "type": "individual_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "inline_transition",
     "named": true,
     "fields": {},
@@ -9536,218 +6914,6 @@
         },
         {
           "type": "unary_expression",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "interaction_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "interface_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
           "named": true
         },
         {
@@ -10144,112 +7310,6 @@
         },
         {
           "type": "unary_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "item_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -10861,112 +7921,6 @@
     }
   },
   {
-    "type": "metaclass_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "metaclass_usage",
     "named": true,
     "fields": {
@@ -11154,10 +8108,6 @@
           "named": true
         },
         {
-          "type": "action_definition",
-          "named": true
-        },
-        {
           "type": "action_usage",
           "named": true
         },
@@ -11174,15 +8124,7 @@
           "named": true
         },
         {
-          "type": "allocation_definition",
-          "named": true
-        },
-        {
           "type": "allocation_usage",
-          "named": true
-        },
-        {
-          "type": "analysis_case_definition",
           "named": true
         },
         {
@@ -11202,19 +8144,7 @@
           "named": true
         },
         {
-          "type": "assoc_definition",
-          "named": true
-        },
-        {
-          "type": "attribute_definition",
-          "named": true
-        },
-        {
           "type": "attribute_usage",
-          "named": true
-        },
-        {
-          "type": "behavior_definition",
           "named": true
         },
         {
@@ -11230,23 +8160,7 @@
           "named": true
         },
         {
-          "type": "calc_definition",
-          "named": true
-        },
-        {
           "type": "calc_usage",
-          "named": true
-        },
-        {
-          "type": "case_definition",
-          "named": true
-        },
-        {
-          "type": "class_definition",
-          "named": true
-        },
-        {
-          "type": "classifier_definition",
           "named": true
         },
         {
@@ -11255,10 +8169,6 @@
         },
         {
           "type": "comment_element",
-          "named": true
-        },
-        {
-          "type": "concern_definition",
           "named": true
         },
         {
@@ -11274,19 +8184,7 @@
           "named": true
         },
         {
-          "type": "connection_definition",
-          "named": true
-        },
-        {
           "type": "connection_usage",
-          "named": true
-        },
-        {
-          "type": "connector_definition",
-          "named": true
-        },
-        {
-          "type": "constraint_definition",
           "named": true
         },
         {
@@ -11294,11 +8192,11 @@
           "named": true
         },
         {
-          "type": "datatype_definition",
+          "type": "decide_node",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "definition",
           "named": true
         },
         {
@@ -11342,19 +8240,11 @@
           "named": true
         },
         {
-          "type": "expr_definition",
-          "named": true
-        },
-        {
           "type": "expr_usage",
           "named": true
         },
         {
           "type": "expression_statement",
-          "named": true
-        },
-        {
-          "type": "feature_definition",
           "named": true
         },
         {
@@ -11367,10 +8257,6 @@
         },
         {
           "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "flow_definition",
           "named": true
         },
         {
@@ -11394,10 +8280,6 @@
           "named": true
         },
         {
-          "type": "function_definition",
-          "named": true
-        },
-        {
           "type": "generic_definition",
           "named": true
         },
@@ -11418,19 +8300,7 @@
           "named": true
         },
         {
-          "type": "individual_definition",
-          "named": true
-        },
-        {
           "type": "inline_transition",
-          "named": true
-        },
-        {
-          "type": "interaction_definition",
-          "named": true
-        },
-        {
-          "type": "interface_definition",
           "named": true
         },
         {
@@ -11447,10 +8317,6 @@
         },
         {
           "type": "inverse_statement",
-          "named": true
-        },
-        {
-          "type": "item_definition",
           "named": true
         },
         {
@@ -11478,10 +8344,6 @@
           "named": true
         },
         {
-          "type": "metaclass_definition",
-          "named": true
-        },
-        {
           "type": "metaclass_usage",
           "named": true
         },
@@ -11494,23 +8356,11 @@
           "named": true
         },
         {
-          "type": "metadata_definition",
-          "named": true
-        },
-        {
           "type": "metadata_usage",
           "named": true
         },
         {
-          "type": "namespace_definition",
-          "named": true
-        },
-        {
           "type": "objective_declaration",
-          "named": true
-        },
-        {
-          "type": "occurrence_definition",
           "named": true
         },
         {
@@ -11522,10 +8372,6 @@
           "named": true
         },
         {
-          "type": "part_definition",
-          "named": true
-        },
-        {
           "type": "part_usage",
           "named": true
         },
@@ -11534,15 +8380,7 @@
           "named": true
         },
         {
-          "type": "port_definition",
-          "named": true
-        },
-        {
           "type": "port_usage",
-          "named": true
-        },
-        {
-          "type": "predicate_definition",
           "named": true
         },
         {
@@ -11558,19 +8396,11 @@
           "named": true
         },
         {
-          "type": "rendering_definition",
-          "named": true
-        },
-        {
           "type": "rendering_usage",
           "named": true
         },
         {
           "type": "require_statement",
-          "named": true
-        },
-        {
-          "type": "requirement_definition",
           "named": true
         },
         {
@@ -11614,15 +8444,7 @@
           "named": true
         },
         {
-          "type": "step_definition",
-          "named": true
-        },
-        {
           "type": "step_usage",
-          "named": true
-        },
-        {
-          "type": "struct_definition",
           "named": true
         },
         {
@@ -11662,19 +8484,7 @@
           "named": true
         },
         {
-          "type": "type_definition",
-          "named": true
-        },
-        {
-          "type": "use_case_definition",
-          "named": true
-        },
-        {
           "type": "use_case_usage",
-          "named": true
-        },
-        {
-          "type": "verification_case_definition",
           "named": true
         },
         {
@@ -11686,15 +8496,7 @@
           "named": true
         },
         {
-          "type": "view_definition",
-          "named": true
-        },
-        {
           "type": "view_usage",
-          "named": true
-        },
-        {
-          "type": "viewpoint_definition",
           "named": true
         },
         {
@@ -11810,112 +8612,6 @@
         },
         {
           "type": "value_assignment",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "metadata_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -12153,112 +8849,6 @@
     }
   },
   {
-    "type": "namespace_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "new_expression",
     "named": true,
     "fields": {},
@@ -12444,112 +9034,6 @@
     }
   },
   {
-    "type": "occurrence_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "occurrence_usage",
     "named": true,
     "fields": {
@@ -12672,10 +9156,6 @@
           "named": true
         },
         {
-          "type": "action_definition",
-          "named": true
-        },
-        {
           "type": "action_usage",
           "named": true
         },
@@ -12688,15 +9168,7 @@
           "named": true
         },
         {
-          "type": "allocation_definition",
-          "named": true
-        },
-        {
           "type": "allocation_usage",
-          "named": true
-        },
-        {
-          "type": "analysis_case_definition",
           "named": true
         },
         {
@@ -12716,19 +9188,7 @@
           "named": true
         },
         {
-          "type": "assoc_definition",
-          "named": true
-        },
-        {
-          "type": "attribute_definition",
-          "named": true
-        },
-        {
           "type": "attribute_usage",
-          "named": true
-        },
-        {
-          "type": "behavior_definition",
           "named": true
         },
         {
@@ -12740,23 +9200,7 @@
           "named": true
         },
         {
-          "type": "calc_definition",
-          "named": true
-        },
-        {
           "type": "calc_usage",
-          "named": true
-        },
-        {
-          "type": "case_definition",
-          "named": true
-        },
-        {
-          "type": "class_definition",
-          "named": true
-        },
-        {
-          "type": "classifier_definition",
           "named": true
         },
         {
@@ -12765,10 +9209,6 @@
         },
         {
           "type": "comment_element",
-          "named": true
-        },
-        {
-          "type": "concern_definition",
           "named": true
         },
         {
@@ -12784,19 +9224,7 @@
           "named": true
         },
         {
-          "type": "connection_definition",
-          "named": true
-        },
-        {
           "type": "connection_usage",
-          "named": true
-        },
-        {
-          "type": "connector_definition",
-          "named": true
-        },
-        {
-          "type": "constraint_definition",
           "named": true
         },
         {
@@ -12804,11 +9232,11 @@
           "named": true
         },
         {
-          "type": "datatype_definition",
+          "type": "decide_node",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "definition",
           "named": true
         },
         {
@@ -12848,19 +9276,11 @@
           "named": true
         },
         {
-          "type": "expr_definition",
-          "named": true
-        },
-        {
           "type": "expr_usage",
           "named": true
         },
         {
           "type": "expression_statement",
-          "named": true
-        },
-        {
-          "type": "feature_definition",
           "named": true
         },
         {
@@ -12873,10 +9293,6 @@
         },
         {
           "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "flow_definition",
           "named": true
         },
         {
@@ -12893,10 +9309,6 @@
         },
         {
           "type": "fork_node",
-          "named": true
-        },
-        {
-          "type": "function_definition",
           "named": true
         },
         {
@@ -12920,18 +9332,6 @@
           "named": true
         },
         {
-          "type": "individual_definition",
-          "named": true
-        },
-        {
-          "type": "interaction_definition",
-          "named": true
-        },
-        {
-          "type": "interface_definition",
-          "named": true
-        },
-        {
           "type": "interface_usage",
           "named": true
         },
@@ -12941,10 +9341,6 @@
         },
         {
           "type": "inverse_statement",
-          "named": true
-        },
-        {
-          "type": "item_definition",
           "named": true
         },
         {
@@ -12972,19 +9368,11 @@
           "named": true
         },
         {
-          "type": "metaclass_definition",
-          "named": true
-        },
-        {
           "type": "metaclass_usage",
           "named": true
         },
         {
           "type": "metadata_annotation",
-          "named": true
-        },
-        {
-          "type": "metadata_definition",
           "named": true
         },
         {
@@ -12996,23 +9384,11 @@
           "named": true
         },
         {
-          "type": "namespace_definition",
-          "named": true
-        },
-        {
-          "type": "occurrence_definition",
-          "named": true
-        },
-        {
           "type": "occurrence_usage",
           "named": true
         },
         {
           "type": "package_declaration",
-          "named": true
-        },
-        {
-          "type": "part_definition",
           "named": true
         },
         {
@@ -13024,15 +9400,7 @@
           "named": true
         },
         {
-          "type": "port_definition",
-          "named": true
-        },
-        {
           "type": "port_usage",
-          "named": true
-        },
-        {
-          "type": "predicate_definition",
           "named": true
         },
         {
@@ -13040,15 +9408,7 @@
           "named": true
         },
         {
-          "type": "rendering_definition",
-          "named": true
-        },
-        {
           "type": "rendering_usage",
-          "named": true
-        },
-        {
-          "type": "requirement_definition",
           "named": true
         },
         {
@@ -13080,15 +9440,7 @@
           "named": true
         },
         {
-          "type": "step_definition",
-          "named": true
-        },
-        {
           "type": "step_usage",
-          "named": true
-        },
-        {
-          "type": "struct_definition",
           "named": true
         },
         {
@@ -13120,19 +9472,7 @@
           "named": true
         },
         {
-          "type": "type_definition",
-          "named": true
-        },
-        {
-          "type": "use_case_definition",
-          "named": true
-        },
-        {
           "type": "use_case_usage",
-          "named": true
-        },
-        {
-          "type": "verification_case_definition",
           "named": true
         },
         {
@@ -13140,15 +9480,7 @@
           "named": true
         },
         {
-          "type": "view_definition",
-          "named": true
-        },
-        {
           "type": "view_usage",
-          "named": true
-        },
-        {
-          "type": "viewpoint_definition",
           "named": true
         },
         {
@@ -13278,112 +9610,6 @@
         },
         {
           "type": "unary_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "part_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -13611,112 +9837,6 @@
     }
   },
   {
-    "type": "port_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "port_usage",
     "named": true,
     "fields": {
@@ -13825,112 +9945,6 @@
         },
         {
           "type": "value_assignment",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "predicate_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -14348,112 +10362,6 @@
     }
   },
   {
-    "type": "rendering_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "rendering_usage",
     "named": true,
     "fields": {
@@ -14682,10 +10590,6 @@
           "named": true
         },
         {
-          "type": "action_definition",
-          "named": true
-        },
-        {
           "type": "action_usage",
           "named": true
         },
@@ -14702,15 +10606,7 @@
           "named": true
         },
         {
-          "type": "allocation_definition",
-          "named": true
-        },
-        {
           "type": "allocation_usage",
-          "named": true
-        },
-        {
-          "type": "analysis_case_definition",
           "named": true
         },
         {
@@ -14730,19 +10626,7 @@
           "named": true
         },
         {
-          "type": "assoc_definition",
-          "named": true
-        },
-        {
-          "type": "attribute_definition",
-          "named": true
-        },
-        {
           "type": "attribute_usage",
-          "named": true
-        },
-        {
-          "type": "behavior_definition",
           "named": true
         },
         {
@@ -14758,23 +10642,7 @@
           "named": true
         },
         {
-          "type": "calc_definition",
-          "named": true
-        },
-        {
           "type": "calc_usage",
-          "named": true
-        },
-        {
-          "type": "case_definition",
-          "named": true
-        },
-        {
-          "type": "class_definition",
-          "named": true
-        },
-        {
-          "type": "classifier_definition",
           "named": true
         },
         {
@@ -14783,10 +10651,6 @@
         },
         {
           "type": "comment_element",
-          "named": true
-        },
-        {
-          "type": "concern_definition",
           "named": true
         },
         {
@@ -14802,19 +10666,7 @@
           "named": true
         },
         {
-          "type": "connection_definition",
-          "named": true
-        },
-        {
           "type": "connection_usage",
-          "named": true
-        },
-        {
-          "type": "connector_definition",
-          "named": true
-        },
-        {
-          "type": "constraint_definition",
           "named": true
         },
         {
@@ -14822,11 +10674,11 @@
           "named": true
         },
         {
-          "type": "datatype_definition",
+          "type": "decide_node",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "definition",
           "named": true
         },
         {
@@ -14870,19 +10722,11 @@
           "named": true
         },
         {
-          "type": "expr_definition",
-          "named": true
-        },
-        {
           "type": "expr_usage",
           "named": true
         },
         {
           "type": "expression_statement",
-          "named": true
-        },
-        {
-          "type": "feature_definition",
           "named": true
         },
         {
@@ -14895,10 +10739,6 @@
         },
         {
           "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "flow_definition",
           "named": true
         },
         {
@@ -14922,10 +10762,6 @@
           "named": true
         },
         {
-          "type": "function_definition",
-          "named": true
-        },
-        {
           "type": "generic_definition",
           "named": true
         },
@@ -14946,19 +10782,7 @@
           "named": true
         },
         {
-          "type": "individual_definition",
-          "named": true
-        },
-        {
           "type": "inline_transition",
-          "named": true
-        },
-        {
-          "type": "interaction_definition",
-          "named": true
-        },
-        {
-          "type": "interface_definition",
           "named": true
         },
         {
@@ -14975,10 +10799,6 @@
         },
         {
           "type": "inverse_statement",
-          "named": true
-        },
-        {
-          "type": "item_definition",
           "named": true
         },
         {
@@ -15006,10 +10826,6 @@
           "named": true
         },
         {
-          "type": "metaclass_definition",
-          "named": true
-        },
-        {
           "type": "metaclass_usage",
           "named": true
         },
@@ -15018,23 +10834,11 @@
           "named": true
         },
         {
-          "type": "metadata_definition",
-          "named": true
-        },
-        {
           "type": "metadata_usage",
           "named": true
         },
         {
-          "type": "namespace_definition",
-          "named": true
-        },
-        {
           "type": "objective_declaration",
-          "named": true
-        },
-        {
-          "type": "occurrence_definition",
           "named": true
         },
         {
@@ -15046,10 +10850,6 @@
           "named": true
         },
         {
-          "type": "part_definition",
-          "named": true
-        },
-        {
           "type": "part_usage",
           "named": true
         },
@@ -15058,15 +10858,7 @@
           "named": true
         },
         {
-          "type": "port_definition",
-          "named": true
-        },
-        {
           "type": "port_usage",
-          "named": true
-        },
-        {
-          "type": "predicate_definition",
           "named": true
         },
         {
@@ -15082,19 +10874,11 @@
           "named": true
         },
         {
-          "type": "rendering_definition",
-          "named": true
-        },
-        {
           "type": "rendering_usage",
           "named": true
         },
         {
           "type": "require_statement",
-          "named": true
-        },
-        {
-          "type": "requirement_definition",
           "named": true
         },
         {
@@ -15138,15 +10922,7 @@
           "named": true
         },
         {
-          "type": "step_definition",
-          "named": true
-        },
-        {
           "type": "step_usage",
-          "named": true
-        },
-        {
-          "type": "struct_definition",
           "named": true
         },
         {
@@ -15186,19 +10962,7 @@
           "named": true
         },
         {
-          "type": "type_definition",
-          "named": true
-        },
-        {
-          "type": "use_case_definition",
-          "named": true
-        },
-        {
           "type": "use_case_usage",
-          "named": true
-        },
-        {
-          "type": "verification_case_definition",
           "named": true
         },
         {
@@ -15210,15 +10974,7 @@
           "named": true
         },
         {
-          "type": "view_definition",
-          "named": true
-        },
-        {
           "type": "view_usage",
-          "named": true
-        },
-        {
-          "type": "viewpoint_definition",
           "named": true
         },
         {
@@ -15231,112 +10987,6 @@
         },
         {
           "type": "while_action",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "requirement_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -15757,10 +11407,6 @@
           "named": true
         },
         {
-          "type": "action_definition",
-          "named": true
-        },
-        {
           "type": "action_usage",
           "named": true
         },
@@ -15777,15 +11423,7 @@
           "named": true
         },
         {
-          "type": "allocation_definition",
-          "named": true
-        },
-        {
           "type": "allocation_usage",
-          "named": true
-        },
-        {
-          "type": "analysis_case_definition",
           "named": true
         },
         {
@@ -15805,19 +11443,7 @@
           "named": true
         },
         {
-          "type": "assoc_definition",
-          "named": true
-        },
-        {
-          "type": "attribute_definition",
-          "named": true
-        },
-        {
           "type": "attribute_usage",
-          "named": true
-        },
-        {
-          "type": "behavior_definition",
           "named": true
         },
         {
@@ -15845,23 +11471,7 @@
           "named": true
         },
         {
-          "type": "calc_definition",
-          "named": true
-        },
-        {
           "type": "calc_usage",
-          "named": true
-        },
-        {
-          "type": "case_definition",
-          "named": true
-        },
-        {
-          "type": "class_definition",
-          "named": true
-        },
-        {
-          "type": "classifier_definition",
           "named": true
         },
         {
@@ -15870,10 +11480,6 @@
         },
         {
           "type": "comment_element",
-          "named": true
-        },
-        {
-          "type": "concern_definition",
           "named": true
         },
         {
@@ -15893,19 +11499,7 @@
           "named": true
         },
         {
-          "type": "connection_definition",
-          "named": true
-        },
-        {
           "type": "connection_usage",
-          "named": true
-        },
-        {
-          "type": "connector_definition",
-          "named": true
-        },
-        {
-          "type": "constraint_definition",
           "named": true
         },
         {
@@ -15913,11 +11507,11 @@
           "named": true
         },
         {
-          "type": "datatype_definition",
+          "type": "decide_node",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "definition",
           "named": true
         },
         {
@@ -15961,10 +11555,6 @@
           "named": true
         },
         {
-          "type": "expr_definition",
-          "named": true
-        },
-        {
           "type": "expr_usage",
           "named": true
         },
@@ -15977,10 +11567,6 @@
           "named": true
         },
         {
-          "type": "feature_definition",
-          "named": true
-        },
-        {
           "type": "feature_usage",
           "named": true
         },
@@ -15990,10 +11576,6 @@
         },
         {
           "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "flow_definition",
           "named": true
         },
         {
@@ -16014,10 +11596,6 @@
         },
         {
           "type": "frame_statement",
-          "named": true
-        },
-        {
-          "type": "function_definition",
           "named": true
         },
         {
@@ -16049,19 +11627,7 @@
           "named": true
         },
         {
-          "type": "individual_definition",
-          "named": true
-        },
-        {
           "type": "inline_transition",
-          "named": true
-        },
-        {
-          "type": "interaction_definition",
-          "named": true
-        },
-        {
-          "type": "interface_definition",
           "named": true
         },
         {
@@ -16082,10 +11648,6 @@
         },
         {
           "type": "invocation_expression",
-          "named": true
-        },
-        {
-          "type": "item_definition",
           "named": true
         },
         {
@@ -16117,10 +11679,6 @@
           "named": true
         },
         {
-          "type": "metaclass_definition",
-          "named": true
-        },
-        {
           "type": "metaclass_usage",
           "named": true
         },
@@ -16133,15 +11691,7 @@
           "named": true
         },
         {
-          "type": "metadata_definition",
-          "named": true
-        },
-        {
           "type": "metadata_usage",
-          "named": true
-        },
-        {
-          "type": "namespace_definition",
           "named": true
         },
         {
@@ -16161,10 +11711,6 @@
           "named": true
         },
         {
-          "type": "occurrence_definition",
-          "named": true
-        },
-        {
           "type": "occurrence_usage",
           "named": true
         },
@@ -16177,10 +11723,6 @@
           "named": true
         },
         {
-          "type": "part_definition",
-          "named": true
-        },
-        {
           "type": "part_usage",
           "named": true
         },
@@ -16189,15 +11731,7 @@
           "named": true
         },
         {
-          "type": "port_definition",
-          "named": true
-        },
-        {
           "type": "port_usage",
-          "named": true
-        },
-        {
-          "type": "predicate_definition",
           "named": true
         },
         {
@@ -16217,19 +11751,11 @@
           "named": true
         },
         {
-          "type": "rendering_definition",
-          "named": true
-        },
-        {
           "type": "rendering_usage",
           "named": true
         },
         {
           "type": "require_statement",
-          "named": true
-        },
-        {
-          "type": "requirement_definition",
           "named": true
         },
         {
@@ -16277,19 +11803,11 @@
           "named": true
         },
         {
-          "type": "step_definition",
-          "named": true
-        },
-        {
           "type": "step_usage",
           "named": true
         },
         {
           "type": "string_literal",
-          "named": true
-        },
-        {
-          "type": "struct_definition",
           "named": true
         },
         {
@@ -16329,23 +11847,11 @@
           "named": true
         },
         {
-          "type": "type_definition",
-          "named": true
-        },
-        {
           "type": "unary_expression",
           "named": true
         },
         {
-          "type": "use_case_definition",
-          "named": true
-        },
-        {
           "type": "use_case_usage",
-          "named": true
-        },
-        {
-          "type": "verification_case_definition",
           "named": true
         },
         {
@@ -16357,15 +11863,7 @@
           "named": true
         },
         {
-          "type": "view_definition",
-          "named": true
-        },
-        {
           "type": "view_usage",
-          "named": true
-        },
-        {
-          "type": "viewpoint_definition",
           "named": true
         },
         {
@@ -16605,10 +12103,6 @@
           "named": true
         },
         {
-          "type": "action_definition",
-          "named": true
-        },
-        {
           "type": "action_usage",
           "named": true
         },
@@ -16621,15 +12115,7 @@
           "named": true
         },
         {
-          "type": "allocation_definition",
-          "named": true
-        },
-        {
           "type": "allocation_usage",
-          "named": true
-        },
-        {
-          "type": "analysis_case_definition",
           "named": true
         },
         {
@@ -16649,19 +12135,7 @@
           "named": true
         },
         {
-          "type": "assoc_definition",
-          "named": true
-        },
-        {
-          "type": "attribute_definition",
-          "named": true
-        },
-        {
           "type": "attribute_usage",
-          "named": true
-        },
-        {
-          "type": "behavior_definition",
           "named": true
         },
         {
@@ -16673,23 +12147,7 @@
           "named": true
         },
         {
-          "type": "calc_definition",
-          "named": true
-        },
-        {
           "type": "calc_usage",
-          "named": true
-        },
-        {
-          "type": "case_definition",
-          "named": true
-        },
-        {
-          "type": "class_definition",
-          "named": true
-        },
-        {
-          "type": "classifier_definition",
           "named": true
         },
         {
@@ -16698,10 +12156,6 @@
         },
         {
           "type": "comment_element",
-          "named": true
-        },
-        {
-          "type": "concern_definition",
           "named": true
         },
         {
@@ -16717,19 +12171,7 @@
           "named": true
         },
         {
-          "type": "connection_definition",
-          "named": true
-        },
-        {
           "type": "connection_usage",
-          "named": true
-        },
-        {
-          "type": "connector_definition",
-          "named": true
-        },
-        {
-          "type": "constraint_definition",
           "named": true
         },
         {
@@ -16737,11 +12179,11 @@
           "named": true
         },
         {
-          "type": "datatype_definition",
+          "type": "decide_node",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "definition",
           "named": true
         },
         {
@@ -16781,19 +12223,11 @@
           "named": true
         },
         {
-          "type": "expr_definition",
-          "named": true
-        },
-        {
           "type": "expr_usage",
           "named": true
         },
         {
           "type": "expression_statement",
-          "named": true
-        },
-        {
-          "type": "feature_definition",
           "named": true
         },
         {
@@ -16806,10 +12240,6 @@
         },
         {
           "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "flow_definition",
           "named": true
         },
         {
@@ -16826,10 +12256,6 @@
         },
         {
           "type": "fork_node",
-          "named": true
-        },
-        {
-          "type": "function_definition",
           "named": true
         },
         {
@@ -16853,18 +12279,6 @@
           "named": true
         },
         {
-          "type": "individual_definition",
-          "named": true
-        },
-        {
-          "type": "interaction_definition",
-          "named": true
-        },
-        {
-          "type": "interface_definition",
-          "named": true
-        },
-        {
           "type": "interface_usage",
           "named": true
         },
@@ -16874,10 +12288,6 @@
         },
         {
           "type": "inverse_statement",
-          "named": true
-        },
-        {
-          "type": "item_definition",
           "named": true
         },
         {
@@ -16905,19 +12315,11 @@
           "named": true
         },
         {
-          "type": "metaclass_definition",
-          "named": true
-        },
-        {
           "type": "metaclass_usage",
           "named": true
         },
         {
           "type": "metadata_annotation",
-          "named": true
-        },
-        {
-          "type": "metadata_definition",
           "named": true
         },
         {
@@ -16929,23 +12331,11 @@
           "named": true
         },
         {
-          "type": "namespace_definition",
-          "named": true
-        },
-        {
-          "type": "occurrence_definition",
-          "named": true
-        },
-        {
           "type": "occurrence_usage",
           "named": true
         },
         {
           "type": "package_declaration",
-          "named": true
-        },
-        {
-          "type": "part_definition",
           "named": true
         },
         {
@@ -16957,15 +12347,7 @@
           "named": true
         },
         {
-          "type": "port_definition",
-          "named": true
-        },
-        {
           "type": "port_usage",
-          "named": true
-        },
-        {
-          "type": "predicate_definition",
           "named": true
         },
         {
@@ -16973,15 +12355,7 @@
           "named": true
         },
         {
-          "type": "rendering_definition",
-          "named": true
-        },
-        {
           "type": "rendering_usage",
-          "named": true
-        },
-        {
-          "type": "requirement_definition",
           "named": true
         },
         {
@@ -17013,15 +12387,7 @@
           "named": true
         },
         {
-          "type": "step_definition",
-          "named": true
-        },
-        {
           "type": "step_usage",
-          "named": true
-        },
-        {
-          "type": "struct_definition",
           "named": true
         },
         {
@@ -17053,19 +12419,7 @@
           "named": true
         },
         {
-          "type": "type_definition",
-          "named": true
-        },
-        {
-          "type": "use_case_definition",
-          "named": true
-        },
-        {
           "type": "use_case_usage",
-          "named": true
-        },
-        {
-          "type": "verification_case_definition",
           "named": true
         },
         {
@@ -17073,15 +12427,7 @@
           "named": true
         },
         {
-          "type": "view_definition",
-          "named": true
-        },
-        {
           "type": "view_usage",
-          "named": true
-        },
-        {
-          "type": "viewpoint_definition",
           "named": true
         },
         {
@@ -17391,10 +12737,6 @@
           "named": true
         },
         {
-          "type": "action_definition",
-          "named": true
-        },
-        {
           "type": "action_usage",
           "named": true
         },
@@ -17411,15 +12753,7 @@
           "named": true
         },
         {
-          "type": "allocation_definition",
-          "named": true
-        },
-        {
           "type": "allocation_usage",
-          "named": true
-        },
-        {
-          "type": "analysis_case_definition",
           "named": true
         },
         {
@@ -17439,19 +12773,7 @@
           "named": true
         },
         {
-          "type": "assoc_definition",
-          "named": true
-        },
-        {
-          "type": "attribute_definition",
-          "named": true
-        },
-        {
           "type": "attribute_usage",
-          "named": true
-        },
-        {
-          "type": "behavior_definition",
           "named": true
         },
         {
@@ -17467,23 +12789,7 @@
           "named": true
         },
         {
-          "type": "calc_definition",
-          "named": true
-        },
-        {
           "type": "calc_usage",
-          "named": true
-        },
-        {
-          "type": "case_definition",
-          "named": true
-        },
-        {
-          "type": "class_definition",
-          "named": true
-        },
-        {
-          "type": "classifier_definition",
           "named": true
         },
         {
@@ -17492,10 +12798,6 @@
         },
         {
           "type": "comment_element",
-          "named": true
-        },
-        {
-          "type": "concern_definition",
           "named": true
         },
         {
@@ -17511,19 +12813,7 @@
           "named": true
         },
         {
-          "type": "connection_definition",
-          "named": true
-        },
-        {
           "type": "connection_usage",
-          "named": true
-        },
-        {
-          "type": "connector_definition",
-          "named": true
-        },
-        {
-          "type": "constraint_definition",
           "named": true
         },
         {
@@ -17531,11 +12821,11 @@
           "named": true
         },
         {
-          "type": "datatype_definition",
+          "type": "decide_node",
           "named": true
         },
         {
-          "type": "decide_node",
+          "type": "definition",
           "named": true
         },
         {
@@ -17591,19 +12881,11 @@
           "named": true
         },
         {
-          "type": "expr_definition",
-          "named": true
-        },
-        {
           "type": "expr_usage",
           "named": true
         },
         {
           "type": "expression_statement",
-          "named": true
-        },
-        {
-          "type": "feature_definition",
           "named": true
         },
         {
@@ -17616,10 +12898,6 @@
         },
         {
           "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "flow_definition",
           "named": true
         },
         {
@@ -17643,10 +12921,6 @@
           "named": true
         },
         {
-          "type": "function_definition",
-          "named": true
-        },
-        {
           "type": "generic_definition",
           "named": true
         },
@@ -17667,19 +12941,7 @@
           "named": true
         },
         {
-          "type": "individual_definition",
-          "named": true
-        },
-        {
           "type": "inline_transition",
-          "named": true
-        },
-        {
-          "type": "interaction_definition",
-          "named": true
-        },
-        {
-          "type": "interface_definition",
           "named": true
         },
         {
@@ -17696,10 +12958,6 @@
         },
         {
           "type": "inverse_statement",
-          "named": true
-        },
-        {
-          "type": "item_definition",
           "named": true
         },
         {
@@ -17727,10 +12985,6 @@
           "named": true
         },
         {
-          "type": "metaclass_definition",
-          "named": true
-        },
-        {
           "type": "metaclass_usage",
           "named": true
         },
@@ -17739,23 +12993,11 @@
           "named": true
         },
         {
-          "type": "metadata_definition",
-          "named": true
-        },
-        {
           "type": "metadata_usage",
           "named": true
         },
         {
-          "type": "namespace_definition",
-          "named": true
-        },
-        {
           "type": "objective_declaration",
-          "named": true
-        },
-        {
-          "type": "occurrence_definition",
           "named": true
         },
         {
@@ -17767,10 +13009,6 @@
           "named": true
         },
         {
-          "type": "part_definition",
-          "named": true
-        },
-        {
           "type": "part_usage",
           "named": true
         },
@@ -17779,15 +13017,7 @@
           "named": true
         },
         {
-          "type": "port_definition",
-          "named": true
-        },
-        {
           "type": "port_usage",
-          "named": true
-        },
-        {
-          "type": "predicate_definition",
           "named": true
         },
         {
@@ -17803,19 +13033,11 @@
           "named": true
         },
         {
-          "type": "rendering_definition",
-          "named": true
-        },
-        {
           "type": "rendering_usage",
           "named": true
         },
         {
           "type": "require_statement",
-          "named": true
-        },
-        {
-          "type": "requirement_definition",
           "named": true
         },
         {
@@ -17859,15 +13081,7 @@
           "named": true
         },
         {
-          "type": "step_definition",
-          "named": true
-        },
-        {
           "type": "step_usage",
-          "named": true
-        },
-        {
-          "type": "struct_definition",
           "named": true
         },
         {
@@ -17907,19 +13121,7 @@
           "named": true
         },
         {
-          "type": "type_definition",
-          "named": true
-        },
-        {
-          "type": "use_case_definition",
-          "named": true
-        },
-        {
           "type": "use_case_usage",
-          "named": true
-        },
-        {
-          "type": "verification_case_definition",
           "named": true
         },
         {
@@ -17931,15 +13133,7 @@
           "named": true
         },
         {
-          "type": "view_definition",
-          "named": true
-        },
-        {
           "type": "view_usage",
-          "named": true
-        },
-        {
-          "type": "viewpoint_definition",
           "named": true
         },
         {
@@ -18170,112 +13364,6 @@
     }
   },
   {
-    "type": "step_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "step_usage",
     "named": true,
     "fields": {
@@ -18380,112 +13468,6 @@
         },
         {
           "type": "value_assignment",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "struct_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -19559,112 +14541,6 @@
     }
   },
   {
-    "type": "type_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "typed_by",
     "named": true,
     "fields": {
@@ -19797,112 +14673,6 @@
           }
         ]
       }
-    }
-  },
-  {
-    "type": "use_case_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
     }
   },
   {
@@ -20089,112 +14859,6 @@
         },
         {
           "type": "unary_expression",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "verification_case_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -20410,112 +15074,6 @@
     }
   },
   {
-    "type": "view_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "view_usage",
     "named": true,
     "fields": {
@@ -20588,112 +15146,6 @@
         },
         {
           "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
-          "type": "tilde_conjugation",
-          "named": true
-        },
-        {
-          "type": "typed_by",
-          "named": true
-        },
-        {
-          "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "viewpoint_definition",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "binding",
-          "named": true
-        },
-        {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
-          "type": "inverse_keyword",
-          "named": true
-        },
-        {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
-          "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
-          "type": "short_name",
           "named": true
         },
         {

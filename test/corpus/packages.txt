@@ -57,7 +57,7 @@ package Vehicle {
   (package_declaration
     name: (identifier)
     (package_body
-      (part_definition
+      (definition
         name: (identifier)
         (definition_body)))))
 

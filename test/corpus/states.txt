@@ -9,7 +9,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (state_usage
@@ -26,7 +26,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (state_usage
@@ -44,7 +44,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (state_usage
@@ -67,7 +67,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (state_usage
@@ -88,7 +88,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (state_usage
@@ -110,7 +110,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (state_usage

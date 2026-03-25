@@ -9,7 +9,7 @@ classifier def Vehicle {
 ---
 
 (source_file
-  (classifier_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -29,7 +29,7 @@ metaclass def SafetyAnnotation {
 ---
 
 (source_file
-  (metaclass_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -51,7 +51,7 @@ expr def TotalMass {
 ---
 
 (source_file
-  (expr_definition
+  (definition
     name: (identifier)
     (definition_body
       (feature_usage
@@ -80,7 +80,7 @@ step def Accelerate {
 ---
 
 (source_file
-  (step_definition
+  (definition
     name: (identifier)
     (definition_body
       (feature_usage
@@ -100,7 +100,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (classifier_usage
@@ -120,7 +120,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (metaclass_usage
@@ -140,7 +140,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (expr_usage
@@ -160,7 +160,7 @@ action def Drive {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (step_usage
@@ -181,7 +181,7 @@ port def ConjugateControl conjugates ControlPort;
 ---
 
 (source_file
-  (port_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -189,7 +189,7 @@ port def ConjugateControl conjugates ControlPort;
         (typed_by
           type: (qualified_name
             (identifier))))))
-  (port_definition
+  (definition
     name: (identifier)
     (conjugates_keyword
       target: (qualified_name
@@ -206,7 +206,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (part_usage
@@ -228,7 +228,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (part_usage
@@ -248,7 +248,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (part_usage
@@ -274,7 +274,7 @@ action def Monitor {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (loop_action
@@ -299,7 +299,7 @@ action def Pump {
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body
       (loop_action
@@ -325,7 +325,7 @@ standard library package ISQ {
   (package_declaration
     name: (identifier)
     (package_body
-      (attribute_definition
+      (definition
         name: (identifier)))))
 
 =====================================
@@ -342,7 +342,7 @@ library package MyLib {
   (package_declaration
     name: (identifier)
     (package_body
-      (part_definition
+      (definition
         name: (identifier)))))
 
 =====================================
@@ -356,7 +356,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage

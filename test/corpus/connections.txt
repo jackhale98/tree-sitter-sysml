@@ -9,7 +9,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (connection_usage
@@ -26,7 +26,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (connection_usage
@@ -50,7 +50,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (connection_usage
@@ -78,7 +78,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (connection_usage
@@ -102,7 +102,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (connection_usage
@@ -127,7 +127,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (constraint_usage
@@ -147,7 +147,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (constraint_usage
@@ -164,7 +164,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (constraint_usage
@@ -186,7 +186,7 @@ constraint def MassLimit {
 ---
 
 (source_file
-  (constraint_definition
+  (definition
     name: (identifier)
     (definition_body
       (expression_statement
@@ -206,7 +206,7 @@ part def System {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (connection_usage

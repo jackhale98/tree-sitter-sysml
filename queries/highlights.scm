@@ -15,50 +15,10 @@
 (boolean_literal) @constant.builtin
 (null_literal) @constant.builtin
 
-; Definition names — SysML v2
-(part_definition name: (identifier) @type.definition)
-(action_definition name: (identifier) @type.definition)
-(state_definition name: (identifier) @type.definition)
-(port_definition name: (identifier) @type.definition)
-(connection_definition name: (identifier) @type.definition)
-(flow_definition name: (identifier) @type.definition)
-(attribute_definition name: (identifier) @type.definition)
-(item_definition name: (identifier) @type.definition)
-(requirement_definition name: (identifier) @type.definition)
-(constraint_definition name: (identifier) @type.definition)
-(view_definition name: (identifier) @type.definition)
-(viewpoint_definition name: (identifier) @type.definition)
-(rendering_definition name: (identifier) @type.definition)
-(concern_definition name: (identifier) @type.definition)
-(use_case_definition name: (identifier) @type.definition)
-(analysis_case_definition name: (identifier) @type.definition)
-(verification_case_definition name: (identifier) @type.definition)
-(allocation_definition name: (identifier) @type.definition)
-(interface_definition name: (identifier) @type.definition)
+; Definition names
+(definition name: (identifier) @type.definition)
 (enumeration_definition name: (identifier) @type.definition)
-(individual_definition name: (identifier) @type.definition)
-(occurrence_definition name: (identifier) @type.definition)
-(metadata_definition name: (identifier) @type.definition)
-(calc_definition name: (identifier) @type.definition)
-
-; Definition names — KerML
-(case_definition name: (identifier) @type.definition)
-(class_definition name: (identifier) @type.definition)
-(struct_definition name: (identifier) @type.definition)
-(assoc_definition name: (identifier) @type.definition)
-(behavior_definition name: (identifier) @type.definition)
-(datatype_definition name: (identifier) @type.definition)
-(feature_definition name: (identifier) @type.definition)
-(function_definition name: (identifier) @type.definition)
-(predicate_definition name: (identifier) @type.definition)
-(connector_definition name: (identifier) @type.definition)
-(interaction_definition name: (identifier) @type.definition)
-(type_definition name: (identifier) @type.definition)
-(namespace_definition name: (identifier) @type.definition)
-(classifier_definition name: (identifier) @type.definition)
-(metaclass_definition name: (identifier) @type.definition)
-(expr_definition name: (identifier) @type.definition)
-(step_definition name: (identifier) @type.definition)
+(generic_definition name: (identifier) @type.definition)
 
 ; Namespace names
 (namespace_declaration name: (identifier) @module)

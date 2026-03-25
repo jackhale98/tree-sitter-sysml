@@ -9,7 +9,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -28,7 +28,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -47,7 +47,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -66,7 +66,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -85,7 +85,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -104,7 +104,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -123,7 +123,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -142,7 +142,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -161,7 +161,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -182,7 +182,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -203,7 +203,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -224,7 +224,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -245,7 +245,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -265,7 +265,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -285,7 +285,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -307,7 +307,7 @@ part def X {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -328,7 +328,7 @@ constraint def Limit {
 ---
 
 (source_file
-  (constraint_definition
+  (definition
     name: (identifier)
     (definition_body
       (expression_statement

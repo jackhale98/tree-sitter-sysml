@@ -9,7 +9,7 @@ view def TreeView {
 ---
 
 (source_file
-  (view_definition
+  (definition
     name: (identifier)
     (definition_body
       (render_statement
@@ -69,7 +69,7 @@ concern def VehicleSafety {
 ---
 
 (source_file
-  (concern_definition
+  (definition
     name: (identifier)
     (definition_body
       (stakeholder_declaration
@@ -89,7 +89,7 @@ viewpoint def SafetyViewpoint {
 ---
 
 (source_file
-  (viewpoint_definition
+  (definition
     name: (identifier)
     (definition_body
       (frame_statement
@@ -109,7 +109,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (attribute_usage
@@ -130,7 +130,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (part_usage
@@ -151,7 +151,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (part_usage
@@ -173,7 +173,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (part_usage

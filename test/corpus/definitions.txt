@@ -7,7 +7,7 @@ part def Vehicle {}
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -20,7 +20,7 @@ abstract part def Shape {}
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -33,7 +33,7 @@ part def Car :> Pkg::Vehicle {}
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (specialization
       target: (qualified_name
@@ -50,7 +50,7 @@ action def Drive {}
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -76,7 +76,7 @@ port def FuelPort {}
 ---
 
 (source_file
-  (port_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -89,7 +89,7 @@ connection def Link {}
 ---
 
 (source_file
-  (connection_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -102,7 +102,7 @@ flow connection def FlowLink {}
 ---
 
 (source_file
-  (connection_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -115,7 +115,7 @@ attribute def Mass {}
 ---
 
 (source_file
-  (attribute_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -128,7 +128,7 @@ attribute def Mass;
 ---
 
 (source_file
-  (attribute_definition
+  (definition
     name: (identifier)))
 
 =====================================
@@ -140,7 +140,7 @@ item def Cargo {}
 ---
 
 (source_file
-  (item_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -153,7 +153,7 @@ item def Cargo;
 ---
 
 (source_file
-  (item_definition
+  (definition
     name: (identifier)))
 
 =====================================
@@ -165,7 +165,7 @@ requirement def SafetyReq {}
 ---
 
 (source_file
-  (requirement_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -178,7 +178,7 @@ constraint def MassLimit {}
 ---
 
 (source_file
-  (constraint_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -191,7 +191,7 @@ view def SystemView {}
 ---
 
 (source_file
-  (view_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -204,7 +204,7 @@ viewpoint def SafetyViewpoint {}
 ---
 
 (source_file
-  (viewpoint_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -217,7 +217,7 @@ rendering def MyRendering {}
 ---
 
 (source_file
-  (rendering_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -230,7 +230,7 @@ concern def SafetyConcern {}
 ---
 
 (source_file
-  (concern_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -243,7 +243,7 @@ use case def DriveVehicle {}
 ---
 
 (source_file
-  (use_case_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -256,7 +256,7 @@ analysis case def ThermalAnalysis {}
 ---
 
 (source_file
-  (analysis_case_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -269,7 +269,7 @@ verification case def SafetyTest {}
 ---
 
 (source_file
-  (verification_case_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -282,7 +282,7 @@ allocation def FunctionAllocation {}
 ---
 
 (source_file
-  (allocation_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -295,7 +295,7 @@ interface def DataInterface {}
 ---
 
 (source_file
-  (interface_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -344,7 +344,7 @@ occurrence def Accident {}
 ---
 
 (source_file
-  (occurrence_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -357,7 +357,7 @@ metadata def Rationale {}
 ---
 
 (source_file
-  (metadata_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -370,7 +370,7 @@ calc def TotalMass {}
 ---
 
 (source_file
-  (calc_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -383,7 +383,7 @@ abstract action def Accelerate :> Vehicles::Drive {}
 ---
 
 (source_file
-  (action_definition
+  (definition
     name: (identifier)
     (specialization
       target: (qualified_name
@@ -401,7 +401,7 @@ private part def InternalPart {}
 
 (source_file
   (visibility)
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body)))
 
@@ -416,7 +416,7 @@ part def Vehicle {
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body
       (part_usage
@@ -435,6 +435,6 @@ variation part def VehicleConfig {}
 ---
 
 (source_file
-  (part_definition
+  (definition
     name: (identifier)
     (definition_body)))
