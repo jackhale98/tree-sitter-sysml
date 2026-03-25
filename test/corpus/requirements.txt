@@ -282,7 +282,7 @@ requirement def SafetyReq {
             (identifier)
             (identifier)))
         (definition_body
-          (attribute_usage
+          (usage
             name: (identifier)
             (typed_by
               type: (qualified_name
@@ -310,7 +310,7 @@ requirement def TestReq {
           type: (qualified_name
             (identifier)))
         (definition_body
-          (attribute_usage
+          (usage
             name: (identifier)
             (typed_by
               type: (qualified_name
@@ -339,7 +339,7 @@ requirement def SafetyReq {
             (identifier)
             (identifier)))
         (definition_body
-          (attribute_usage
+          (usage
             name: (identifier)
             (typed_by
               type: (qualified_name

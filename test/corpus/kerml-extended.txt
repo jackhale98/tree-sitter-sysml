@@ -12,7 +12,7 @@ classifier def Vehicle {
   (definition
     name: (identifier)
     (definition_body
-      (attribute_usage
+      (usage
         name: (identifier)
         (typed_by
           type: (qualified_name
@@ -32,7 +32,7 @@ metaclass def SafetyAnnotation {
   (definition
     name: (identifier)
     (definition_body
-      (attribute_usage
+      (usage
         name: (identifier)
         (typed_by
           type: (qualified_name
@@ -103,7 +103,7 @@ part def Vehicle {
   (definition
     name: (identifier)
     (definition_body
-      (classifier_usage
+      (usage
         name: (identifier)
         (typed_by
           type: (qualified_name
@@ -123,7 +123,7 @@ part def Vehicle {
   (definition
     name: (identifier)
     (definition_body
-      (metaclass_usage
+      (usage
         name: (identifier)
         (typed_by
           type: (qualified_name
@@ -143,7 +143,7 @@ part def Vehicle {
   (definition
     name: (identifier)
     (definition_body
-      (expr_usage
+      (usage
         name: (identifier)
         (typed_by
           type: (qualified_name
@@ -163,7 +163,7 @@ action def Drive {
   (definition
     name: (identifier)
     (definition_body
-      (step_usage
+      (usage
         name: (identifier)
         (typed_by
           type: (qualified_name
@@ -184,7 +184,7 @@ port def ConjugateControl conjugates ControlPort;
   (definition
     name: (identifier)
     (definition_body
-      (attribute_usage
+      (usage
         name: (identifier)
         (typed_by
           type: (qualified_name
@@ -209,7 +209,7 @@ part def Vehicle {
   (definition
     name: (identifier)
     (definition_body
-      (part_usage
+      (usage
         name: (identifier)
         (chains_keyword
           target: (feature_chain
@@ -231,7 +231,7 @@ part def Vehicle {
   (definition
     name: (identifier)
     (definition_body
-      (part_usage
+      (usage
         name: (identifier)
         (references_keyword
           target: (qualified_name
@@ -251,7 +251,7 @@ part def Vehicle {
   (definition
     name: (identifier)
     (definition_body
-      (part_usage
+      (usage
         name: (identifier)
         (typed_by
           type: (qualified_name
@@ -280,7 +280,7 @@ action def Monitor {
       (loop_action
         name: (identifier)
         (definition_body
-          (step_usage
+          (usage
             name: (identifier)
             (typed_by
               type: (qualified_name
@@ -305,7 +305,7 @@ action def Pump {
       (loop_action
         (identifier)
         (definition_body
-          (step_usage
+          (usage
             name: (identifier)
             (typed_by
               type: (qualified_name
@@ -359,7 +359,7 @@ part def Vehicle {
   (definition
     name: (identifier)
     (definition_body
-      (attribute_usage
+      (usage
         name: (identifier)
         (value_assignment
           (conditional_expression

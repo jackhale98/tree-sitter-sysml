@@ -27,7 +27,7 @@ view vehiclePartsTree : PartsTreeView {
 ---
 
 (source_file
-  (view_usage
+  (usage
     name: (identifier)
     (typed_by
       type: (qualified_name
@@ -48,7 +48,7 @@ view vehiclePartsTree : PartsTreeView {
 ---
 
 (source_file
-  (view_usage
+  (usage
     name: (identifier)
     (typed_by
       type: (qualified_name
@@ -112,7 +112,7 @@ part def Vehicle {
   (definition
     name: (identifier)
     (definition_body
-      (attribute_usage
+      (usage
         name: (identifier)
         (value_assignment
           (index_expression
@@ -133,7 +133,7 @@ part def Vehicle {
   (definition
     name: (identifier)
     (definition_body
-      (part_usage
+      (usage
         name: (identifier)
         (typed_by
           type: (qualified_name
@@ -154,7 +154,7 @@ part def Vehicle {
   (definition
     name: (identifier)
     (definition_body
-      (part_usage
+      (usage
         name: (identifier)
         (typed_by
           type: (qualified_name
@@ -176,7 +176,7 @@ part def Vehicle {
   (definition
     name: (identifier)
     (definition_body
-      (part_usage
+      (usage
         name: (identifier)
         (typed_by
           type: (qualified_name

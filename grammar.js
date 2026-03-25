@@ -43,19 +43,21 @@ module.exports = grammar({
     [$.feature_usage, $._declaration, $.constraint_usage, $.connect_statement],
     [$.end_feature],
     [$.interface_statement, $._feature_ref],
-    [$.part_usage],
-    [$.item_usage],
+    [$.usage],
     [$.end_feature, $.end_feature],
     [$.definition_body, $.constraint_body],
     [$.event_usage],
     [$._def_keyword, $._modifier],
     [$._def_keyword, $.metadata_usage],
+    [$._usage_keyword, $._modifier],
+    [$._def_keyword, $._usage_keyword],
+    [$._def_keyword, $._usage_keyword, $._modifier],
+    [$._def_keyword, $._usage_keyword, $.metadata_usage],
     [$.kerml_usage],
     [$._feature_ref, $._expression],
     [$.redefinition_statement, $.specialization],
     [$.disjoining_statement, $._modifier],
     [$.connection_usage],
-    [$.occurrence_usage],
   ],
 
   rules: {
@@ -313,37 +315,20 @@ module.exports = grammar({
 
     _usage_type: ($) =>
       choice(
-        $.part_usage,
-        $.attribute_usage,
-        $.port_usage,
+        // Unified usage rule — covers 20 keyword-only variants
+        $.usage,
+        // Special usages with unique structure
         $.action_usage,
         $.state_usage,
-        $.item_usage,
         $.connection_usage,
         $.interface_usage,
         $.constraint_usage,
         $.requirement_usage,
         // ref_usage is handled directly in _element/_body_element, not through _declaration
         $.event_usage,
-        $.occurrence_usage,
         $.allocation_usage,
         $.flow_usage,
-        $.snapshot_usage,
-        $.timeslice_usage,
-        $.calc_usage,
-        $.view_usage,
-        $.viewpoint_usage,
-        $.rendering_usage,
-        $.concern_usage,
-        $.use_case_usage,
-        $.analysis_usage,
-        $.verification_usage,
         $.metadata_usage,
-        // Additional KerML usages
-        $.classifier_usage,
-        $.metaclass_usage,
-        $.expr_usage,
-        $.step_usage,
         // KerML expression types
         $.invariant_usage,
         $.boolean_expression_usage,
@@ -372,7 +357,6 @@ module.exports = grammar({
         $.join_node,
         $.else_action,
         $.accept_action,
-        $.enum_usage,
         // KerML bare keyword usages (without "def")
         $.kerml_usage,
         // KerML standalone relationship statements
@@ -383,9 +367,14 @@ module.exports = grammar({
         $.inverse_statement,
       ),
 
-    part_usage: ($) =>
+    // =================================================================
+    // Usages — unified rule with keyword dispatch
+    // All these usages follow: KEYWORD [short_name] [name] [mult] [type_rels] [mult] [type_rels] [value] [metadata] BODY
+    // =================================================================
+
+    usage: ($) =>
       seq(
-        "part",
+        $._usage_keyword,
         optional($.short_name),
         optional(field("name", $.identifier)),
         optional($.multiplicity),
@@ -397,29 +386,15 @@ module.exports = grammar({
         choice($._body, ";"),
       ),
 
-    attribute_usage: ($) =>
-      seq(
-        "attribute",
-        optional($.short_name),
-        optional(field("name", $.identifier)),
-        optional($.multiplicity),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        optional($.value_assignment),
-        optional($.metadata_annotation_list),
-        choice($._body, ";"),
-      ),
-
-    port_usage: ($) =>
-      seq(
-        "port",
-        optional(field("name", $.identifier)),
-        optional($.multiplicity),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        optional($.value_assignment),
-        optional($.metadata_annotation_list),
-        choice($._body, ";"),
+    _usage_keyword: ($) =>
+      choice(
+        "part", "attribute", "port", "item", "occurrence",
+        "calc", "view", "viewpoint", "rendering", "concern",
+        "analysis", "verification", "enum",
+        "classifier", "metaclass", "expr", "step",
+        seq("use", "case"),
+        seq("snapshot", optional(choice("item", "part"))),
+        seq("timeslice", optional(choice("item", "part"))),
       ),
 
     action_usage: ($) =>
@@ -452,18 +427,6 @@ module.exports = grammar({
         optional($.multiplicity),
         optional("parallel"),
         choice($.state_body, ";"),
-      ),
-
-    item_usage: ($) =>
-      seq(
-        "item",
-        optional(field("name", $.identifier)),
-        optional($.multiplicity),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        optional($._type_relationships),
-        optional($.value_assignment),
-        choice($._body, ";"),
       ),
 
     connection_usage: ($) =>
@@ -538,18 +501,6 @@ module.exports = grammar({
         choice($._body, ";"),
       ),
 
-    occurrence_usage: ($) =>
-      seq(
-        "occurrence",
-        optional(field("name", $.identifier)),
-        optional($.multiplicity),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        optional($._type_relationships),
-        optional($.value_assignment),
-        choice($._body, ";"),
-      ),
-
     allocation_usage: ($) =>
       seq(
         "allocation",
@@ -572,103 +523,6 @@ module.exports = grammar({
         choice($._body, ";"),
       ),
 
-    snapshot_usage: ($) =>
-      seq(
-        "snapshot",
-        optional(choice("item", "part")),
-        optional(field("name", $.identifier)),
-        optional($.multiplicity),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        optional($.value_assignment),
-        choice($._body, ";"),
-      ),
-
-    timeslice_usage: ($) =>
-      seq(
-        "timeslice",
-        optional(choice("item", "part")),
-        optional(field("name", $.identifier)),
-        optional($.multiplicity),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        optional($.value_assignment),
-        choice($._body, ";"),
-      ),
-
-    calc_usage: ($) =>
-      seq(
-        "calc",
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        optional($.value_assignment),
-        choice($._body, ";"),
-      ),
-
-    view_usage: ($) =>
-      seq(
-        "view",
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        choice($._body, ";"),
-      ),
-
-    viewpoint_usage: ($) =>
-      seq(
-        "viewpoint",
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        choice($._body, ";"),
-      ),
-
-    rendering_usage: ($) =>
-      seq(
-        "rendering",
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        choice($._body, ";"),
-      ),
-
-    concern_usage: ($) =>
-      seq(
-        "concern",
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        choice($._body, ";"),
-      ),
-
-    use_case_usage: ($) =>
-      seq(
-        "use", "case",
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        choice($._body, ";"),
-      ),
-
-    analysis_usage: ($) =>
-      seq(
-        "analysis",
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        choice($._body, ";"),
-      ),
-
-    verification_usage: ($) =>
-      seq(
-        "verification",
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        choice($._body, ";"),
-      ),
-
     metadata_usage: ($) =>
       seq(
         "metadata",
@@ -679,48 +533,6 @@ module.exports = grammar({
         optional($.multiplicity),
         optional($.metadata_body),
         optional(";"),
-      ),
-
-    // Additional KerML usages
-
-    classifier_usage: ($) =>
-      seq(
-        "classifier",
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        optional($.value_assignment),
-        choice($._body, ";"),
-      ),
-
-    metaclass_usage: ($) =>
-      seq(
-        "metaclass",
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        optional($.value_assignment),
-        choice($._body, ";"),
-      ),
-
-    expr_usage: ($) =>
-      seq(
-        "expr",
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        optional($.value_assignment),
-        choice($._body, ";"),
-      ),
-
-    step_usage: ($) =>
-      seq(
-        "step",
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        optional($.value_assignment),
-        choice($._body, ";"),
       ),
 
     invariant_usage: ($) =>
@@ -1312,17 +1124,6 @@ module.exports = grammar({
       seq("objective", optional(field("name", $.identifier)),
           optional($._type_relationships),
           choice($._body, ";")),
-
-    // --- Standalone enum usage (e.g. `enum color : ColorKind;`) ---
-
-    enum_usage: ($) =>
-      seq(
-        "enum",
-        optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.value_assignment),
-        choice($._body, ";"),
-      ),
 
     // KerML bare keyword usage (e.g. `class A { }`, `feature f;`, `type T;`)
     kerml_usage: ($) =>
