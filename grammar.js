@@ -38,7 +38,6 @@ module.exports = grammar({
     [$.succession_usage, $.succession_statement],
     [$.accept_clause, $.accept_action],
     [$.feature_usage, $._declaration, $.namespace_declaration, $.constraint_usage, $._statement, $.connect_statement],
-    [$.feature_usage, $._declaration],
     [$.constraint_usage],
     [$.feature_usage, $._declaration, $.constraint_usage, $.connect_statement],
     [$.end_feature],
@@ -539,31 +538,19 @@ module.exports = grammar({
     // Implicit feature usage (modifier-driven, no keyword — stays outside _declaration)
     feature_usage: ($) =>
       choice(
-        // With modifiers: name and type are optional
+        // With at least one modifier or metadata prefix
         seq(
-          repeat(choice($._prefix_metadata, $._modifier)),
-          repeat1($._modifier),
-          repeat($._prefix_metadata),
+          repeat1(choice($._prefix_metadata, $._modifier)),
           optional(field("name", $.identifier)),
           optional($._type_relationships),
           optional($.multiplicity),
           optional($.value_assignment),
           choice($._body, ";"),
         ),
-        // Without modifiers: name and type are required
+        // Without prefix: name and type are required
         seq(
-          repeat($._prefix_metadata),
           field("name", $.identifier),
           $._type_relationships,
-          optional($.multiplicity),
-          optional($.value_assignment),
-          choice($._body, ";"),
-        ),
-        // With prefix metadata only: name + body (no modifiers or type rels needed)
-        seq(
-          repeat1($._prefix_metadata),
-          optional(field("name", $.identifier)),
-          optional($._type_relationships),
           optional($.multiplicity),
           optional($.value_assignment),
           choice($._body, ";"),
