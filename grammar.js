@@ -24,7 +24,7 @@ module.exports = grammar({
     [$._expression, $.feature_chain],
     [$._feature_ref, $.feature_chain],
     [$.redefinition_statement, $._expression, $.qualified_name],
-    [$.standalone_redefines, $.redefines_keyword],
+    [$.standalone_redefines, $.keyword_type_relationship],
     [$.feature_usage, $.redefinition_statement, $._expression, $.qualified_name],
     [$.feature_usage, $._expression, $.qualified_name],
     [$.constraint_usage, $.require_statement],
@@ -1218,20 +1218,9 @@ module.exports = grammar({
     _type_relationship: ($) =>
       choice(
         $._colon_type_rel,
-        $.redefines_keyword,
-        $.subsets_keyword,
-        $.conjugates_keyword,
-        $.references_keyword,
-        $.chains_keyword,
+        $.keyword_type_relationship,
         $.inverse_keyword,
-        $.specializes_keyword,
         $.typed_by_keyword,
-        $.crosses_keyword,
-        $.unions_keyword,
-        $.intersects_keyword,
-        $.differences_keyword,
-        $.featuring_keyword,
-        $.disjoint_from_keyword,
         $.tilde_conjugation,
       ),
 
@@ -1257,47 +1246,24 @@ module.exports = grammar({
     typed_by: ($) =>
       seq(optional("~"), commaSep1(field("type", $.qualified_name))),
 
-    redefines_keyword: ($) =>
-      seq("redefines", commaSep1(field("target", $._feature_ref))),
-
-    subsets_keyword: ($) =>
-      seq("subsets", commaSep1(field("target", $._feature_ref))),
-
-    conjugates_keyword: ($) =>
-      seq("conjugates", commaSep1(field("target", $._feature_ref))),
-
-    references_keyword: ($) =>
-      seq("references", commaSep1(field("target", $._feature_ref))),
-
-    chains_keyword: ($) =>
-      seq("chains", commaSep1(field("target", $._feature_ref))),
+    // Keyword-based type relationships — unified
+    keyword_type_relationship: ($) =>
+      seq(
+        choice(
+          "redefines", "subsets", "conjugates", "references",
+          "chains", "specializes", "unions", "intersects", "differences",
+          choice("crosses", "=>"),
+          seq("disjoint", "from"),
+          seq(choice("featuring", "featured"), "by"),
+        ),
+        commaSep1(field("target", $._feature_ref)),
+      ),
 
     inverse_keyword: ($) =>
       seq("inverse", "of", field("target", $._feature_ref)),
 
-    specializes_keyword: ($) =>
-      seq("specializes", commaSep1(field("target", $._feature_ref))),
-
     typed_by_keyword: ($) =>
       seq(choice(seq("typed", "by"), seq("defined", "by")), commaSep1(field("type", $.qualified_name))),
-
-    crosses_keyword: ($) =>
-      seq(choice("crosses", "=>"), commaSep1(field("target", $._feature_ref))),
-
-    unions_keyword: ($) =>
-      seq("unions", commaSep1(field("target", $._feature_ref))),
-
-    intersects_keyword: ($) =>
-      seq("intersects", commaSep1(field("target", $._feature_ref))),
-
-    differences_keyword: ($) =>
-      seq("differences", commaSep1(field("target", $._feature_ref))),
-
-    featuring_keyword: ($) =>
-      seq(choice(seq("featuring", "by"), seq("featured", "by")), commaSep1(field("target", $._feature_ref))),
-
-    disjoint_from_keyword: ($) =>
-      seq("disjoint", "from", commaSep1(field("target", $._feature_ref))),
 
     tilde_conjugation: ($) =>
       prec(1, seq("~", field("target", $._feature_ref))),

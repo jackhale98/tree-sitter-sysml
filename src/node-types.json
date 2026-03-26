@@ -24,35 +24,11 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
           "type": "conditional_expression",
           "named": true
         },
         {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -64,15 +40,15 @@
           "named": true
         },
         {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
           "named": true
         },
         {
           "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -104,15 +80,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -124,15 +92,7 @@
           "named": true
         },
         {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
           "type": "string_literal",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -149,10 +109,6 @@
         },
         {
           "type": "unary_expression",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -183,35 +139,11 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
           "type": "conditional_expression",
           "named": true
         },
         {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -223,15 +155,15 @@
           "named": true
         },
         {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
           "named": true
         },
         {
           "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -263,15 +195,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -283,15 +207,7 @@
           "named": true
         },
         {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
           "type": "string_literal",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -308,10 +224,6 @@
         },
         {
           "type": "unary_expression",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -363,19 +275,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
           "type": "conditional_expression",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
           "named": true
         },
         {
@@ -383,19 +283,7 @@
           "named": true
         },
         {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -407,15 +295,15 @@
           "named": true
         },
         {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
           "named": true
         },
         {
           "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -451,15 +339,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -471,15 +351,7 @@
           "named": true
         },
         {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
           "type": "string_literal",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -496,10 +368,6 @@
         },
         {
           "type": "unary_expression",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         },
         {
@@ -533,35 +401,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -569,11 +409,11 @@
           "named": true
         },
         {
-          "type": "multiplicity",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "multiplicity",
           "named": true
         },
         {
@@ -581,19 +421,7 @@
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -606,10 +434,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         },
         {
@@ -731,35 +555,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -767,7 +563,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -775,19 +571,7 @@
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -800,10 +584,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -1407,27 +1187,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
           "named": true
         },
         {
@@ -1435,15 +1195,11 @@
           "named": true
         },
         {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -1451,27 +1207,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -1484,10 +1224,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -1579,26 +1315,6 @@
           "named": true
         }
       ]
-    }
-  },
-  {
-    "type": "chains_keyword",
-    "named": true,
-    "fields": {
-      "target": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "feature_chain",
-            "named": true
-          },
-          {
-            "type": "qualified_name",
-            "named": true
-          }
-        ]
-      }
     }
   },
   {
@@ -1719,26 +1435,6 @@
     }
   },
   {
-    "type": "conjugates_keyword",
-    "named": true,
-    "fields": {
-      "target": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "feature_chain",
-            "named": true
-          },
-          {
-            "type": "qualified_name",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "conjugation_statement",
     "named": true,
     "fields": {
@@ -1781,31 +1477,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -1813,11 +1485,11 @@
           "named": true
         },
         {
-          "type": "intersects_keyword",
+          "type": "inverse_keyword",
           "named": true
         },
         {
-          "type": "inverse_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -1829,27 +1501,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -1862,10 +1518,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -1884,35 +1536,11 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
           "named": true
         },
         {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -1924,11 +1552,11 @@
           "named": true
         },
         {
-          "type": "intersects_keyword",
+          "type": "inverse_keyword",
           "named": true
         },
         {
-          "type": "inverse_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -1940,27 +1568,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -1973,10 +1585,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -2006,19 +1614,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
           "type": "connect_clause",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
           "named": true
         },
         {
@@ -2026,23 +1622,11 @@
           "named": true
         },
         {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -2050,27 +1634,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -2083,10 +1651,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -2507,35 +2071,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
           "type": "constraint_body",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -2543,7 +2079,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -2551,19 +2087,7 @@
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -2576,10 +2100,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -2609,31 +2129,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
           "type": "constraint_body",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -2641,15 +2137,11 @@
           "named": true
         },
         {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -2657,19 +2149,7 @@
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -2682,10 +2162,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -2718,26 +2194,6 @@
     }
   },
   {
-    "type": "crosses_keyword",
-    "named": true,
-    "fields": {
-      "target": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "feature_chain",
-            "named": true
-          },
-          {
-            "type": "qualified_name",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "definition",
     "named": true,
     "fields": {
@@ -2761,35 +2217,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -2797,15 +2225,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -2814,14 +2238,6 @@
         },
         {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -2834,10 +2250,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -3201,26 +2613,6 @@
     }
   },
   {
-    "type": "differences_keyword",
-    "named": true,
-    "fields": {
-      "target": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "feature_chain",
-            "named": true
-          },
-          {
-            "type": "qualified_name",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "disjoining_statement",
     "named": true,
     "fields": {
@@ -3251,26 +2643,6 @@
     }
   },
   {
-    "type": "disjoint_from_keyword",
-    "named": true,
-    "fields": {
-      "target": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "feature_chain",
-            "named": true
-          },
-          {
-            "type": "qualified_name",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "do_action",
     "named": true,
     "fields": {},
@@ -3295,19 +2667,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
           "type": "conditional_expression",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
           "named": true
         },
         {
@@ -3315,19 +2675,7 @@
           "named": true
         },
         {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -3339,15 +2687,15 @@
           "named": true
         },
         {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
           "named": true
         },
         {
           "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -3379,15 +2727,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -3399,15 +2739,7 @@
           "named": true
         },
         {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
           "type": "string_literal",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -3424,10 +2756,6 @@
         },
         {
           "type": "unary_expression",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -3520,31 +2848,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -3552,11 +2856,11 @@
           "named": true
         },
         {
-          "type": "intersects_keyword",
+          "type": "inverse_keyword",
           "named": true
         },
         {
-          "type": "inverse_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -3564,27 +2868,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -3597,10 +2885,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         },
         {
@@ -3721,35 +3005,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -3757,7 +3013,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -3765,19 +3021,7 @@
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -3790,10 +3034,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         },
         {
@@ -4150,35 +3390,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "enumeration_body",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -4186,15 +3398,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -4203,14 +3411,6 @@
         },
         {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -4223,10 +3423,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -4245,27 +3441,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
           "named": true
         },
         {
@@ -4273,15 +3449,11 @@
           "named": true
         },
         {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -4293,27 +3465,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -4326,10 +3482,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         },
         {
@@ -4538,31 +3690,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -4570,11 +3698,11 @@
           "named": true
         },
         {
-          "type": "intersects_keyword",
+          "type": "inverse_keyword",
           "named": true
         },
         {
-          "type": "inverse_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -4582,27 +3710,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -4618,10 +3730,6 @@
           "named": true
         },
         {
-          "type": "unions_keyword",
-          "named": true
-        },
-        {
           "type": "value_assignment",
           "named": true
         },
@@ -4630,26 +3738,6 @@
           "named": true
         }
       ]
-    }
-  },
-  {
-    "type": "featuring_keyword",
-    "named": true,
-    "fields": {
-      "target": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "feature_chain",
-            "named": true
-          },
-          {
-            "type": "qualified_name",
-            "named": true
-          }
-        ]
-      }
     }
   },
   {
@@ -4834,27 +3922,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
           "named": true
         },
         {
@@ -4862,15 +3930,11 @@
           "named": true
         },
         {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -4882,27 +3946,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -4915,10 +3963,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -5035,35 +4079,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -5071,11 +4087,11 @@
           "named": true
         },
         {
-          "type": "multiplicity",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "multiplicity",
           "named": true
         },
         {
@@ -5083,19 +4099,7 @@
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -5108,10 +4112,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         },
         {
@@ -5145,35 +4145,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -5181,15 +4153,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -5198,14 +4166,6 @@
         },
         {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -5218,10 +4178,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -5407,27 +4363,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
           "named": true
         },
         {
@@ -5435,15 +4371,11 @@
           "named": true
         },
         {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -5455,27 +4387,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -5488,10 +4404,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -5609,19 +4521,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
           "type": "conditional_expression",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
           "named": true
         },
         {
@@ -5629,19 +4529,7 @@
           "named": true
         },
         {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -5653,15 +4541,15 @@
           "named": true
         },
         {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
           "named": true
         },
         {
           "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -5693,15 +4581,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -5713,15 +4593,7 @@
           "named": true
         },
         {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
           "type": "string_literal",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -5738,10 +4610,6 @@
         },
         {
           "type": "unary_expression",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -5790,19 +4658,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
           "type": "connect_clause",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
           "named": true
         },
         {
@@ -5810,27 +4666,15 @@
           "named": true
         },
         {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
           "named": true
         },
         {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -5842,27 +4686,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -5876,32 +4704,8 @@
         {
           "type": "typed_by_keyword",
           "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
         }
       ]
-    }
-  },
-  {
-    "type": "intersects_keyword",
-    "named": true,
-    "fields": {
-      "target": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "feature_chain",
-            "named": true
-          },
-          {
-            "type": "qualified_name",
-            "named": true
-          }
-        ]
-      }
     }
   },
   {
@@ -6061,27 +4865,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
           "named": true
         },
         {
@@ -6089,15 +4873,11 @@
           "named": true
         },
         {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -6109,15 +4889,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -6126,14 +4898,6 @@
         },
         {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -6149,14 +4913,30 @@
           "named": true
         },
         {
-          "type": "unions_keyword",
-          "named": true
-        },
-        {
           "type": "value_assignment",
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "keyword_type_relationship",
+    "named": true,
+    "fields": {
+      "target": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "feature_chain",
+            "named": true
+          },
+          {
+            "type": "qualified_name",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -6195,19 +4975,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
           "type": "conditional_expression",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
           "named": true
         },
         {
@@ -6215,19 +4983,7 @@
           "named": true
         },
         {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -6239,15 +4995,15 @@
           "named": true
         },
         {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
           "named": true
         },
         {
           "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -6279,15 +5035,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -6299,15 +5047,7 @@
           "named": true
         },
         {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
           "type": "string_literal",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -6324,10 +5064,6 @@
         },
         {
           "type": "unary_expression",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -6367,27 +5103,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
           "named": true
         },
         {
@@ -6395,15 +5111,11 @@
           "named": true
         },
         {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -6415,27 +5127,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -6448,10 +5144,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         },
         {
@@ -6881,39 +5573,15 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
           "named": true
         },
         {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -6925,27 +5593,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -6958,10 +5610,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         },
         {
@@ -6995,39 +5643,15 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
           "named": true
         },
         {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -7043,27 +5667,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -7076,10 +5684,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -7309,35 +5913,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -7345,7 +5921,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -7353,19 +5929,7 @@
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -7378,10 +5942,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -7776,27 +6336,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
           "named": true
         },
         {
@@ -7804,15 +6344,11 @@
           "named": true
         },
         {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -7824,27 +6360,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -7857,10 +6377,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -7885,26 +6401,6 @@
     "type": "quoted_identifier",
     "named": true,
     "fields": {}
-  },
-  {
-    "type": "redefines_keyword",
-    "named": true,
-    "fields": {
-      "target": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "feature_chain",
-            "named": true
-          },
-          {
-            "type": "qualified_name",
-            "named": true
-          }
-        ]
-      }
-    }
   },
   {
     "type": "redefinition",
@@ -7950,27 +6446,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
           "named": true
         },
         {
@@ -7978,15 +6454,11 @@
           "named": true
         },
         {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -7998,27 +6470,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -8034,34 +6490,10 @@
           "named": true
         },
         {
-          "type": "unions_keyword",
-          "named": true
-        },
-        {
           "type": "value_assignment",
           "named": true
         }
       ]
-    }
-  },
-  {
-    "type": "references_keyword",
-    "named": true,
-    "fields": {
-      "target": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "feature_chain",
-            "named": true
-          },
-          {
-            "type": "qualified_name",
-            "named": true
-          }
-        ]
-      }
     }
   },
   {
@@ -8077,39 +6509,15 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
           "named": true
         },
         {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -8121,27 +6529,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -8154,10 +6546,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -8187,31 +6575,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -8219,15 +6583,11 @@
           "named": true
         },
         {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -8235,19 +6595,7 @@
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -8260,10 +6608,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         },
         {
@@ -8616,35 +6960,11 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -8652,15 +6972,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -8676,14 +6988,6 @@
           "named": true
         },
         {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
-          "named": true
-        },
-        {
           "type": "tilde_conjugation",
           "named": true
         },
@@ -8693,10 +6997,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         },
         {
@@ -8813,35 +7113,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -8849,7 +7121,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -8857,19 +7129,7 @@
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -8882,10 +7142,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         },
         {
@@ -8908,35 +7164,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -8944,19 +7172,15 @@
           "named": true
         },
         {
+          "type": "keyword_type_relationship",
+          "named": true
+        },
+        {
           "type": "qualified_name",
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -8965,14 +7189,6 @@
         },
         {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -8985,10 +7201,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -9787,35 +7999,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -9823,11 +8007,11 @@
           "named": true
         },
         {
-          "type": "qualified_name",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "qualified_name",
           "named": true
         },
         {
@@ -9835,19 +8019,7 @@
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -9861,32 +8033,8 @@
         {
           "type": "typed_by_keyword",
           "named": true
-        },
-        {
-          "type": "unions_keyword",
-          "named": true
         }
       ]
-    }
-  },
-  {
-    "type": "specializes_keyword",
-    "named": true,
-    "fields": {
-      "target": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "feature_chain",
-            "named": true
-          },
-          {
-            "type": "qualified_name",
-            "named": true
-          }
-        ]
-      }
     }
   },
   {
@@ -9913,35 +8061,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -9949,11 +8069,11 @@
           "named": true
         },
         {
-          "type": "multiplicity",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "multiplicity",
           "named": true
         },
         {
@@ -9961,19 +8081,7 @@
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -9986,10 +8094,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         },
         {
@@ -10377,47 +8481,15 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -10429,15 +8501,7 @@
           "named": true
         },
         {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
           "type": "state_body",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -10450,10 +8514,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -10483,35 +8543,11 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -10519,15 +8555,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -10535,15 +8563,7 @@
           "named": true
         },
         {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
           "type": "state_body",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -10556,10 +8576,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -10589,35 +8605,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
           "named": true
         },
         {
@@ -10625,11 +8613,11 @@
           "named": true
         },
         {
-          "type": "multiplicity",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "multiplicity",
           "named": true
         },
         {
@@ -10637,19 +8625,7 @@
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -10665,34 +8641,10 @@
           "named": true
         },
         {
-          "type": "unions_keyword",
-          "named": true
-        },
-        {
           "type": "value_assignment",
           "named": true
         }
       ]
-    }
-  },
-  {
-    "type": "subsets_keyword",
-    "named": true,
-    "fields": {
-      "target": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "feature_chain",
-            "named": true
-          },
-          {
-            "type": "qualified_name",
-            "named": true
-          }
-        ]
-      }
     }
   },
   {
@@ -10765,19 +8717,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
           "type": "conditional_expression",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
           "named": true
         },
         {
@@ -10785,19 +8725,7 @@
           "named": true
         },
         {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -10809,15 +8737,15 @@
           "named": true
         },
         {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
           "named": true
         },
         {
           "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -10849,15 +8777,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -10869,15 +8789,7 @@
           "named": true
         },
         {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
           "type": "string_literal",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -10894,10 +8806,6 @@
         },
         {
           "type": "unary_expression",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -10927,27 +8835,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
           "named": true
         },
         {
@@ -10955,15 +8843,11 @@
           "named": true
         },
         {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -10971,27 +8855,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -11004,10 +8872,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -11060,39 +8924,11 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
           "named": true
         },
         {
-          "type": "redefines_keyword",
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -11100,23 +8936,11 @@
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
           "named": true
         },
         {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
           "type": "string_literal",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -11129,10 +8953,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -11178,19 +8998,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
           "type": "conditional_expression",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
           "named": true
         },
         {
@@ -11198,19 +9006,7 @@
           "named": true
         },
         {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -11226,15 +9022,15 @@
           "named": true
         },
         {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
           "named": true
         },
         {
           "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -11270,15 +9066,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -11290,15 +9078,7 @@
           "named": true
         },
         {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
           "type": "string_literal",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -11315,10 +9095,6 @@
         },
         {
           "type": "unary_expression",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         },
         {
@@ -11388,35 +9164,11 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
           "type": "conditional_expression",
           "named": true
         },
         {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
           "type": "feature_chain",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
           "named": true
         },
         {
@@ -11428,15 +9180,15 @@
           "named": true
         },
         {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
           "named": true
         },
         {
           "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -11468,15 +9220,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -11488,15 +9232,7 @@
           "named": true
         },
         {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
           "type": "string_literal",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -11513,10 +9249,6 @@
         },
         {
           "type": "unary_expression",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         }
       ]
@@ -11638,26 +9370,6 @@
     }
   },
   {
-    "type": "unions_keyword",
-    "named": true,
-    "fields": {
-      "target": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "feature_chain",
-            "named": true
-          },
-          {
-            "type": "qualified_name",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "usage",
     "named": true,
     "fields": {
@@ -11681,39 +9393,15 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
           "named": true
         },
         {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
-          "named": true
-        },
-        {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -11725,15 +9413,7 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
-          "named": true
-        },
-        {
-          "type": "references_keyword",
           "named": true
         },
         {
@@ -11742,14 +9422,6 @@
         },
         {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -11762,10 +9434,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         },
         {
@@ -11871,27 +9539,7 @@
           "named": true
         },
         {
-          "type": "chains_keyword",
-          "named": true
-        },
-        {
-          "type": "conjugates_keyword",
-          "named": true
-        },
-        {
-          "type": "crosses_keyword",
-          "named": true
-        },
-        {
           "type": "definition_body",
-          "named": true
-        },
-        {
-          "type": "differences_keyword",
-          "named": true
-        },
-        {
-          "type": "disjoint_from_keyword",
           "named": true
         },
         {
@@ -11899,15 +9547,11 @@
           "named": true
         },
         {
-          "type": "featuring_keyword",
-          "named": true
-        },
-        {
-          "type": "intersects_keyword",
-          "named": true
-        },
-        {
           "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -11915,27 +9559,11 @@
           "named": true
         },
         {
-          "type": "redefines_keyword",
-          "named": true
-        },
-        {
           "type": "redefinition",
           "named": true
         },
         {
-          "type": "references_keyword",
-          "named": true
-        },
-        {
           "type": "specialization",
-          "named": true
-        },
-        {
-          "type": "specializes_keyword",
-          "named": true
-        },
-        {
-          "type": "subsets_keyword",
           "named": true
         },
         {
@@ -11948,10 +9576,6 @@
         },
         {
           "type": "typed_by_keyword",
-          "named": true
-        },
-        {
-          "type": "unions_keyword",
           "named": true
         },
         {

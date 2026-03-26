@@ -191,7 +191,7 @@ port def ConjugateControl conjugates ControlPort;
             (identifier))))))
   (definition
     name: (identifier)
-    (conjugates_keyword
+    (keyword_type_relationship
       target: (qualified_name
         (identifier)))))
 
@@ -211,7 +211,7 @@ part def Vehicle {
     (definition_body
       (usage
         name: (identifier)
-        (chains_keyword
+        (keyword_type_relationship
           target: (feature_chain
             (qualified_name
               (identifier))
@@ -233,7 +233,7 @@ part def Vehicle {
     (definition_body
       (usage
         name: (identifier)
-        (references_keyword
+        (keyword_type_relationship
           target: (qualified_name
             (identifier)))))))
 
