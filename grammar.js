@@ -48,6 +48,12 @@ module.exports = grammar({
     [$.flow_usage],
     [$.exit_action],
     [$.standalone_redefines],
+    [$._body, $.entry_action],
+    [$.do_action],
+    [$.entry_action],
+    [$.subject_declaration],
+    [$.objective_declaration],
+    [$.actor_declaration],
     [$.interface_usage],
     [$.feature_usage, $._declaration, $.constraint_usage, $.connect_statement],
     [$.end_feature],
@@ -920,6 +926,8 @@ module.exports = grammar({
             optional(seq("via", $._feature_ref)),
             optional(seq("to", $._feature_ref)),
             ";"),
+        // Named entry with type (e.g. `entry action entryAction :>> 'entry';`)
+        seq(optional(field("name", $.identifier)), optional($._type_relationships), optional($.multiplicity), optional($._type_relationships), choice(";", $._body)),
         seq($._feature_ref, choice(
           seq(";", optional(seq("then", $._feature_ref, ";"))),
           $.definition_body,
@@ -927,10 +935,11 @@ module.exports = grammar({
       )),
 
     do_action: ($) =>
-      seq("do", choice(
+      seq("do", optional("action"), choice(
         seq("send", $._expression, choice("to", "via"), $._feature_ref, ";"),
         seq("assign", $._feature_ref, ":=", $._expression, ";"),
-        seq("action", $._feature_ref, optional($._type_relationships), choice(";", $._body)),
+        // Named do with type (e.g. `do action doAction: Action :>> 'do';`)
+        seq(optional(field("name", $.identifier)), optional($._type_relationships), optional($.multiplicity), optional($._type_relationships), choice(";", $._body)),
         seq($._feature_ref, choice(";", $._body)),
         $._body,
       )),
@@ -994,6 +1003,8 @@ module.exports = grammar({
         $.exit_action,
         // Standalone member feature (e.g. `member feature 'public' : VisibilityKind;`)
         $.member_feature,
+        // Bind statement (e.g. `bind start = done;`)
+        $.bind_statement,
       ),
 
     assignment_statement: ($) =>
@@ -1107,21 +1118,27 @@ module.exports = grammar({
 
     subject_declaration: ($) =>
       seq("subject", optional(field("name", $.identifier)),
-          optional($.multiplicity),
           optional($._type_relationships),
           optional($.multiplicity),
+          repeat($._feature_qualifier),
+          optional($._type_relationships),
           optional($.value_assignment), choice($._body, ";")),
 
     actor_declaration: ($) =>
       seq("actor", optional(field("name", $.identifier)),
           optional($._type_relationships),
           optional($.multiplicity),
+          repeat($._feature_qualifier),
+          optional($._type_relationships),
           optional($.value_assignment), choice($._body, ";")),
 
     objective_declaration: ($) =>
       seq("objective", optional(field("name", $.identifier)),
           optional($._type_relationships),
-          choice($._body, ";")),
+          optional($.multiplicity),
+          repeat($._feature_qualifier),
+          optional($._type_relationships),
+          optional($.value_assignment), choice($._body, ";")),
 
     // KerML bare keyword usage (e.g. `class A { }`, `feature f;`, `type T;`)
     kerml_usage: ($) =>
@@ -1337,6 +1354,11 @@ module.exports = grammar({
         optional($._type_relationships),
         choice($._body, ";"),
       ),
+
+    // Bind statement (e.g. `bind start = done { doc ... }`)
+    bind_statement: ($) =>
+      seq("bind", $._feature_ref, "=", $._feature_ref,
+          choice($._body, ";")),
 
     // Member feature declaration (e.g. `member feature 'public' : VisibilityKind;`)
     member_feature: ($) =>

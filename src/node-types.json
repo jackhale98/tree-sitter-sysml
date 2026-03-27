@@ -1157,6 +1157,10 @@
       "required": true,
       "types": [
         {
+          "type": "definition_body",
+          "named": true
+        },
+        {
           "type": "feature_chain",
           "named": true
         },
@@ -2717,10 +2721,21 @@
   {
     "type": "do_action",
     "named": true,
-    "fields": {},
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "binary_expression",
@@ -2776,6 +2791,10 @@
         },
         {
           "type": "metadata_access_expression",
+          "named": true
+        },
+        {
+          "type": "multiplicity",
           "named": true
         },
         {
@@ -2969,13 +2988,28 @@
   {
     "type": "entry_action",
     "named": true,
-    "fields": {},
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
           "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "binding",
           "named": true
         },
         {
@@ -3007,7 +3041,15 @@
           "named": true
         },
         {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
           "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -3016,6 +3058,10 @@
         },
         {
           "type": "metadata_access_expression",
+          "named": true
+        },
+        {
+          "type": "multiplicity",
           "named": true
         },
         {
@@ -3039,11 +3085,31 @@
           "named": true
         },
         {
+          "type": "redefinition",
+          "named": true
+        },
+        {
           "type": "select_expression",
           "named": true
         },
         {
+          "type": "specialization",
+          "named": true
+        },
+        {
           "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "tilde_conjugation",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
           "named": true
         },
         {
@@ -6204,6 +6270,10 @@
           "named": true
         },
         {
+          "type": "multiplicity",
+          "named": true
+        },
+        {
           "type": "redefinition",
           "named": true
         },
@@ -6221,6 +6291,10 @@
         },
         {
           "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "value_assignment",
           "named": true
         }
       ]
