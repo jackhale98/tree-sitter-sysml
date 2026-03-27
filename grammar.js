@@ -44,12 +44,15 @@ module.exports = grammar({
     [$.state_usage],
     [$.action_usage],
     [$.return_statement],
+    [$.allocation_usage],
+    [$.interface_usage],
     [$.feature_usage, $._declaration, $.constraint_usage, $.connect_statement],
     [$.end_feature],
     [$.interface_statement, $._feature_ref],
     [$.usage],
     [$.end_feature, $.end_feature],
     [$.definition_body, $.constraint_body],
+    [$.state_body, $._body_element],
     [$.event_usage],
     [$._def_keyword, $._modifier],
     [$._feature_qualifier, $._modifier],
@@ -447,6 +450,8 @@ module.exports = grammar({
         optional(field("name", $.identifier)),
         optional($._type_relationships),
         optional($.multiplicity),
+        repeat($._feature_qualifier),
+        optional($._type_relationships),
         optional(choice(
           $.connect_clause,
           seq($._feature_ref, "to", $._feature_ref),
@@ -496,6 +501,9 @@ module.exports = grammar({
         "allocation",
         optional(field("name", $.identifier)),
         optional($._type_relationships),
+        optional($.multiplicity),
+        repeat($._feature_qualifier),
+        optional($._type_relationships),
         optional($.allocate_clause),
         choice($._body, ";"),
       ),
@@ -539,10 +547,11 @@ module.exports = grammar({
         repeat($._prefix_metadata),
         optional(field("end_name", $.identifier)),
         optional($.multiplicity),
-        optional(choice("ref", "item", "port", "part", "attribute", "feature")),
+        optional(choice("ref", "item", "port", "part", "attribute", "feature", "occurrence", "action", "connection", "flow")),
         optional(field("name", $.identifier)),
         optional($._type_relationships),
         optional($.multiplicity),
+        repeat($._feature_qualifier),
         optional($._type_relationships),
         optional($.value_assignment),
         choice($._body, ";"),
@@ -970,6 +979,12 @@ module.exports = grammar({
         $.inline_transition,
         $.textual_representation,
         $.multiplicity_definition,
+        // State-related actions can appear in definition bodies too
+        $.entry_action,
+        $.do_action,
+        $.exit_action,
+        // Standalone member feature (e.g. `member feature 'public' : VisibilityKind;`)
+        $.member_feature,
       ),
 
     assignment_statement: ($) =>
@@ -1306,6 +1321,17 @@ module.exports = grammar({
         optional(field("name", $.identifier)),
         optional($.multiplicity),
         optional($._type_relationships),
+        choice($._body, ";"),
+      ),
+
+    // Member feature declaration (e.g. `member feature 'public' : VisibilityKind;`)
+    member_feature: ($) =>
+      seq(
+        "member", "feature",
+        optional(field("name", $.identifier)),
+        optional($._type_relationships),
+        optional($.multiplicity),
+        optional($.value_assignment),
         choice($._body, ";"),
       ),
 

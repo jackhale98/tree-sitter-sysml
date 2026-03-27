@@ -2565,6 +2565,25 @@
           ]
         },
         {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_feature_qualifier"
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_type_relationships"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "CHOICE",
           "members": [
             {
@@ -2945,6 +2964,37 @@
               "type": "BLANK"
             }
           ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_type_relationships"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "multiplicity"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_feature_qualifier"
+          }
         },
         {
           "type": "CHOICE",
@@ -3432,6 +3482,22 @@
                 {
                   "type": "STRING",
                   "value": "feature"
+                },
+                {
+                  "type": "STRING",
+                  "value": "occurrence"
+                },
+                {
+                  "type": "STRING",
+                  "value": "action"
+                },
+                {
+                  "type": "STRING",
+                  "value": "connection"
+                },
+                {
+                  "type": "STRING",
+                  "value": "flow"
                 }
               ]
             },
@@ -3479,6 +3545,13 @@
               "type": "BLANK"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_feature_qualifier"
+          }
         },
         {
           "type": "CHOICE",
@@ -7734,6 +7807,22 @@
         {
           "type": "SYMBOL",
           "name": "multiplicity_definition"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "entry_action"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "do_action"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "exit_action"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "member_feature"
         }
       ]
     },
@@ -10808,6 +10897,84 @@
         }
       ]
     },
+    "member_feature": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "member"
+        },
+        {
+          "type": "STRING",
+          "value": "feature"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "name",
+              "content": {
+                "type": "SYMBOL",
+                "name": "identifier"
+              }
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_type_relationships"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "multiplicity"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "value_assignment"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_body"
+            },
+            {
+              "type": "STRING",
+              "value": ";"
+            }
+          ]
+        }
+      ]
+    },
     "_feature_qualifier": {
       "type": "CHOICE",
       "members": [
@@ -12651,6 +12818,12 @@
       "return_statement"
     ],
     [
+      "allocation_usage"
+    ],
+    [
+      "interface_usage"
+    ],
+    [
       "feature_usage",
       "_declaration",
       "constraint_usage",
@@ -12673,6 +12846,10 @@
     [
       "definition_body",
       "constraint_body"
+    ],
+    [
+      "state_body",
+      "_body_element"
     ],
     [
       "event_usage"

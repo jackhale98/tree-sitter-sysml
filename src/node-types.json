@@ -567,6 +567,10 @@
           "named": true
         },
         {
+          "type": "multiplicity",
+          "named": true
+        },
+        {
           "type": "redefinition",
           "named": true
         },
@@ -838,6 +842,10 @@
           "named": true
         },
         {
+          "type": "do_action",
+          "named": true
+        },
+        {
           "type": "doc_comment",
           "named": true
         },
@@ -850,6 +858,10 @@
           "named": true
         },
         {
+          "type": "entry_action",
+          "named": true
+        },
+        {
           "type": "enumeration_definition",
           "named": true
         },
@@ -859,6 +871,10 @@
         },
         {
           "type": "exhibit_statement",
+          "named": true
+        },
+        {
+          "type": "exit_action",
           "named": true
         },
         {
@@ -955,6 +971,10 @@
         },
         {
           "type": "loop_action",
+          "named": true
+        },
+        {
+          "type": "member_feature",
           "named": true
         },
         {
@@ -1773,6 +1793,10 @@
           "named": true
         },
         {
+          "type": "do_action",
+          "named": true
+        },
+        {
           "type": "doc_comment",
           "named": true
         },
@@ -1785,6 +1809,10 @@
           "named": true
         },
         {
+          "type": "entry_action",
+          "named": true
+        },
+        {
           "type": "enumeration_definition",
           "named": true
         },
@@ -1794,6 +1822,10 @@
         },
         {
           "type": "exhibit_statement",
+          "named": true
+        },
+        {
+          "type": "exit_action",
           "named": true
         },
         {
@@ -1890,6 +1922,10 @@
         },
         {
           "type": "loop_action",
+          "named": true
+        },
+        {
+          "type": "member_feature",
           "named": true
         },
         {
@@ -2364,6 +2400,10 @@
           "named": true
         },
         {
+          "type": "do_action",
+          "named": true
+        },
+        {
           "type": "doc_comment",
           "named": true
         },
@@ -2376,6 +2416,10 @@
           "named": true
         },
         {
+          "type": "entry_action",
+          "named": true
+        },
+        {
           "type": "enumeration_definition",
           "named": true
         },
@@ -2385,6 +2429,10 @@
         },
         {
           "type": "exhibit_statement",
+          "named": true
+        },
+        {
+          "type": "exit_action",
           "named": true
         },
         {
@@ -2465,6 +2513,10 @@
         },
         {
           "type": "loop_action",
+          "named": true
+        },
+        {
+          "type": "member_feature",
           "named": true
         },
         {
@@ -3156,6 +3208,10 @@
           "named": true
         },
         {
+          "type": "do_action",
+          "named": true
+        },
+        {
           "type": "doc_comment",
           "named": true
         },
@@ -3165,6 +3221,10 @@
         },
         {
           "type": "end_feature",
+          "named": true
+        },
+        {
+          "type": "entry_action",
           "named": true
         },
         {
@@ -3181,6 +3241,10 @@
         },
         {
           "type": "exhibit_statement",
+          "named": true
+        },
+        {
+          "type": "exit_action",
           "named": true
         },
         {
@@ -3261,6 +3325,10 @@
         },
         {
           "type": "loop_action",
+          "named": true
+        },
+        {
+          "type": "member_feature",
           "named": true
         },
         {
@@ -5094,6 +5162,72 @@
     }
   },
   {
+    "type": "member_feature",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
+          "named": true
+        },
+        {
+          "type": "multiplicity",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "tilde_conjugation",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
+          "named": true
+        },
+        {
+          "type": "value_assignment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "message_statement",
     "named": true,
     "fields": {
@@ -5354,6 +5488,10 @@
           "named": true
         },
         {
+          "type": "do_action",
+          "named": true
+        },
+        {
           "type": "doc_comment",
           "named": true
         },
@@ -5366,6 +5504,10 @@
           "named": true
         },
         {
+          "type": "entry_action",
+          "named": true
+        },
+        {
           "type": "enumeration_definition",
           "named": true
         },
@@ -5375,6 +5517,10 @@
         },
         {
           "type": "exhibit_statement",
+          "named": true
+        },
+        {
+          "type": "exit_action",
           "named": true
         },
         {
@@ -5455,6 +5601,10 @@
         },
         {
           "type": "loop_action",
+          "named": true
+        },
+        {
+          "type": "member_feature",
           "named": true
         },
         {
@@ -6804,6 +6954,10 @@
           "named": true
         },
         {
+          "type": "do_action",
+          "named": true
+        },
+        {
           "type": "doc_comment",
           "named": true
         },
@@ -6816,6 +6970,10 @@
           "named": true
         },
         {
+          "type": "entry_action",
+          "named": true
+        },
+        {
           "type": "enumeration_definition",
           "named": true
         },
@@ -6825,6 +6983,10 @@
         },
         {
           "type": "exhibit_statement",
+          "named": true
+        },
+        {
+          "type": "exit_action",
           "named": true
         },
         {
@@ -6905,6 +7067,10 @@
         },
         {
           "type": "loop_action",
+          "named": true
+        },
+        {
+          "type": "member_feature",
           "named": true
         },
         {
@@ -7417,6 +7583,10 @@
           "named": true
         },
         {
+          "type": "do_action",
+          "named": true
+        },
+        {
           "type": "doc_comment",
           "named": true
         },
@@ -7429,6 +7599,10 @@
           "named": true
         },
         {
+          "type": "entry_action",
+          "named": true
+        },
+        {
           "type": "enumeration_definition",
           "named": true
         },
@@ -7438,6 +7612,10 @@
         },
         {
           "type": "exhibit_statement",
+          "named": true
+        },
+        {
+          "type": "exit_action",
           "named": true
         },
         {
@@ -7534,6 +7712,10 @@
         },
         {
           "type": "loop_action",
+          "named": true
+        },
+        {
+          "type": "member_feature",
           "named": true
         },
         {
@@ -8442,6 +8624,10 @@
         },
         {
           "type": "loop_action",
+          "named": true
+        },
+        {
+          "type": "member_feature",
           "named": true
         },
         {
@@ -10357,6 +10543,10 @@
   },
   {
     "type": "loop",
+    "named": false
+  },
+  {
+    "type": "member",
     "named": false
   },
   {
