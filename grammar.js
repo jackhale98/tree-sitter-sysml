@@ -1047,7 +1047,7 @@ module.exports = grammar({
 
     return_statement: ($) =>
       seq("return",
-          optional(choice("attribute", "part", "port", "ref")),
+          optional(choice("attribute", "part", "port", "ref", "feature")),
           optional(field("name", $.identifier)),
           optional($._type_relationships),
           optional($.multiplicity),
@@ -1376,7 +1376,11 @@ module.exports = grammar({
       choice("nonunique", "ordered"),
 
     value_assignment: ($) =>
-      seq(choice("=", ":=", seq("default", optional(choice("=", ":=")))), $._expression),
+      choice(
+        seq(choice("=", ":=", seq("default", choice("=", ":="))), $._expression),
+        seq("default", $._expression),
+        seq("default", $._body),
+      ),
 
     connect_clause: ($) =>
       choice(

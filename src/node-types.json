@@ -9929,6 +9929,10 @@
           "named": true
         },
         {
+          "type": "definition_body",
+          "named": true
+        },
+        {
           "type": "feature_chain",
           "named": true
         },
