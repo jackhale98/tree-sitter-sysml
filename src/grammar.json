@@ -1968,6 +1968,14 @@
         },
         {
           "type": "STRING",
+          "value": "message"
+        },
+        {
+          "type": "STRING",
+          "value": "case"
+        },
+        {
+          "type": "STRING",
           "value": "classifier"
         },
         {
@@ -3057,6 +3065,37 @@
               "type": "BLANK"
             }
           ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_type_relationships"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "multiplicity"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_feature_qualifier"
+          }
         },
         {
           "type": "CHOICE",
@@ -7582,8 +7621,56 @@
               "type": "SEQ",
               "members": [
                 {
-                  "type": "SYMBOL",
-                  "name": "_feature_ref"
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "FIELD",
+                      "name": "name",
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "identifier"
+                      }
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "_type_relationships"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "multiplicity"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "_type_relationships"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
                 },
                 {
                   "type": "CHOICE",
@@ -7990,12 +8077,85 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "redefines"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "redefines"
+            },
+            {
+              "type": "STRING",
+              "value": ":>>"
+            }
+          ]
         },
         {
-          "type": "SYMBOL",
-          "name": "_feature_ref"
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_feature_ref"
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": ","
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "_feature_ref"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_type_relationships"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "multiplicity"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_feature_qualifier"
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_type_relationships"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "CHOICE",
@@ -8010,8 +8170,17 @@
           ]
         },
         {
-          "type": "STRING",
-          "value": ";"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_body"
+            },
+            {
+              "type": "STRING",
+              "value": ";"
+            }
+          ]
         }
       ]
     },
@@ -9552,6 +9721,22 @@
         {
           "type": "STRING",
           "value": "assoc"
+        },
+        {
+          "type": "STRING",
+          "value": "bool"
+        },
+        {
+          "type": "STRING",
+          "value": "boolean"
+        },
+        {
+          "type": "STRING",
+          "value": "inv"
+        },
+        {
+          "type": "STRING",
+          "value": "invariant"
         }
       ]
     },
@@ -12821,6 +13006,15 @@
       "allocation_usage"
     ],
     [
+      "flow_usage"
+    ],
+    [
+      "exit_action"
+    ],
+    [
+      "standalone_redefines"
+    ],
+    [
       "interface_usage"
     ],
     [
@@ -12857,6 +13051,14 @@
     [
       "_def_keyword",
       "_modifier"
+    ],
+    [
+      "_usage_keyword",
+      "message_statement"
+    ],
+    [
+      "constraint_expression_usage",
+      "_kerml_keyword"
     ],
     [
       "_feature_qualifier",

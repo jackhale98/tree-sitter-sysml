@@ -45,6 +45,9 @@ module.exports = grammar({
     [$.action_usage],
     [$.return_statement],
     [$.allocation_usage],
+    [$.flow_usage],
+    [$.exit_action],
+    [$.standalone_redefines],
     [$.interface_usage],
     [$.feature_usage, $._declaration, $.constraint_usage, $.connect_statement],
     [$.end_feature],
@@ -55,6 +58,8 @@ module.exports = grammar({
     [$.state_body, $._body_element],
     [$.event_usage],
     [$._def_keyword, $._modifier],
+    [$._usage_keyword, $.message_statement],
+    [$.constraint_expression_usage, $._kerml_keyword],
     [$._feature_qualifier, $._modifier],
     [$._def_keyword, $.metadata_usage],
     [$.kerml_usage],
@@ -391,6 +396,7 @@ module.exports = grammar({
         "part", "attribute", "port", "item", "occurrence",
         "calc", "view", "viewpoint", "rendering", "concern",
         "analysis", "verification", "enum",
+        "message", "case",
         "classifier", "metaclass", "expr", "step",
         seq("use", "case"),
         seq("snapshot", optional(choice("item", "part"))),
@@ -512,6 +518,9 @@ module.exports = grammar({
       seq(
         "flow",
         optional(field("name", $.identifier)),
+        optional($._type_relationships),
+        optional($.multiplicity),
+        repeat($._feature_qualifier),
         optional($._type_relationships),
         optional(seq("of", $._feature_ref, optional($.multiplicity))),
         optional(choice(
@@ -928,7 +937,7 @@ module.exports = grammar({
 
     exit_action: ($) =>
       seq("exit", optional("action"), choice(
-        seq($._feature_ref, choice(";", $._body)),
+        seq(optional(field("name", $.identifier)), optional($._type_relationships), optional($.multiplicity), optional($._type_relationships), choice(";", $._body)),
         $._body,
         ";",
       )),
@@ -1008,9 +1017,13 @@ module.exports = grammar({
 
     // Standalone redefines inside bodies (e.g. `redefines massRequired = 200 [kg];`)
     standalone_redefines: ($) =>
-      seq("redefines", $._feature_ref,
+      seq(choice("redefines", ":>>"), commaSep1($._feature_ref),
+          optional($._type_relationships),
+          optional($.multiplicity),
+          repeat($._feature_qualifier),
+          optional($._type_relationships),
           optional($.value_assignment),
-          ";"),
+          choice($._body, ";")),
 
     require_statement: ($) =>
       seq("require",
@@ -1157,6 +1170,7 @@ module.exports = grammar({
         "class", "struct", "datatype", "type",
         "behavior", "function", "predicate",
         "interaction", "feature", "assoc",
+        "bool", "boolean", "inv", "invariant",
       ),
 
     // KerML standalone relationship statements

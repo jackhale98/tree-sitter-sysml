@@ -3609,21 +3609,60 @@
   {
     "type": "exit_action",
     "named": true,
-    "fields": {},
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
+          "type": "binding",
+          "named": true
+        },
+        {
           "type": "definition_body",
           "named": true
         },
         {
-          "type": "feature_chain",
+          "type": "inverse_keyword",
           "named": true
         },
         {
-          "type": "qualified_name",
+          "type": "keyword_type_relationship",
+          "named": true
+        },
+        {
+          "type": "multiplicity",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "tilde_conjugation",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
           "named": true
         }
       ]
@@ -8404,11 +8443,51 @@
       "required": true,
       "types": [
         {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "definition_body",
+          "named": true
+        },
+        {
           "type": "feature_chain",
           "named": true
         },
         {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
+          "named": true
+        },
+        {
+          "type": "multiplicity",
+          "named": true
+        },
+        {
           "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "tilde_conjugation",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
           "named": true
         },
         {
@@ -10075,6 +10154,10 @@
   },
   {
     "type": ":=",
+    "named": false
+  },
+  {
+    "type": ":>>",
     "named": false
   },
   {
