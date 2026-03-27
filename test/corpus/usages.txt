@@ -344,7 +344,7 @@ part def Vehicle {
   (definition
     name: (identifier)
     (definition_body
-      (usage
+      (feature_usage
         name: (identifier)
         (typed_by
           type: (qualified_name

@@ -978,6 +978,10 @@
           "named": true
         },
         {
+          "type": "multiplicity_definition",
+          "named": true
+        },
+        {
           "type": "new_expression",
           "named": true
         },
@@ -1200,6 +1204,10 @@
         },
         {
           "type": "keyword_type_relationship",
+          "named": true
+        },
+        {
+          "type": "multiplicity",
           "named": true
         },
         {
@@ -1905,6 +1913,10 @@
           "named": true
         },
         {
+          "type": "multiplicity_definition",
+          "named": true
+        },
+        {
           "type": "new_expression",
           "named": true
         },
@@ -2142,6 +2154,10 @@
         },
         {
           "type": "keyword_type_relationship",
+          "named": true
+        },
+        {
+          "type": "multiplicity",
           "named": true
         },
         {
@@ -2461,6 +2477,10 @@
         },
         {
           "type": "metadata_usage",
+          "named": true
+        },
+        {
+          "type": "multiplicity_definition",
           "named": true
         },
         {
@@ -3253,6 +3273,10 @@
         },
         {
           "type": "metadata_usage",
+          "named": true
+        },
+        {
+          "type": "multiplicity_definition",
           "named": true
         },
         {
@@ -5450,6 +5474,10 @@
           "named": true
         },
         {
+          "type": "multiplicity_definition",
+          "named": true
+        },
+        {
           "type": "objective_declaration",
           "named": true
         },
@@ -5767,6 +5795,68 @@
         },
         {
           "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "multiplicity_definition",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "definition_body",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
+          "named": true
+        },
+        {
+          "type": "multiplicity",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "tilde_conjugation",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
           "named": true
         }
       ]
@@ -6129,6 +6219,10 @@
         },
         {
           "type": "metadata_usage",
+          "named": true
+        },
+        {
+          "type": "multiplicity_definition",
           "named": true
         },
         {
@@ -6826,6 +6920,10 @@
           "named": true
         },
         {
+          "type": "multiplicity_definition",
+          "named": true
+        },
+        {
           "type": "objective_declaration",
           "named": true
         },
@@ -7122,6 +7220,10 @@
         },
         {
           "type": "keyword_type_relationship",
+          "named": true
+        },
+        {
+          "type": "multiplicity",
           "named": true
         },
         {
@@ -7452,6 +7554,10 @@
         },
         {
           "type": "metadata_usage",
+          "named": true
+        },
+        {
+          "type": "multiplicity_definition",
           "named": true
         },
         {
@@ -7878,6 +7984,10 @@
         },
         {
           "type": "metadata_usage",
+          "named": true
+        },
+        {
+          "type": "multiplicity_definition",
           "named": true
         },
         {
@@ -8347,6 +8457,10 @@
           "named": true
         },
         {
+          "type": "multiplicity_definition",
+          "named": true
+        },
+        {
           "type": "objective_declaration",
           "named": true
         },
@@ -8675,6 +8789,10 @@
           "named": true
         },
         {
+          "type": "multiplicity",
+          "named": true
+        },
+        {
           "type": "qualified_name",
           "named": true
         }
@@ -8848,6 +8966,10 @@
         },
         {
           "type": "keyword_type_relationship",
+          "named": true
+        },
+        {
+          "type": "multiplicity",
           "named": true
         },
         {
@@ -10255,6 +10377,10 @@
   },
   {
     "type": "metadata",
+    "named": false
+  },
+  {
+    "type": "multiplicity",
     "named": false
   },
   {

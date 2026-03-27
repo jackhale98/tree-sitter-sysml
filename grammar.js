@@ -37,8 +37,13 @@ module.exports = grammar({
     [$.assert_statement],
     [$.succession_usage, $.succession_statement],
     [$.accept_clause, $.accept_action],
+    [$.feature_usage],
     [$.feature_usage, $._declaration, $.namespace_declaration, $.constraint_usage, $._statement, $.connect_statement],
     [$.constraint_usage],
+    [$.requirement_usage],
+    [$.state_usage],
+    [$.action_usage],
+    [$.return_statement],
     [$.feature_usage, $._declaration, $.constraint_usage, $.connect_statement],
     [$.end_feature],
     [$.interface_statement, $._feature_ref],
@@ -47,8 +52,8 @@ module.exports = grammar({
     [$.definition_body, $.constraint_body],
     [$.event_usage],
     [$._def_keyword, $._modifier],
+    [$._feature_qualifier, $._modifier],
     [$._def_keyword, $.metadata_usage],
-    [$._usage_keyword, $._modifier],
     [$.kerml_usage],
     [$._feature_ref, $._expression],
     [$.redefinition_statement, $.specialization],
@@ -77,6 +82,7 @@ module.exports = grammar({
         $.connect_statement,
         $.assert_statement,
         $.expression_statement,
+        $.multiplicity_definition,
         $._statement,
       ),
 
@@ -370,6 +376,7 @@ module.exports = grammar({
         optional($.multiplicity),
         optional($._type_relationships),
         optional($.multiplicity),
+        repeat($._feature_qualifier),
         optional($._type_relationships),
         optional($.value_assignment),
         optional($.metadata_annotation_list),
@@ -378,7 +385,7 @@ module.exports = grammar({
 
     _usage_keyword: ($) =>
       choice(
-        "part", "attribute", "port", "item", "occurrence", "ref",
+        "part", "attribute", "port", "item", "occurrence",
         "calc", "view", "viewpoint", "rendering", "concern",
         "analysis", "verification", "enum",
         "classifier", "metaclass", "expr", "step",
@@ -394,6 +401,8 @@ module.exports = grammar({
         optional($.multiplicity),
         optional($._type_relationships),
         optional($.multiplicity),
+        repeat($._feature_qualifier),
+        optional($._type_relationships),
         optional($.value_assignment),
         optional(choice(
           seq("send", optional($._expression),
@@ -415,6 +424,7 @@ module.exports = grammar({
         optional($.multiplicity),
         optional($._type_relationships),
         optional($.multiplicity),
+        optional($._type_relationships),
         optional("parallel"),
         choice($.state_body, ";"),
       ),
@@ -451,6 +461,8 @@ module.exports = grammar({
         "constraint",
         optional(field("name", $.identifier)),
         optional($._type_relationships),
+        optional($.multiplicity),
+        optional($._type_relationships),
         choice($.constraint_body, ";"),
       ),
 
@@ -461,6 +473,7 @@ module.exports = grammar({
         optional(field("name", $.identifier)),
         optional($._type_relationships),
         optional($.multiplicity),
+        optional($._type_relationships),
         optional($.value_assignment),
         choice($.requirement_body, ";"),
       ),
@@ -494,8 +507,8 @@ module.exports = grammar({
         optional($._type_relationships),
         optional(seq("of", $._feature_ref, optional($.multiplicity))),
         optional(choice(
-          seq("from", $._feature_ref, "to", $._feature_ref),
-          seq($._feature_ref, "to", $._feature_ref),
+          seq("from", optional($.multiplicity), $._feature_ref, "to", optional($.multiplicity), $._feature_ref),
+          seq(optional($.multiplicity), $._feature_ref, "to", optional($.multiplicity), $._feature_ref),
         )),
         choice($._body, ";"),
       ),
@@ -544,6 +557,8 @@ module.exports = grammar({
           optional(field("name", $.identifier)),
           optional($._type_relationships),
           optional($.multiplicity),
+          repeat($._feature_qualifier),
+          optional($._type_relationships),
           optional($.value_assignment),
           choice($._body, ";"),
         ),
@@ -552,6 +567,8 @@ module.exports = grammar({
           field("name", $.identifier),
           $._type_relationships,
           optional($.multiplicity),
+          repeat($._feature_qualifier),
+          optional($._type_relationships),
           optional($.value_assignment),
           choice($._body, ";"),
         ),
@@ -564,10 +581,11 @@ module.exports = grammar({
         "binding",
         optional(field("name", $.identifier)),
         optional($._type_relationships),
+        optional($.multiplicity),
         optional(choice(
-          seq("bind", $._feature_ref, "=", $._feature_ref),
-          seq("of", $._feature_ref, "=", $._feature_ref),
-          seq($._feature_ref, "=", $._feature_ref),
+          seq("bind", optional($.multiplicity), $._feature_ref, "=", optional($.multiplicity), $._feature_ref),
+          seq("of", optional($.multiplicity), $._feature_ref, "=", optional($.multiplicity), $._feature_ref),
+          seq(optional($.multiplicity), $._feature_ref, "=", optional($.multiplicity), $._feature_ref),
         )),
         choice($._body, ";"),
       ),
@@ -577,9 +595,10 @@ module.exports = grammar({
         "succession",
         optional(field("name", $.identifier)),
         optional($._type_relationships),
+        optional($.multiplicity),
         optional(choice(
-          seq("first", $._feature_ref, "then", $._feature_ref),
-          seq($._feature_ref, "then", $._feature_ref),
+          seq("first", optional($.multiplicity), $._feature_ref, "then", optional($.multiplicity), $._feature_ref),
+          seq(optional($.multiplicity), $._feature_ref, "then", optional($.multiplicity), $._feature_ref),
         )),
         choice($._body, ";"),
       ),
@@ -588,10 +607,10 @@ module.exports = grammar({
       seq(
         "succession", "flow",
         optional(field("name", $.identifier)),
-        optional(seq("of", $._feature_ref)),
+        optional(seq("of", $._feature_ref, optional($.multiplicity))),
         optional(choice(
-          seq("from", $._feature_ref, "to", $._feature_ref),
-          seq($._feature_ref, "to", $._feature_ref),
+          seq("from", optional($.multiplicity), $._feature_ref, "to", optional($.multiplicity), $._feature_ref),
+          seq(optional($.multiplicity), $._feature_ref, "to", optional($.multiplicity), $._feature_ref),
         )),
         choice($._body, ";"),
       ),
@@ -950,6 +969,7 @@ module.exports = grammar({
         $.terminate_statement,
         $.inline_transition,
         $.textual_representation,
+        $.multiplicity_definition,
       ),
 
     assignment_statement: ($) =>
@@ -990,6 +1010,9 @@ module.exports = grammar({
       seq("return",
           optional(choice("attribute", "part", "port", "ref")),
           optional(field("name", $.identifier)),
+          optional($._type_relationships),
+          optional($.multiplicity),
+          repeat($._feature_qualifier),
           optional($._type_relationships),
           optional($.value_assignment),
           choice($._body, ";")),
@@ -1087,7 +1110,7 @@ module.exports = grammar({
           optional($._type_relationships),
           optional($.value_assignment),
           optional(choice(
-            seq("from", $._feature_ref, "to", $._feature_ref),
+            seq("from", optional($.multiplicity), $._feature_ref, optional($._type_relationships), "to", optional($.multiplicity), $._feature_ref, optional($._type_relationships)),
             seq($._feature_ref, "to", $._feature_ref),
             seq($._feature_ref, "=", $._feature_ref),
             seq("of", $._feature_ref, "=", $._feature_ref),
@@ -1104,6 +1127,7 @@ module.exports = grammar({
           optional($.multiplicity),
           optional($._type_relationships),
           optional($.multiplicity),
+          repeat($._feature_qualifier),
           optional($._type_relationships),
           optional($.value_assignment),
           choice($._body, ";"),
@@ -1274,6 +1298,20 @@ module.exports = grammar({
             seq("ordered", optional("nonunique")),
             seq("nonunique", optional("ordered")),
           ))),
+
+    // Standalone multiplicity definition (e.g. `multiplicity exactlyOne [1..1] { }`)
+    multiplicity_definition: ($) =>
+      seq(
+        "multiplicity",
+        optional(field("name", $.identifier)),
+        optional($.multiplicity),
+        optional($._type_relationships),
+        choice($._body, ";"),
+      ),
+
+    // Feature qualifiers that can appear after multiplicity (e.g. `[0..*] nonunique ordered`)
+    _feature_qualifier: ($) =>
+      choice("nonunique", "ordered"),
 
     value_assignment: ($) =>
       seq(choice("=", ":=", seq("default", optional(choice("=", ":=")))), $._expression),

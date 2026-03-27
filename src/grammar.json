@@ -79,6 +79,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "multiplicity_definition"
+        },
+        {
+          "type": "SYMBOL",
           "name": "_statement"
         }
       ]
@@ -1850,6 +1854,13 @@
           ]
         },
         {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_feature_qualifier"
+          }
+        },
+        {
           "type": "CHOICE",
           "members": [
             {
@@ -1922,10 +1933,6 @@
         {
           "type": "STRING",
           "value": "occurrence"
-        },
-        {
-          "type": "STRING",
-          "value": "ref"
         },
         {
           "type": "STRING",
@@ -2103,6 +2110,25 @@
             {
               "type": "SYMBOL",
               "name": "multiplicity"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_feature_qualifier"
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_type_relationships"
             },
             {
               "type": "BLANK"
@@ -2348,6 +2374,18 @@
             {
               "type": "SYMBOL",
               "name": "multiplicity"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_type_relationships"
             },
             {
               "type": "BLANK"
@@ -2647,6 +2685,30 @@
           "members": [
             {
               "type": "SYMBOL",
+              "name": "multiplicity"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_type_relationships"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
               "name": "constraint_body"
             },
             {
@@ -2710,6 +2772,18 @@
             {
               "type": "SYMBOL",
               "name": "multiplicity"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_type_relationships"
             },
             {
               "type": "BLANK"
@@ -2993,12 +3067,36 @@
                       "value": "from"
                     },
                     {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
+                    },
+                    {
                       "type": "SYMBOL",
                       "name": "_feature_ref"
                     },
                     {
                       "type": "STRING",
                       "value": "to"
+                    },
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
                     },
                     {
                       "type": "SYMBOL",
@@ -3010,12 +3108,36 @@
                   "type": "SEQ",
                   "members": [
                     {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
+                    },
+                    {
                       "type": "SYMBOL",
                       "name": "_feature_ref"
                     },
                     {
                       "type": "STRING",
                       "value": "to"
+                    },
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
                     },
                     {
                       "type": "SYMBOL",
@@ -3460,6 +3582,25 @@
               ]
             },
             {
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_feature_qualifier"
+              }
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "_type_relationships"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
               "type": "CHOICE",
               "members": [
                 {
@@ -3507,6 +3648,25 @@
                 {
                   "type": "SYMBOL",
                   "name": "multiplicity"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_feature_qualifier"
+              }
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "_type_relationships"
                 },
                 {
                   "type": "BLANK"
@@ -3581,6 +3741,18 @@
           "type": "CHOICE",
           "members": [
             {
+              "type": "SYMBOL",
+              "name": "multiplicity"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
               "type": "CHOICE",
               "members": [
                 {
@@ -3591,12 +3763,36 @@
                       "value": "bind"
                     },
                     {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
+                    },
+                    {
                       "type": "SYMBOL",
                       "name": "_feature_ref"
                     },
                     {
                       "type": "STRING",
                       "value": "="
+                    },
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
                     },
                     {
                       "type": "SYMBOL",
@@ -3612,12 +3808,36 @@
                       "value": "of"
                     },
                     {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
+                    },
+                    {
                       "type": "SYMBOL",
                       "name": "_feature_ref"
                     },
                     {
                       "type": "STRING",
                       "value": "="
+                    },
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
                     },
                     {
                       "type": "SYMBOL",
@@ -3629,12 +3849,36 @@
                   "type": "SEQ",
                   "members": [
                     {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
+                    },
+                    {
                       "type": "SYMBOL",
                       "name": "_feature_ref"
                     },
                     {
                       "type": "STRING",
                       "value": "="
+                    },
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
                     },
                     {
                       "type": "SYMBOL",
@@ -3703,6 +3947,18 @@
           "type": "CHOICE",
           "members": [
             {
+              "type": "SYMBOL",
+              "name": "multiplicity"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
               "type": "CHOICE",
               "members": [
                 {
@@ -3713,12 +3969,36 @@
                       "value": "first"
                     },
                     {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
+                    },
+                    {
                       "type": "SYMBOL",
                       "name": "_feature_ref"
                     },
                     {
                       "type": "STRING",
                       "value": "then"
+                    },
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
                     },
                     {
                       "type": "SYMBOL",
@@ -3730,12 +4010,36 @@
                   "type": "SEQ",
                   "members": [
                     {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
+                    },
+                    {
                       "type": "SYMBOL",
                       "name": "_feature_ref"
                     },
                     {
                       "type": "STRING",
                       "value": "then"
+                    },
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
                     },
                     {
                       "type": "SYMBOL",
@@ -3805,6 +4109,18 @@
                 {
                   "type": "SYMBOL",
                   "name": "_feature_ref"
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "multiplicity"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
                 }
               ]
             },
@@ -3827,12 +4143,36 @@
                       "value": "from"
                     },
                     {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
+                    },
+                    {
                       "type": "SYMBOL",
                       "name": "_feature_ref"
                     },
                     {
                       "type": "STRING",
                       "value": "to"
+                    },
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
                     },
                     {
                       "type": "SYMBOL",
@@ -3844,12 +4184,36 @@
                   "type": "SEQ",
                   "members": [
                     {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
+                    },
+                    {
                       "type": "SYMBOL",
                       "name": "_feature_ref"
                     },
                     {
                       "type": "STRING",
                       "value": "to"
+                    },
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "multiplicity"
+                        },
+                        {
+                          "type": "BLANK"
+                        }
+                      ]
                     },
                     {
                       "type": "SYMBOL",
@@ -7366,6 +7730,10 @@
         {
           "type": "SYMBOL",
           "name": "textual_representation"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "multiplicity_definition"
         }
       ]
     },
@@ -7699,6 +8067,37 @@
               "type": "BLANK"
             }
           ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_type_relationships"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "multiplicity"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_feature_qualifier"
+          }
         },
         {
           "type": "CHOICE",
@@ -8718,16 +9117,64 @@
                           "value": "from"
                         },
                         {
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "SYMBOL",
+                              "name": "multiplicity"
+                            },
+                            {
+                              "type": "BLANK"
+                            }
+                          ]
+                        },
+                        {
                           "type": "SYMBOL",
                           "name": "_feature_ref"
+                        },
+                        {
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "SYMBOL",
+                              "name": "_type_relationships"
+                            },
+                            {
+                              "type": "BLANK"
+                            }
+                          ]
                         },
                         {
                           "type": "STRING",
                           "value": "to"
                         },
                         {
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "SYMBOL",
+                              "name": "multiplicity"
+                            },
+                            {
+                              "type": "BLANK"
+                            }
+                          ]
+                        },
+                        {
                           "type": "SYMBOL",
                           "name": "_feature_ref"
+                        },
+                        {
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "SYMBOL",
+                              "name": "_type_relationships"
+                            },
+                            {
+                              "type": "BLANK"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -8903,6 +9350,13 @@
                   "type": "BLANK"
                 }
               ]
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_feature_qualifier"
+              }
             },
             {
               "type": "CHOICE",
@@ -10289,6 +10743,81 @@
               "type": "BLANK"
             }
           ]
+        }
+      ]
+    },
+    "multiplicity_definition": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "multiplicity"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "name",
+              "content": {
+                "type": "SYMBOL",
+                "name": "identifier"
+              }
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "multiplicity"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_type_relationships"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_body"
+            },
+            {
+              "type": "STRING",
+              "value": ";"
+            }
+          ]
+        }
+      ]
+    },
+    "_feature_qualifier": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "nonunique"
+        },
+        {
+          "type": "STRING",
+          "value": "ordered"
         }
       ]
     },
@@ -12096,6 +12625,9 @@
       "accept_action"
     ],
     [
+      "feature_usage"
+    ],
+    [
       "feature_usage",
       "_declaration",
       "namespace_declaration",
@@ -12105,6 +12637,18 @@
     ],
     [
       "constraint_usage"
+    ],
+    [
+      "requirement_usage"
+    ],
+    [
+      "state_usage"
+    ],
+    [
+      "action_usage"
+    ],
+    [
+      "return_statement"
     ],
     [
       "feature_usage",
@@ -12138,12 +12682,12 @@
       "_modifier"
     ],
     [
-      "_def_keyword",
-      "metadata_usage"
+      "_feature_qualifier",
+      "_modifier"
     ],
     [
-      "_usage_keyword",
-      "_modifier"
+      "_def_keyword",
+      "metadata_usage"
     ],
     [
       "kerml_usage"
