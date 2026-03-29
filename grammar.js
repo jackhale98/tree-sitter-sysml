@@ -644,6 +644,7 @@ module.exports = grammar({
     then_succession: ($) =>
       prec.left(seq(
         "then",
+        optional($.visibility),
         optional(choice("action", "state", "fork", "join", "merge", "decide", seq("event", "occurrence"), "event", "terminate", "message", "timeslice", seq("snapshot", optional(choice("part", "item"))), seq("use", "case"), "verification", "analysis")),
         optional($._feature_ref),
         optional($.multiplicity),
@@ -1148,18 +1149,20 @@ module.exports = grammar({
           $._kerml_connector_keyword,
           optional("all"),
           optional($.short_name),
+          optional($.multiplicity),
           optional(field("name", $.identifier)),
           optional($.multiplicity),
           optional($._type_relationships),
           optional($.multiplicity),
+          repeat($._feature_qualifier),
           optional($._type_relationships),
           optional($.value_assignment),
           optional(choice(
             seq("from", optional($.multiplicity), $._feature_ref, optional($._type_relationships), "to", optional($.multiplicity), $._feature_ref, optional($._type_relationships)),
-            seq($._feature_ref, "to", $._feature_ref),
+            seq(optional($.multiplicity), $._feature_ref, "to", optional($.multiplicity), $._feature_ref),
             seq($._feature_ref, "=", $._feature_ref),
             seq("of", $._feature_ref, "=", $._feature_ref),
-            seq("to", $._feature_ref),
+            seq("to", optional($.multiplicity), $._feature_ref),
           )),
           choice($._body, ";"),
         ),
@@ -1499,6 +1502,8 @@ module.exports = grammar({
         prec.left(10, seq($._expression, "->", $.identifier, "(", commaSep($._argument), ")")),
         // collect/select arrow with quoted name
         prec.left(10, seq($._expression, "->", $.identifier, $.quoted_identifier)),
+        // collect/select arrow with function reference (e.g. ->reduce RealFunctions::'+')
+        prec.left(10, seq($._expression, "->", $.identifier, $._feature_ref)),
         // collect/select arrow (plain)
         prec.left(10, seq($._expression, "->", $._expression)),
         // member access — highest
