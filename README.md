@@ -5,34 +5,42 @@ OMG SysML v2.0 and KerML 1.0 specifications.
 
 ## Features
 
-- **Full language coverage** — parses all 88 official OMG example files from
-  all 21 example directories in the
+- **Near-complete language coverage** — parses all 213 official OMG example and
+  training files plus 92 of 94 standard library files from the
   [SysML-v2-Release](https://github.com/Systems-Modeling/SysML-v2-Release)
   repository with zero errors
-- **41+ definition types** (SysML v2 + KerML) with optional names (anonymous
-  definitions), comma-separated specialization targets, and short names
-- **30+ usage types** including binding, succession, succession flow, invariant,
-  boolean expression, enum, event occurrence, and full modifier support
-- **Behavioral constructs**: actions, states, transitions, control flow (if/while/for
-  with body and ref forms), terminate, inline transitions, send/accept/after,
-  while-until loops, entry assign/send patterns
-- **Relationships**: specialization (`:>` / `specializes`), redefinition (`:>>` /
-  `redefines`), binding (`::>`), conjugation, chaining, crosses (`=>`),
+- **Definitions** — unified rule covering 40+ definition keywords (part, action,
+  state, port, connection, attribute, item, requirement, constraint, view,
+  calc, class, struct, type, function, and more)
+- **Usages** — unified rule covering 20+ usage keywords, plus specialized rules
+  for action, state, connection, interface, constraint, requirement, event,
+  allocation, flow, metadata, binding, succession, and KerML usages
+- **Behavioral constructs** — actions, states, transitions, control flow
+  (if/while/for with body and ref forms), terminate, inline transitions,
+  send/accept/after, entry/do/exit actions with names and types, while-until
+  loops, fork/join/merge/decide nodes, action chaining with `then`
+- **Relationships** — specialization (`:>` / `specializes`), redefinition
+  (`:>>` / `redefines`), binding (`::>`), conjugation, chaining, crosses (`=>`),
   `typed by` / `defined by`, `unions` / `intersects` / `differences`,
-  `featuring by` — all supporting comma-separated multiple targets
-- **Connections**: named binding/succession usages, multi-end connections with
-  `crosses`, end features with multiplicity and item/ref/port/part qualifiers,
-  `::>` bindings in parenthesized connect clauses
-- **Expressions**: arithmetic, logical (`&`), comparison, invocation with named
-  arguments and qualified names, conditional, `new` with qualified names,
-  `->` collect/arrow, `.?{...}` select, `->name{...}` body expressions,
-  result expressions (trailing expr without `;`)
-- **Requirements**: `assert`/`not satisfy`, `require constraint/requirement`
-  with bodies, subject/actor/objective/stakeholder/frame declarations
-- **Metadata**: `#` prefix annotations with qualified names, structured
-  `metadata_body` with `redefines`/`:>>` patterns, `metadata ... about` clause
-- **Views**: render with rendering keyword and typing, expose, viewpoint frames
-- **Textual representation**: `rep`/`language` blocks for embedding foreign code
+  `featuring by`, `disjoint from` — all supporting comma-separated multiple targets
+- **Connections** — named binding/succession usages with multiplicity on endpoints,
+  multi-end connections with `crosses`, end features with occurrence/action/flow
+  qualifiers, `::>` bindings in parenthesized connect clauses
+- **Expressions** — arithmetic, logical, comparison, invocation with named
+  arguments and qualified names, conditional, `new` expressions,
+  `->` collect/select/reduce arrows with bodies, invocations, and function
+  references, `.?{...}` select, `meta` expressions, result expressions
+- **Requirements** — `assert`/`not satisfy`, `require constraint/requirement`
+  with bodies, subject/actor/objective/stakeholder/frame declarations with
+  full type relationship and multiplicity support
+- **Metadata** — `#` prefix annotations with qualified names, structured
+  `metadata_body` with `redefines`/`:>>` patterns, `metadata ... about` clause,
+  `member feature` declarations
+- **Standard library patterns** — standalone multiplicity definitions, feature
+  qualifiers (`nonunique`, `ordered`), `default` with body values, `bind`
+  statements, standalone `:>>` redefines in bodies, quoted operator names
+- **Views** — render with rendering keyword and typing, expose, viewpoint frames
+- **Textual representation** — `rep`/`language` blocks for embedding foreign code
 - **Multiplicity** with `ordered nonunique` in any order, flexible positioning
   between name, type, and specialization
 - **Imports** with recursive `**`, packages with short names, bare `namespace`
@@ -43,14 +51,13 @@ OMG SysML v2.0 and KerML 1.0 specifications.
 
 - **198 corpus tests** covering definitions, usages, expressions, control flow,
   connections, requirements, states, imports, packages, comments, and KerML extensions
-- **88 official OMG example files** from all 21 example directories, including:
-  - Simple Tests (34 files)
-  - Vehicle Example, Camera, Flashlight, Room Model
-  - Arrowhead Framework (domain-specific metaclasses)
-  - Interaction Sequencing (message flows, event occurrences)
-  - Metadata, Requirements, Analysis, Verification
-  - Geometry, Mass Roll-up, Dynamics
-  - Variability, Individuals, Cause and Effect
+- **213 official OMG files** (examples, training, KerML) — all parse with zero errors
+- **92/94 standard library files** — near-complete coverage of the SysML v2 and
+  KerML standard libraries (Kernel Semantic, Kernel Function, Domain, Systems)
+
+The 2 remaining standard library files (Actions.sysml, Occurrences.kerml) use
+inline action body chaining and complex `end` feature patterns that cannot be
+added without exceeding tree-sitter's generator memory limits.
 
 ## Installation
 
