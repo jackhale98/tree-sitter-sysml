@@ -322,8 +322,7 @@ part def Vehicle {
     name: (identifier)
     (definition_body
       (metadata_usage
-        (qualified_name
-          (identifier))))))
+        name: (identifier)))))
 
 =====================================
 Metadata usage with type and body

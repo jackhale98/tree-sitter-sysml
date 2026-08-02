@@ -39,6 +39,7 @@ module.exports = grammar({
     [$.accept_clause, $.accept_action],
     [$.feature_usage],
     [$.feature_usage, $._declaration, $.namespace_declaration, $.constraint_usage, $._statement, $.connect_statement],
+    [$._declaration, $.constraint_usage, $.feature_usage, $._statement, $.connect_statement],
     [$.constraint_usage],
     [$.requirement_usage],
     [$.state_usage],
@@ -63,15 +64,15 @@ module.exports = grammar({
     [$.definition_body, $.constraint_body],
     [$.state_body, $._body_element],
     [$.event_usage],
-    [$._def_keyword, $._modifier],
+    [$._def_keyword, $.modifier],
     [$._usage_keyword, $.message_statement],
     [$.constraint_expression_usage, $._kerml_keyword],
-    [$._feature_qualifier, $._modifier],
+    [$._feature_qualifier, $.modifier],
     [$._def_keyword, $.metadata_usage],
     [$.kerml_usage],
     [$._feature_ref, $._expression],
     [$.redefinition_statement, $.specialization],
-    [$.disjoining_statement, $._modifier],
+    [$.disjoining_statement, $.modifier],
     [$.connection_usage],
   ],
 
@@ -177,6 +178,7 @@ module.exports = grammar({
       choice(
         seq(
           "comment",
+          optional($.short_name),
           optional(field("name", $.identifier)),
           optional(seq("about", commaSep1($.qualified_name))),
           optional(seq("locale", $.string_literal)),
@@ -423,11 +425,18 @@ module.exports = grammar({
           seq("send", optional($._expression),
               optional(seq("via", $._feature_ref)),
               optional(seq("to", $._feature_ref))),
-          seq("accept", optional(field("accept_name", $.identifier)),
-              optional($._type_relationships),
-              optional(seq("after", $._expression)),
-              optional(seq("via", $._feature_ref))),
+          seq("accept", choice(
+            seq("when", $._expression),
+            seq("at", $._expression),
+            seq("after", $._expression),
+            seq(field("accept_name", $.identifier),
+                optional($._type_relationships),
+                optional(seq("after", $._expression)),
+                optional(seq("via", $._feature_ref))),
+          )),
           "terminate",
+          seq("for", $.identifier, optional(seq(":", $._feature_ref)),
+              "in", $._expression, optional(seq("..", $._expression))),
         )),
         choice($._body, ";"),
       ),
@@ -492,6 +501,7 @@ module.exports = grammar({
         optional($.multiplicity),
         optional($._type_relationships),
         optional($.value_assignment),
+        optional(seq("by", $._feature_ref)),
         choice($.requirement_body, ";"),
       ),
 
@@ -539,7 +549,7 @@ module.exports = grammar({
     metadata_usage: ($) =>
       seq(
         "metadata",
-        optional(field("name", $.identifier)),
+        optional(prec.dynamic(1, field("name", $.identifier))),
         optional($._feature_ref),
         optional($._type_relationships),
         optional(seq("about", commaSep1($._feature_ref))),
@@ -642,7 +652,7 @@ module.exports = grammar({
     // --- Behavioral ---
 
     then_succession: ($) =>
-      prec.left(seq(
+      prec.right(seq(
         "then",
         optional($.visibility),
         optional(choice("action", "state", "fork", "join", "merge", "decide", seq("event", "occurrence"), "event", "terminate", "message", "timeslice", seq("snapshot", optional(choice("part", "item"))), seq("use", "case"), "verification", "analysis")),
@@ -661,6 +671,10 @@ module.exports = grammar({
           seq("assign", $._feature_ref, ":=", $._expression, ";"),
           seq("include", optional(repeat1(choice("use", "case", "action", "state"))), $._feature_ref,
               optional($._type_relationships), choice($._body, ";")),
+          seq("perform", optional("action"), optional($._feature_ref),
+              optional($._type_relationships), optional($.multiplicity),
+              choice($._body, ";")),
+          seq("terminate", optional($._feature_ref), ";"),
           seq("of", optional(field("of_name", $.identifier)), optional($._type_relationships), $._feature_ref,
               optional($.multiplicity), optional($._type_relationships), optional($.value_assignment),
               optional(seq("from", $._feature_ref, "to", $._feature_ref)), choice($._body, ";")),
@@ -700,8 +714,8 @@ module.exports = grammar({
       seq(
         "exhibit",
         optional("state"),
-        $._feature_ref,
-        optional(seq("redefines", $._feature_ref)),
+        optional($._feature_ref),
+        optional($._type_relationships),
         optional("parallel"),
         choice($.state_body, ";"),
       ),
@@ -710,7 +724,7 @@ module.exports = grammar({
       seq(
         "include",
         optional(repeat1(choice("use", "case", "action", "state"))),
-        $._feature_ref,
+        optional($._feature_ref),
         optional($._type_relationships),
         optional($.multiplicity),
         choice($._body, ";"),
@@ -724,7 +738,8 @@ module.exports = grammar({
         optional($.accept_clause),
         optional(seq("if", $._expression)),
         optional(seq("do", choice(
-          seq("send", $._expression, choice("to", "via"), $._feature_ref),
+          seq(optional("action"), "send", $._expression,
+              optional(seq(choice("to", "via"), $._feature_ref))),
           seq("action", $._feature_ref, optional($._type_relationships)),
           $._feature_ref,
         ))),
@@ -741,7 +756,8 @@ module.exports = grammar({
         $.accept_clause,
         optional(seq("if", $._expression)),
         optional(seq("do", choice(
-          seq("send", $._expression, choice("to", "via"), $._feature_ref),
+          seq(optional("action"), "send", $._expression,
+              optional(seq(choice("to", "via"), $._feature_ref))),
           seq("action", optional($._feature_ref), optional($._type_relationships), $._body),
           seq("action", $._feature_ref, optional($._type_relationships)),
           $._feature_ref,
@@ -767,7 +783,8 @@ module.exports = grammar({
 
     do_clause: ($) =>
       seq("do", choice(
-        seq("send", $._expression, choice("to", "via"), $._feature_ref),
+        seq(optional("action"), "send", $._expression,
+            optional(seq(choice("to", "via"), $._feature_ref))),
         seq("action", $._feature_ref, optional($._type_relationships), choice(";", $._body)),
         seq($._feature_ref, choice(";", $._body)),
         $._body,
@@ -820,8 +837,10 @@ module.exports = grammar({
     for_action: ($) =>
       choice(
         seq("for", $.identifier, optional(seq(":", $._feature_ref)), "in", $._expression,
+            optional(seq("..", $._expression)),
             "do", $._feature_ref, ";"),
         seq("for", $.identifier, optional(seq(":", $._feature_ref)), "in", $._expression,
+            optional(seq("..", $._expression)),
             $._body),
       ),
 
@@ -980,10 +999,9 @@ module.exports = grammar({
         $.verify_statement,
         $.connect_statement,
         $.interface_statement,
-        $.allocate_statement,
-        $.message_statement,
-        $.flow_statement,
-        $.dependency_statement,
+        // Via $._statement so prefix metadata (`#tag allocate ...`) works
+        // inside bodies, not just at top level.
+        $._statement,
         $.redefinition_statement,
         $.standalone_redefines,
         $.require_statement,
@@ -1380,7 +1398,7 @@ module.exports = grammar({
 
     value_assignment: ($) =>
       choice(
-        seq(choice("=", ":=", seq("default", choice("=", ":="))), $._expression),
+        seq(choice("=", ":=", seq("default", choice("=", ":="))), choice($.body_expression, $._expression)),
         seq("default", $._expression),
         seq("default", $._body),
       ),
@@ -1421,6 +1439,13 @@ module.exports = grammar({
     _modifier: ($) =>
       choice(
         $.visibility,
+        $.modifier,
+      ),
+
+    // Named node so modifiers (esp. `variation`/`variant`, Ch 35) are
+    // visible/queryable in the CST rather than anonymous tokens.
+    modifier: ($) =>
+      choice(
         "abstract",
         "variation",
         "variant",
@@ -1494,8 +1519,8 @@ module.exports = grammar({
         prec.left(7, seq($._expression, choice("*", "/", "%"), $._expression)),
         // exponentiation — right-associative
         prec.right(8, seq($._expression, "**", $._expression)),
-        // type operators
-        prec.left(9, seq($._expression, choice("hastype", "istype", "as"), $._expression)),
+        // type operators (incl. classification `@` and metaclassification `@@`)
+        prec.left(9, seq($._expression, choice("hastype", "istype", "as", "@", "@@"), $._expression)),
         // collect/select arrow with body
         prec.left(10, seq($._expression, "->", $.identifier, "{", repeat(choice($._body_element, $._expression)), "}")),
         // collect/select arrow with invocation
@@ -1543,9 +1568,19 @@ module.exports = grammar({
 
     _argument: ($) =>
       choice(
-        seq($.identifier, "=", $._expression),
+        $.named_argument,
+        $.body_expression,
         $._expression,
       ),
+
+    named_argument: ($) =>
+      seq(field("name", $.identifier), "=", $._expression),
+
+    // Function-literal body expression (KerML body expression, Ch 30.5):
+    // `{ in x; expr }` — used as argument to higher-order functions and as
+    // calc/attribute values.
+    body_expression: ($) =>
+      seq("{", repeat(choice($._body_element, $._expression)), "}"),
 
     meta_expression: ($) =>
       seq($._feature_ref, "meta", $._feature_ref),
@@ -1559,8 +1594,10 @@ module.exports = grammar({
 
     // --- Names ---
 
+    // prec.right: greedily consume `::` segments so `@Pkg::Name` stays one
+    // qualified name instead of splitting at the binary `::` operator.
     qualified_name: ($) =>
-      prec.left(choice(
+      prec.right(choice(
         seq($.identifier, repeat(seq("::", $.identifier))),
         seq("$", repeat1(seq("::", $.identifier))),
       )),

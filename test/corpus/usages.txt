@@ -345,6 +345,7 @@ part def Vehicle {
     name: (identifier)
     (definition_body
       (feature_usage
+        (modifier)
         name: (identifier)
         (typed_by
           type: (qualified_name
@@ -386,6 +387,7 @@ part def Vehicle {
   (definition
     name: (identifier)
     (definition_body
+      (modifier)
       (usage
         name: (identifier)))))
 
@@ -403,6 +405,7 @@ part def Vehicle {
   (definition
     name: (identifier)
     (definition_body
+      (modifier)
       (usage
         name: (identifier)))))
 
@@ -420,5 +423,6 @@ part def Vehicle {
   (definition
     name: (identifier)
     (definition_body
+      (modifier)
       (usage
         name: (identifier)))))

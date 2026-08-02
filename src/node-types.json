@@ -790,6 +790,10 @@
           "named": true
         },
         {
+          "type": "body_expression",
+          "named": true
+        },
+        {
           "type": "boolean_literal",
           "named": true
         },
@@ -998,7 +1002,15 @@
           "named": true
         },
         {
+          "type": "modifier",
+          "named": true
+        },
+        {
           "type": "multiplicity_definition",
+          "named": true
+        },
+        {
+          "type": "named_argument",
           "named": true
         },
         {
@@ -1262,6 +1274,421 @@
     }
   },
   {
+    "type": "body_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "accept_action",
+          "named": true
+        },
+        {
+          "type": "action_usage",
+          "named": true
+        },
+        {
+          "type": "actor_declaration",
+          "named": true
+        },
+        {
+          "type": "alias_declaration",
+          "named": true
+        },
+        {
+          "type": "allocate_statement",
+          "named": true
+        },
+        {
+          "type": "allocation_usage",
+          "named": true
+        },
+        {
+          "type": "assert_statement",
+          "named": true
+        },
+        {
+          "type": "assign_action",
+          "named": true
+        },
+        {
+          "type": "assignment_statement",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "bind_statement",
+          "named": true
+        },
+        {
+          "type": "binding_usage",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "bracket_expression",
+          "named": true
+        },
+        {
+          "type": "comment_element",
+          "named": true
+        },
+        {
+          "type": "conditional_expression",
+          "named": true
+        },
+        {
+          "type": "conjugation_statement",
+          "named": true
+        },
+        {
+          "type": "connect_statement",
+          "named": true
+        },
+        {
+          "type": "connection_usage",
+          "named": true
+        },
+        {
+          "type": "constraint_expression_usage",
+          "named": true
+        },
+        {
+          "type": "constraint_usage",
+          "named": true
+        },
+        {
+          "type": "control_node",
+          "named": true
+        },
+        {
+          "type": "definition",
+          "named": true
+        },
+        {
+          "type": "dependency_statement",
+          "named": true
+        },
+        {
+          "type": "disjoining_statement",
+          "named": true
+        },
+        {
+          "type": "do_action",
+          "named": true
+        },
+        {
+          "type": "doc_comment",
+          "named": true
+        },
+        {
+          "type": "else_action",
+          "named": true
+        },
+        {
+          "type": "end_feature",
+          "named": true
+        },
+        {
+          "type": "entry_action",
+          "named": true
+        },
+        {
+          "type": "enumeration_definition",
+          "named": true
+        },
+        {
+          "type": "event_usage",
+          "named": true
+        },
+        {
+          "type": "exhibit_statement",
+          "named": true
+        },
+        {
+          "type": "exit_action",
+          "named": true
+        },
+        {
+          "type": "expose_statement",
+          "named": true
+        },
+        {
+          "type": "expression_statement",
+          "named": true
+        },
+        {
+          "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "feature_usage",
+          "named": true
+        },
+        {
+          "type": "featuring_statement",
+          "named": true
+        },
+        {
+          "type": "filter_statement",
+          "named": true
+        },
+        {
+          "type": "flow_statement",
+          "named": true
+        },
+        {
+          "type": "flow_usage",
+          "named": true
+        },
+        {
+          "type": "for_action",
+          "named": true
+        },
+        {
+          "type": "frame_statement",
+          "named": true
+        },
+        {
+          "type": "generic_definition",
+          "named": true
+        },
+        {
+          "type": "hash_tag",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "if_action",
+          "named": true
+        },
+        {
+          "type": "import_statement",
+          "named": true
+        },
+        {
+          "type": "include_statement",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "inline_transition",
+          "named": true
+        },
+        {
+          "type": "interface_statement",
+          "named": true
+        },
+        {
+          "type": "interface_usage",
+          "named": true
+        },
+        {
+          "type": "inverse_statement",
+          "named": true
+        },
+        {
+          "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "kerml_usage",
+          "named": true
+        },
+        {
+          "type": "loop_action",
+          "named": true
+        },
+        {
+          "type": "member_feature",
+          "named": true
+        },
+        {
+          "type": "message_statement",
+          "named": true
+        },
+        {
+          "type": "meta_expression",
+          "named": true
+        },
+        {
+          "type": "metadata_access_expression",
+          "named": true
+        },
+        {
+          "type": "metadata_annotation",
+          "named": true
+        },
+        {
+          "type": "metadata_usage",
+          "named": true
+        },
+        {
+          "type": "modifier",
+          "named": true
+        },
+        {
+          "type": "multiplicity_definition",
+          "named": true
+        },
+        {
+          "type": "new_expression",
+          "named": true
+        },
+        {
+          "type": "null_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "objective_declaration",
+          "named": true
+        },
+        {
+          "type": "package_declaration",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "perform_statement",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "redefinition_statement",
+          "named": true
+        },
+        {
+          "type": "render_statement",
+          "named": true
+        },
+        {
+          "type": "require_statement",
+          "named": true
+        },
+        {
+          "type": "requirement_usage",
+          "named": true
+        },
+        {
+          "type": "return_statement",
+          "named": true
+        },
+        {
+          "type": "satisfy_statement",
+          "named": true
+        },
+        {
+          "type": "select_expression",
+          "named": true
+        },
+        {
+          "type": "send_action",
+          "named": true
+        },
+        {
+          "type": "specialization_statement",
+          "named": true
+        },
+        {
+          "type": "stakeholder_declaration",
+          "named": true
+        },
+        {
+          "type": "standalone_redefines",
+          "named": true
+        },
+        {
+          "type": "state_definition",
+          "named": true
+        },
+        {
+          "type": "state_usage",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "subject_declaration",
+          "named": true
+        },
+        {
+          "type": "succession_flow_usage",
+          "named": true
+        },
+        {
+          "type": "succession_statement",
+          "named": true
+        },
+        {
+          "type": "succession_usage",
+          "named": true
+        },
+        {
+          "type": "terminate_statement",
+          "named": true
+        },
+        {
+          "type": "textual_representation",
+          "named": true
+        },
+        {
+          "type": "then_succession",
+          "named": true
+        },
+        {
+          "type": "transition_statement",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "usage",
+          "named": true
+        },
+        {
+          "type": "verify_statement",
+          "named": true
+        },
+        {
+          "type": "visibility",
+          "named": true
+        },
+        {
+          "type": "while_action",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "boolean_literal",
     "named": true,
     "fields": {}
@@ -1374,6 +1801,10 @@
         },
         {
           "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "short_name",
           "named": true
         },
         {
@@ -1950,6 +2381,10 @@
         },
         {
           "type": "metadata_usage",
+          "named": true
+        },
+        {
+          "type": "modifier",
           "named": true
         },
         {
@@ -2533,6 +2968,10 @@
         },
         {
           "type": "metadata_usage",
+          "named": true
+        },
+        {
+          "type": "modifier",
           "named": true
         },
         {
@@ -3410,6 +3849,10 @@
           "named": true
         },
         {
+          "type": "modifier",
+          "named": true
+        },
+        {
           "type": "multiplicity_definition",
           "named": true
         },
@@ -3655,10 +4098,22 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
+          "type": "binding",
+          "named": true
+        },
+        {
           "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
           "named": true
         },
         {
@@ -3666,7 +4121,27 @@
           "named": true
         },
         {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
           "type": "state_body",
+          "named": true
+        },
+        {
+          "type": "tilde_conjugation",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
           "named": true
         }
       ]
@@ -3900,6 +4375,10 @@
         },
         {
           "type": "keyword_type_relationship",
+          "named": true
+        },
+        {
+          "type": "modifier",
           "named": true
         },
         {
@@ -4553,7 +5032,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "binding",
@@ -4968,6 +5447,10 @@
           "named": true
         },
         {
+          "type": "body_expression",
+          "named": true
+        },
+        {
           "type": "boolean_literal",
           "named": true
         },
@@ -5001,6 +5484,10 @@
         },
         {
           "type": "metadata_access_expression",
+          "named": true
+        },
+        {
+          "type": "named_argument",
           "named": true
         },
         {
@@ -5729,6 +6216,10 @@
           "named": true
         },
         {
+          "type": "modifier",
+          "named": true
+        },
+        {
           "type": "multiplicity_definition",
           "named": true
         },
@@ -5973,6 +6464,11 @@
     }
   },
   {
+    "type": "modifier",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "multiplicity",
     "named": true,
     "fields": {},
@@ -6118,6 +6614,100 @@
     }
   },
   {
+    "type": "named_argument",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "boolean_literal",
+          "named": true
+        },
+        {
+          "type": "bracket_expression",
+          "named": true
+        },
+        {
+          "type": "conditional_expression",
+          "named": true
+        },
+        {
+          "type": "feature_chain",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "index_expression",
+          "named": true
+        },
+        {
+          "type": "invocation_expression",
+          "named": true
+        },
+        {
+          "type": "meta_expression",
+          "named": true
+        },
+        {
+          "type": "metadata_access_expression",
+          "named": true
+        },
+        {
+          "type": "new_expression",
+          "named": true
+        },
+        {
+          "type": "null_literal",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "paren_expression",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "select_expression",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "namespace_declaration",
     "named": true,
     "fields": {
@@ -6164,6 +6754,10 @@
           "named": true
         },
         {
+          "type": "body_expression",
+          "named": true
+        },
+        {
           "type": "boolean_literal",
           "named": true
         },
@@ -6197,6 +6791,10 @@
         },
         {
           "type": "metadata_access_expression",
+          "named": true
+        },
+        {
+          "type": "named_argument",
           "named": true
         },
         {
@@ -6482,6 +7080,10 @@
         },
         {
           "type": "metadata_usage",
+          "named": true
+        },
+        {
+          "type": "modifier",
           "named": true
         },
         {
@@ -7199,6 +7801,10 @@
           "named": true
         },
         {
+          "type": "modifier",
+          "named": true
+        },
+        {
           "type": "multiplicity_definition",
           "named": true
         },
@@ -7337,6 +7943,10 @@
           "named": true
         },
         {
+          "type": "feature_chain",
+          "named": true
+        },
+        {
           "type": "inverse_keyword",
           "named": true
         },
@@ -7346,6 +7956,10 @@
         },
         {
           "type": "multiplicity",
+          "named": true
+        },
+        {
+          "type": "qualified_name",
           "named": true
         },
         {
@@ -7852,6 +8466,10 @@
           "named": true
         },
         {
+          "type": "modifier",
+          "named": true
+        },
+        {
           "type": "multiplicity_definition",
           "named": true
         },
@@ -8279,6 +8897,10 @@
         },
         {
           "type": "metadata_usage",
+          "named": true
+        },
+        {
+          "type": "modifier",
           "named": true
         },
         {
@@ -8793,6 +9415,10 @@
         },
         {
           "type": "metadata_usage",
+          "named": true
+        },
+        {
+          "type": "modifier",
           "named": true
         },
         {
@@ -9921,6 +10547,10 @@
           "named": true
         },
         {
+          "type": "body_expression",
+          "named": true
+        },
+        {
           "type": "boolean_literal",
           "named": true
         },
@@ -10292,6 +10922,10 @@
   },
   {
     "type": "@",
+    "named": false
+  },
+  {
+    "type": "@@",
     "named": false
   },
   {

@@ -20,6 +20,7 @@ abstract part def Shape {}
 ---
 
 (source_file
+  (modifier)
   (definition
     name: (identifier)
     (definition_body)))
@@ -383,6 +384,7 @@ abstract action def Accelerate :> Vehicles::Drive {}
 ---
 
 (source_file
+  (modifier)
   (definition
     name: (identifier)
     (specialization
@@ -435,6 +437,7 @@ variation part def VehicleConfig {}
 ---
 
 (source_file
+  (modifier)
   (definition
     name: (identifier)
     (definition_body)))

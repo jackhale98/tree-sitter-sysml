@@ -17,6 +17,7 @@
 
 ; Definition names
 (definition name: (identifier) @type.definition)
+(state_definition name: (identifier) @type.definition)
 (enumeration_definition name: (identifier) @type.definition)
 (generic_definition name: (identifier) @type.definition)
 

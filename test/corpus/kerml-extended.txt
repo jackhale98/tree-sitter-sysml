@@ -55,11 +55,13 @@ expr def TotalMass {
     name: (identifier)
     (definition_body
       (feature_usage
+        (modifier)
         name: (identifier)
         (typed_by
           type: (qualified_name
             (identifier))))
       (feature_usage
+        (modifier)
         name: (identifier)
         (typed_by
           type: (qualified_name
@@ -84,6 +86,7 @@ step def Accelerate {
     name: (identifier)
     (definition_body
       (feature_usage
+        (modifier)
         name: (identifier)
         (typed_by
           type: (qualified_name
@@ -213,8 +216,7 @@ part def Vehicle {
         name: (identifier)
         (keyword_type_relationship
           target: (feature_chain
-            (qualified_name
-              (identifier))
+            (identifier)
             (identifier)))))))
 
 =====================================
