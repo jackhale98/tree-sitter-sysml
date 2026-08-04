@@ -8,7 +8,9 @@ OMG SysML v2.0 and KerML 1.0 specifications.
 - **Near-complete language coverage** — parses all 213 official OMG example and
   training files plus 92 of 94 standard library files from the
   [SysML-v2-Release](https://github.com/Systems-Modeling/SysML-v2-Release)
-  repository with zero errors
+  repository with zero errors, and 165 of the 169 code listings in the
+  *SysML v2 Book* (Weilkiens, 2026-05) — the remaining 4 are deliberate
+  fragments/errata in the book itself
 - **Definitions** — unified rule covering 40+ definition keywords (part, action,
   state, port, connection, attribute, item, requirement, constraint, view,
   calc, class, struct, type, function, and more)
@@ -16,9 +18,12 @@ OMG SysML v2.0 and KerML 1.0 specifications.
   for action, state, connection, interface, constraint, requirement, event,
   allocation, flow, metadata, binding, succession, and KerML usages
 - **Behavioral constructs** — actions, states, transitions, control flow
-  (if/while/for with body and ref forms), terminate, inline transitions,
-  send/accept/after, entry/do/exit actions with names and types, while-until
+  (if/else-if/else, while/for with body and ref forms, typed for-loops with
+  `1..n` ranges), terminate (with occurrence argument), inline transitions,
+  send/accept with `when`/`at`/`after` triggers, `do action send ... via ...`
+  transition effects, entry/do/exit actions with names and types, while-until
   loops, fork/join/merge/decide nodes, action chaining with `then`
+  (including `then perform action` and `then include`)
 - **Relationships** — specialization (`:>` / `specializes`), redefinition
   (`:>>` / `redefines`), binding (`::>`), conjugation, chaining, crosses (`=>`),
   `typed by` / `defined by`, `unions` / `intersects` / `differences`,
@@ -27,15 +32,21 @@ OMG SysML v2.0 and KerML 1.0 specifications.
   multi-end connections with `crosses`, end features with occurrence/action/flow
   qualifiers, `::>` bindings in parenthesized connect clauses
 - **Expressions** — arithmetic, logical, comparison, invocation with named
-  arguments and qualified names, conditional, `new` expressions,
-  `->` collect/select/reduce arrows with bodies, invocations, and function
-  references, `.?{...}` select, `meta` expressions, result expressions
+  arguments (structured `named_argument` nodes) and qualified names,
+  conditional, `new` expressions, function-literal body expressions
+  (`{ in x; expr }`) as call arguments and values, `->` collect/select/reduce
+  arrows with bodies, invocations, and function references, `.?{...}` select,
+  `meta` expressions, classification operators `@` and `@@`, result expressions
 - **Requirements** — `assert`/`not satisfy`, `require constraint/requirement`
   with bodies, subject/actor/objective/stakeholder/frame declarations with
   full type relationship and multiplicity support
-- **Metadata** — `#` prefix annotations with qualified names, structured
-  `metadata_body` with `redefines`/`:>>` patterns, `metadata ... about` clause,
-  `member feature` declarations
+- **Metadata** — `#` prefix annotations with qualified names (also before
+  body statements like `allocate`), qualified metadata annotations with
+  bodies (`@Pkg::Def { ... }`), structured `metadata_body` with
+  `redefines`/`:>>` patterns, `metadata ... about` clause, `member feature`
+  declarations
+- **Variability** — `variation`/`variant` and all other modifiers are named
+  `modifier` CST nodes, queryable for variant-aware tooling (Ch 35)
 - **Standard library patterns** — standalone multiplicity definitions, feature
   qualifiers (`nonunique`, `ordered`), `default` with body values, `bind`
   statements, standalone `:>>` redefines in bodies, quoted operator names
