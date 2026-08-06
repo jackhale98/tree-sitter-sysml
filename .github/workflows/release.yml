@@ -16,17 +16,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Install dependencies
-        run: npm install
+      - name: Install tree-sitter CLI
+        # A plain `npm install` would run this package's `node-gyp-build`
+        # install script (Node binding build) — unnecessary for CI and
+        # broken on runners with Visual Studio versions old node-gyp
+        # cannot detect. The CLI is all these jobs need.
+        run: npm install -g tree-sitter-cli@0.24.7
       - name: Generate parser
-        run: npx tree-sitter generate
+        run: tree-sitter generate
       - name: Run corpus tests
-        run: npx tree-sitter test
+        run: tree-sitter test
       - name: Parse official examples
         run: |
           for f in test/examples/*.sysml; do
             echo "Parsing $f..."
-            npx tree-sitter parse "$f" > /dev/null
+            tree-sitter parse "$f" > /dev/null
           done
 
   build-wasm:
@@ -37,12 +41,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Install dependencies
-        run: npm install
+      - name: Install tree-sitter CLI
+        # A plain `npm install` would run this package's `node-gyp-build`
+        # install script (Node binding build) — unnecessary for CI and
+        # broken on runners with Visual Studio versions old node-gyp
+        # cannot detect. The CLI is all these jobs need.
+        run: npm install -g tree-sitter-cli@0.24.7
       - name: Generate parser
-        run: npx tree-sitter generate
+        run: tree-sitter generate
       - name: Build WASM
-        run: npx tree-sitter build --wasm -o tree-sitter-sysml.wasm
+        run: tree-sitter build --wasm -o tree-sitter-sysml.wasm
       - name: Upload WASM artifact
         uses: actions/upload-artifact@v4
         with:
@@ -58,7 +66,7 @@ jobs:
             target: linux-x64
           - os: macos-latest
             target: macos-arm64
-          - os: windows-latest
+          - os: windows-2022
             target: windows-x64
     runs-on: ${{ matrix.os }}
     steps:
@@ -66,12 +74,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Install dependencies
-        run: npm install
+      - name: Install tree-sitter CLI
+        # A plain `npm install` would run this package's `node-gyp-build`
+        # install script (Node binding build) — unnecessary for CI and
+        # broken on runners with Visual Studio versions old node-gyp
+        # cannot detect. The CLI is all these jobs need.
+        run: npm install -g tree-sitter-cli@0.24.7
       - name: Generate parser
-        run: npx tree-sitter generate
+        run: tree-sitter generate
       - name: Build native parser
-        run: npx tree-sitter build -o tree-sitter-sysml-${{ matrix.target }}${{ matrix.os == 'windows-latest' && '.dll' || (matrix.os == 'macos-latest' && '.dylib' || '.so') }}
+        run: tree-sitter build -o tree-sitter-sysml-${{ matrix.target }}${{ matrix.os == 'windows-2022' && '.dll' || (matrix.os == 'macos-latest' && '.dylib' || '.so') }}
       - name: Upload native artifact
         uses: actions/upload-artifact@v4
         with:

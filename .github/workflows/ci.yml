@@ -14,15 +14,19 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install dependencies
-        run: npm install
+      - name: Install tree-sitter CLI
+        # A plain `npm install` would run this package's `node-gyp-build`
+        # install script (Node binding build) — unnecessary for CI and
+        # broken on runners with Visual Studio versions old node-gyp
+        # cannot detect. The CLI is all these jobs need.
+        run: npm install -g tree-sitter-cli@0.24.7
       - name: Generate parser
-        run: npx tree-sitter generate
+        run: tree-sitter generate
       - name: Run corpus tests
-        run: npx tree-sitter test
+        run: tree-sitter test
       - name: Parse official examples
         run: |
           for f in test/examples/*.sysml; do
             echo "Parsing $f..."
-            npx tree-sitter parse "$f" > /dev/null
+            tree-sitter parse "$f" > /dev/null
           done
