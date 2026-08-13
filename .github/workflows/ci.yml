@@ -20,13 +20,11 @@ jobs:
         # broken on runners with Visual Studio versions old node-gyp
         # cannot detect. The CLI is all these jobs need.
         run: npm install -g tree-sitter-cli@0.24.7
-      - name: Generate parser
-        run: tree-sitter generate
+      # The committed src/parser.c is the artifact under test — generation
+      # takes ~70 CPU-minutes on this grammar (STATE_COUNT ~24k), so it is
+      # done locally when grammar.js changes and committed. The corpus and
+      # sweep below fail if the committed parser misbehaves.
       - name: Run corpus tests
         run: tree-sitter test
-      - name: Parse official examples
-        run: |
-          for f in test/examples/*.sysml; do
-            echo "Parsing $f..."
-            tree-sitter parse "$f" > /dev/null
-          done
+      - name: Parse sweep (recursive, baseline-aware)
+        run: sh scripts/parse-sweep.sh

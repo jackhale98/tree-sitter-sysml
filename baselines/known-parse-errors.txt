@@ -1,0 +1,4 @@
+# Files with pre-existing parse errors (verified present at v0.5.0).
+# Per-line detail and root causes: BACKLOG.md. Shrink this list as the
+# grammar improves — the sweep reports IMPROVED when a file goes clean.
+test/examples/training/27. Occurrences - Message Payload Example.sysml

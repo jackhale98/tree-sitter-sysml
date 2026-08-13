@@ -297,14 +297,18 @@ module.exports = grammar({
         choice($.enumeration_body, ";"),
       )),
 
+    // prec.dynamic(-2): a bare `def` is a last resort. Without the
+    // penalty, GLR sometimes split `metadata def X { ... }` into
+    // `metadata_usage` + `generic_definition` (the keyword also starts
+    // metadata_usage), losing the definition.
     generic_definition: ($) =>
-      prec(-1, seq(
+      prec(-1, prec.dynamic(-2, seq(
         "def",
         optional($.short_name),
         optional(field("name", $.identifier)),
         optional($._type_relationships),
         choice($.definition_body, ";"),
-      )),
+      ))),
 
     // --- Definition body ---
 
@@ -1281,8 +1285,23 @@ module.exports = grammar({
     metadata_body: ($) =>
       seq("{", repeat(choice(
         $.metadata_body_usage,
+        // Fields named after SysML keywords (`occurrence = 3;`) must be
+        // assignments here, not usage declarations — aliased so consumers
+        // see a uniform assignment_statement node.
+        alias($.metadata_keyword_assignment, $.assignment_statement),
         $._body_element,
       )), "}"),
+
+    // Kept to the minimal keyword set that real metadata vocabularies
+    // use as field names (FMEA's `occurrence`): every additional keyword
+    // aliased as an identifier here perturbs GLR resolution elsewhere
+    // (a broad list regressed `message ... of` payload statements).
+    metadata_keyword_assignment: ($) =>
+      prec(3, seq(
+        field("name", alias("occurrence", $.identifier)),
+        $.value_assignment,
+        ";",
+      )),
 
     metadata_body_usage: ($) =>
       prec(1, seq(

@@ -72,3 +72,68 @@ part def Vehicle {
           type: (qualified_name
             (identifier)))
         (definition_body)))))
+
+================================================================================
+Metadata body field named with a SysML keyword
+================================================================================
+
+package P {
+    part b {
+        @Fmea {
+            severity = 9;
+            occurrence = 3;
+        }
+    }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (package_declaration
+    name: (identifier)
+    (package_body
+      (usage
+        name: (identifier)
+        (definition_body
+          (metadata_annotation
+            (qualified_name
+              (identifier))
+            (metadata_body
+              (assignment_statement
+                name: (identifier)
+                (value_assignment
+                  (number_literal)))
+              (assignment_statement
+                name: (identifier)
+                (value_assignment
+                  (number_literal))))))))))
+
+================================================================================
+Metadata def is one definition after an import
+================================================================================
+
+package Lib {
+    private import ScalarValues::*;
+    metadata def Fmea {
+        attribute severity : FmeaRating;
+    }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (package_declaration
+    name: (identifier)
+    (package_body
+      (import_statement
+        (visibility)
+        (qualified_name
+          (identifier)))
+      (definition
+        name: (identifier)
+        (definition_body
+          (usage
+            name: (identifier)
+            (typed_by
+              type: (qualified_name
+                (identifier)))))))))
