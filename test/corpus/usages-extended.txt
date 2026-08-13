@@ -137,3 +137,89 @@ package Lib {
             (typed_by
               type: (qualified_name
                 (identifier)))))))))
+
+================================================================================
+Message statement with payload
+================================================================================
+
+occurrence def Interaction {
+    message of ignitionCmd : IgnitionCmd from driver.turnVehicleOn to vehicle.trigger1;
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (definition
+    (identifier)
+    (definition_body
+      (message_statement
+        (qualified_name
+          (identifier))
+        (typed_by
+          (qualified_name
+            (identifier)))
+        (feature_chain
+          (identifier)
+          (identifier))
+        (feature_chain
+          (identifier)
+          (identifier))))))
+
+================================================================================
+Then message with payload value
+================================================================================
+
+occurrence def Interaction2 {
+    then message fuelMsg of fuelCommand : FuelCommand = other.fuelCommand
+        from a.sent to b.received;
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (definition
+    (identifier)
+    (definition_body
+      (then_succession
+        (qualified_name
+          (identifier))
+        (qualified_name
+          (identifier))
+        (typed_by
+          (qualified_name
+            (identifier)))
+        (value_assignment
+          (feature_chain
+            (qualified_name
+              (identifier))
+            (identifier)))
+        (feature_chain
+          (identifier)
+          (identifier))
+        (feature_chain
+          (identifier)
+          (identifier))))))
+
+================================================================================
+Require with feature chain
+================================================================================
+
+analysis def A {
+    objective o {
+        require vehicleSpecification.vehicleFuelEconomyRequirements;
+    }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (definition
+    (identifier)
+    (definition_body
+      (objective_declaration
+        (identifier)
+        (definition_body
+          (require_statement
+            (feature_chain
+              (identifier)
+              (identifier))))))))

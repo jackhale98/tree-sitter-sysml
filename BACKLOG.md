@@ -2,13 +2,9 @@
 
 Pre-existing parse gaps, tracked for future generation cycles.
 
-- `message ... of <payload> : Type [= expr] from a.b to c.d;` never parses
-  cleanly (pre-existing at v0.5.0: annex-a lines 781/782, training/27
-  lines 30/32). The message_statement `of`-clause grammar binds the payload
-  name/type ambiguously against the required feature_ref; needs a rule
-  restructure (own generation cycle — generate takes ~70 min).
-- `require <feature_chain>;` inside objectives (annex-a line 1098) also
-  pre-existing.
+- ~~message payload~~ and ~~require feature-chain~~ gaps FIXED in
+  optimization round 2 (the of-clause restructure removed the ambiguity
+  and 2,100+ states at once; require takes a full feature ref).
 
 ## State-space optimization (approved 2026-08-12)
 
@@ -70,3 +66,18 @@ Experiment log:
 - CLI 0.26.12 --abi 14: 98 min (slower than 0.24.7's ~70) — not a path.
 - Parallel generations contend on cache: 4 concurrent ran ~3.5x slower
   each. Run at most 2.
+
+### Round 2 results (2026-08-13)
+
+- Variant F (flatten optional(repeat1) at 83 sites): +4 states — the
+  generator already optimizes this; _type_relationships' cost is its
+  interior choice structure x 87 contexts. Round-3 material.
+- Variant H (of-clause restructure in message_statement +
+  then_succession): 20511 -> 18384 states AND fixes the payload parse
+  gap — both known-imperfect files now parse fully clean.
+- Final ship: H + require feature-chain fix: 20511 -> 18360 states
+  (-10.5% this round; -25% cumulative from 24452), generation ~13 min,
+  corpus 203 tests, known-parse-errors baseline EMPTY.
+- Round 3 candidates: _type_relationships interior redesign (2992),
+  then_succession/action_usage tail sharing (2820/2448), end_feature
+  (1408), expression family, remaining ~50 conflicts.

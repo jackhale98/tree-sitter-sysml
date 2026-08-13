@@ -5832,16 +5832,6 @@
             "named": true
           }
         ]
-      },
-      "of_name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
       }
     },
     "children": {
@@ -7519,7 +7509,11 @@
         "required": false,
         "types": [
           {
-            "type": "identifier",
+            "type": "feature_chain",
+            "named": true
+          },
+          {
+            "type": "qualified_name",
             "named": true
           }
         ]
@@ -10048,18 +10042,7 @@
   {
     "type": "then_succession",
     "named": true,
-    "fields": {
-      "of_name": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "identifier",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": false,
