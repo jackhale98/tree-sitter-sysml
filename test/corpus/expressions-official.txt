@@ -1,0 +1,125 @@
+================================================================================
+Official: select expression in mass rollup (MassRollup2)
+================================================================================
+
+part def MassedThing {
+    attribute totalMass = mass + sum(subcomponents.totalMass.?{in p :> ISQ::mass; p > minMass});
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (definition
+    (identifier)
+    (definition_body
+      (usage
+        (identifier)
+        (value_assignment
+          (binary_expression
+            (identifier)
+            (invocation_expression
+              (identifier)
+              (select_expression
+                (feature_chain
+                  (qualified_name
+                    (identifier))
+                  (identifier))
+                (feature_usage
+                  (modifier)
+                  (identifier)
+                  (specialization
+                    (qualified_name
+                      (identifier)
+                      (identifier))))
+                (binary_expression
+                  (identifier)
+                  (identifier))))))))))
+
+================================================================================
+Official: index expressions in analysis samples (Vehicle Analysis Demo)
+================================================================================
+
+calc def C {
+    attribute a = acceleration#(i);
+    attribute s1 = sc.samples#(i);
+    attribute s2 = sc.samples#(i+1);
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (definition
+    (identifier)
+    (definition_body
+      (usage
+        (identifier)
+        (value_assignment
+          (index_expression
+            (identifier)
+            (identifier))))
+      (usage
+        (identifier)
+        (value_assignment
+          (index_expression
+            (feature_chain
+              (qualified_name
+                (identifier))
+              (identifier))
+            (identifier))))
+      (usage
+        (identifier)
+        (value_assignment
+          (index_expression
+            (feature_chain
+              (qualified_name
+                (identifier))
+              (identifier))
+            (binary_expression
+              (identifier)
+              (number_literal))))))))
+
+================================================================================
+Official: unit brackets including quoted units (Vehicle Analysis Demo)
+================================================================================
+
+requirement def R {
+    attribute :>> requiredFuelEconomy = 25 [mpg];
+    assume constraint { vehicle.cargoMass == 1000 [lb] }
+    require constraint { vehicle.wheelDiameter == 33 ['in'] }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (definition
+    (identifier)
+    (definition_body
+      (usage
+        (redefinition
+          (qualified_name
+            (identifier)))
+        (value_assignment
+          (bracket_expression
+            (number_literal)
+            (identifier))))
+      (constraint_usage
+        (constraint_body
+          (bracket_expression
+            (binary_expression
+              (feature_chain
+                (qualified_name
+                  (identifier))
+                (identifier))
+              (number_literal))
+            (identifier))))
+      (constraint_usage
+        (constraint_body
+          (bracket_expression
+            (binary_expression
+              (feature_chain
+                (qualified_name
+                  (identifier))
+                (identifier))
+              (number_literal))
+            (identifier
+              (quoted_identifier))))))))

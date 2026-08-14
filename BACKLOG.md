@@ -149,3 +149,19 @@ training + validation + examples) is the oracle.
 - Still open: expression-corpus lockdown from official files ->
   postfix merge; _type_relationships ownership; pilot-implementation
   CI validation (the strongest oracle, unbuilt).
+
+### Expression postfix merge: closed as a dead end (2026-08-14)
+
+Tested with the official-expression lockdown corpus in place (CSTs
+captured from OMG-written MassRollup2 / Vehicle Analysis Demo usage
+before the experiment): merging bracket/index/select into one aliased,
+per-branch-prec rule yielded +5 states AND changed the parse of 5
+locked corpus cases. The generator already shares the left-recursion
+states; the merge has no upside. The lockdown corpus stays as
+permanent protection for expression CST shapes.
+
+Remaining deep item before declaring the CST stable for the
+sysml-core refactor: _type_relationships ownership redesign (one
+canonical attachment layer). After CST-stable: sysml-core extractor
+refactor, then CLI depth (evaluator consolidation, cache) - the
+agreed order.
