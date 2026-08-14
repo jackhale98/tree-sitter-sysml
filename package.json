@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-sysml",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Tree-sitter grammar for SysML v2 / KerML textual notation",
   "license": "GPL-3.0-or-later",
   "main": "bindings/node",
