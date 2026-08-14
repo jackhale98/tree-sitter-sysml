@@ -104,3 +104,12 @@ Experiment log:
   instead of per-site collapse. Also queued: expression family
   (~2850), kerml_usage remainder (1984), qualified_name/feature_chain
   unification (CST-breaking; needs sysml-core migration).
+
+### Round 4a (2026-08-13): minimal conflict set
+
+Derived the conflict list from scratch (empty list -> re-add exactly
+what the generator names, 49 fast-fail iterations): 57 -> 49 conflicts.
+The 8 removed were inert (STATE_COUNT unchanged, tables identical,
+corpus 203/203). Every remaining conflict is now generator-required by
+construction — no more mystery band-aids; scripts/conflict_min.py-style
+derivation can re-audit after any grammar change.
