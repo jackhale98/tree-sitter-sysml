@@ -1121,36 +1121,29 @@ module.exports = grammar({
           optional($.value_assignment), choice($._body, ";")),
 
     // KerML bare keyword usage (e.g. `class A { }`, `feature f;`, `type T;`)
+    // One branch for all KerML keywords: the endpoint clause is optional
+    // everywhere (a benign superset - only connector forms use it), and
+    // the formerly-ambiguous `[mult] ref to ...` / `ref = ...` endpoint
+    // branches share one prefix so LR decides at the 'to'/'=' token.
     kerml_usage: ($) =>
-      choice(
-        // Connector/binding forms with endpoint clauses
-        seq(
-          $._kerml_connector_keyword,
-          optional("all"),
-          optional($.short_name),
-          optional($.multiplicity),
-          optional(field("name", $.identifier)),
-          repeat(choice($.multiplicity, $._type_relationship, $._feature_qualifier)),
-          optional($.value_assignment),
-          optional(choice(
-            seq("from", optional($.multiplicity), $._feature_ref, optional($._type_relationships), "to", optional($.multiplicity), $._feature_ref, optional($._type_relationships)),
-            seq(optional($.multiplicity), $._feature_ref, "to", optional($.multiplicity), $._feature_ref),
-            seq($._feature_ref, "=", $._feature_ref),
-            seq("of", $._feature_ref, "=", $._feature_ref),
+      seq(
+        choice($._kerml_connector_keyword, $._kerml_keyword),
+        optional("all"),
+        optional($.short_name),
+        optional($.multiplicity),
+        optional(field("name", $.identifier)),
+        repeat(choice($.multiplicity, $._type_relationship, $._feature_qualifier)),
+        optional($.value_assignment),
+        optional(choice(
+          seq("from", optional($.multiplicity), $._feature_ref, optional($._type_relationships), "to", optional($.multiplicity), $._feature_ref, optional($._type_relationships)),
+          seq(optional($.multiplicity), $._feature_ref, choice(
             seq("to", optional($.multiplicity), $._feature_ref),
+            seq("=", $._feature_ref),
           )),
-          choice($._body, ";"),
-        ),
-        // All other KerML keywords (no endpoint clause)
-        seq(
-          $._kerml_keyword,
-          optional("all"),
-          optional($.short_name),
-          optional(field("name", $.identifier)),
-          repeat(choice($.multiplicity, $._type_relationship, $._feature_qualifier)),
-          optional($.value_assignment),
-          choice($._body, ";"),
-        ),
+          seq("of", $._feature_ref, "=", $._feature_ref),
+          seq("to", optional($.multiplicity), $._feature_ref),
+        )),
+        choice($._body, ";"),
       ),
 
     _kerml_connector_keyword: ($) =>

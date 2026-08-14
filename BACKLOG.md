@@ -113,3 +113,20 @@ The 8 removed were inert (STATE_COUNT unchanged, tables identical,
 corpus 203/203). Every remaining conflict is now generator-required by
 construction — no more mystery band-aids; scripts/conflict_min.py-style
 derivation can re-audit after any grammar change.
+
+### Round 4b (2026-08-13): kerml_usage simplification
+
+- kerml_usage merged to a single branch (endpoint clause optional for
+  all KerML keywords - benign superset) with the ambiguous
+  `[mult] ref to/=` endpoint branches factored to one prefix:
+  16468 -> 16352 states. Modest numerically, but the rule is halved in
+  size and one GLR fork gone; the remaining kerml_usage states live in
+  endpoint follow-sets.
+- Expression-family analysis (deferred to a dedicated session): merging
+  bracket/index/select into one postfix rule with per-branch aliases
+  could recover ~1-1.5k states BUT the three rules carry different
+  precedences (1/3/11) whose interaction with binary operators would
+  change parse trees if unified naively, and the node names are
+  load-bearing in sysml-core's extract_expr. Prereq: expand expression
+  corpus coverage (mixed precedence cases), then refactor with alias()
+  per branch and explicit prec design.
