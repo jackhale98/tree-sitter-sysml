@@ -490,6 +490,10 @@
       "required": true,
       "types": [
         {
+          "type": "binding",
+          "named": true
+        },
+        {
           "type": "feature_chain",
           "named": true
         },
@@ -512,6 +516,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "binding",
+          "named": true
+        },
         {
           "type": "definition_body",
           "named": true
@@ -4564,11 +4572,47 @@
       "required": false,
       "types": [
         {
+          "type": "binding",
+          "named": true
+        },
+        {
+          "type": "definition_body",
+          "named": true
+        },
+        {
           "type": "feature_chain",
           "named": true
         },
         {
+          "type": "inverse_keyword",
+          "named": true
+        },
+        {
+          "type": "keyword_type_relationship",
+          "named": true
+        },
+        {
           "type": "qualified_name",
+          "named": true
+        },
+        {
+          "type": "redefinition",
+          "named": true
+        },
+        {
+          "type": "specialization",
+          "named": true
+        },
+        {
+          "type": "tilde_conjugation",
+          "named": true
+        },
+        {
+          "type": "typed_by",
+          "named": true
+        },
+        {
+          "type": "typed_by_keyword",
           "named": true
         }
       ]
@@ -7327,6 +7371,10 @@
         {
           "type": "typed_by_keyword",
           "named": true
+        },
+        {
+          "type": "value_assignment",
+          "named": true
         }
       ]
     }
@@ -7455,6 +7503,10 @@
       "types": [
         {
           "type": "binding",
+          "named": true
+        },
+        {
+          "type": "definition_body",
           "named": true
         },
         {
@@ -10239,6 +10291,10 @@
         },
         {
           "type": "conditional_expression",
+          "named": true
+        },
+        {
+          "type": "definition_body",
           "named": true
         },
         {

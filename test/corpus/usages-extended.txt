@@ -223,3 +223,166 @@ analysis def A {
             (feature_chain
               (identifier)
               (identifier))))))))
+
+================================================================================
+Transition and succession then-targets with bodies
+================================================================================
+
+state def S {
+    transition 'off-starting'
+        first off
+        accept 'Vehicle Start Signal'
+        then starting {
+            doc /* per the official validation suite */
+        }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (state_definition
+    (identifier)
+    (state_body
+      (transition_statement
+        (identifier
+          (quoted_identifier))
+        (qualified_name
+          (identifier))
+        (accept_clause
+          (qualified_name
+            (identifier
+              (quoted_identifier))))
+        (qualified_name
+          (identifier))
+        (definition_body
+          (doc_comment
+            (block_comment)))))))
+
+================================================================================
+Perform action with redefinition value
+================================================================================
+
+part def P {
+    perform action :>> doXorY = doX;
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (definition
+    (identifier)
+    (definition_body
+      (perform_statement
+        (redefinition
+          (qualified_name
+            (identifier)))
+        (value_assignment
+          (identifier))))))
+
+================================================================================
+Render with body
+================================================================================
+
+view def V {
+    render asElementTable {
+        view :>> columnView {
+            render asTextualNotation;
+        }
+    }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (definition
+    (identifier)
+    (definition_body
+      (render_statement
+        (qualified_name
+          (identifier))
+        (definition_body
+          (usage
+            (redefinition
+              (qualified_name
+                (identifier)))
+            (definition_body
+              (render_statement
+                (qualified_name
+                  (identifier))))))))))
+
+================================================================================
+Allocate with per-end bindings
+================================================================================
+
+part def P {
+    allocation a : LogicalToPhysical
+        allocate logical ::> torqueGenerator to physical ::> powerTrain {
+            allocate x.y to z.w;
+        }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (definition
+    (identifier)
+    (definition_body
+      (allocation_usage
+        (identifier)
+        (typed_by
+          (qualified_name
+            (identifier)))
+        (allocate_clause
+          (qualified_name
+            (identifier))
+          (binding
+            (qualified_name
+              (identifier)))
+          (qualified_name
+            (identifier))
+          (binding
+            (qualified_name
+              (identifier))))
+        (definition_body
+          (allocate_statement
+            (feature_chain
+              (identifier)
+              (identifier))
+            (feature_chain
+              (identifier)
+              (identifier))))))))
+
+================================================================================
+Flow with typed payload and body
+================================================================================
+
+part def P {
+    flow of fuel : Fuel
+        from tank.out.fuel to pump.in.fuel {
+        doc /* per the official validation suite */
+    }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (definition
+    (identifier)
+    (definition_body
+      (flow_statement
+        (qualified_name
+          (identifier))
+        (typed_by
+          (qualified_name
+            (identifier)))
+        (feature_chain
+          (identifier)
+          (identifier)
+          (identifier))
+        (feature_chain
+          (identifier)
+          (identifier)
+          (identifier))
+        (definition_body
+          (doc_comment
+            (block_comment)))))))

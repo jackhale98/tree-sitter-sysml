@@ -420,6 +420,7 @@ module.exports = grammar({
                 optional(seq("via", $._feature_ref))),
           )),
           "terminate",
+          seq("assign", $._feature_ref, ":=", $._expression),
           seq("for", $.identifier, optional(seq(":", $._feature_ref)),
               "in", $._expression, optional(seq("..", $._expression))),
         )),
@@ -660,7 +661,7 @@ module.exports = grammar({
       choice(
         seq("first", $._feature_ref,
             optional(seq("if", $._expression)),
-            "then", $._feature_ref, ";"),
+            "then", $._feature_ref, choice($._body, ";")),
         seq("first", $._feature_ref, ";"),
         seq("succession", optional(field("name", $.identifier)),
             optional($._type_relationships),
@@ -680,6 +681,7 @@ module.exports = grammar({
         optional($._feature_ref),
         optional($.multiplicity),
         optional($._type_relationships),
+        optional($.value_assignment),
         choice($._body, ";"),
       ),
 
@@ -717,7 +719,7 @@ module.exports = grammar({
           $._feature_ref,
         ))),
         seq("then", $._feature_ref),
-        ";",
+        choice($._body, ";"),
       ),
 
     terminate_statement: ($) =>
@@ -860,7 +862,8 @@ module.exports = grammar({
           "to", commaSep1($._feature_ref), choice($._body, ";")),
 
     allocate_statement: ($) =>
-      seq("allocate", $._feature_ref, "to", $._feature_ref,
+      seq("allocate", $._feature_ref, optional($.binding),
+          "to", $._feature_ref, optional($.binding),
           choice($._body, ";")),
 
     message_statement: ($) =>
@@ -878,17 +881,18 @@ module.exports = grammar({
       seq(
         "flow",
         optional(field("name", $.identifier)),
-        optional(seq("of", $._feature_ref)),
+        optional(seq("of", $._feature_ref, repeat($._type_relationship))),
         optional(choice(
           seq("from", $._feature_ref, "to", $._feature_ref),
           seq($._feature_ref, "to", $._feature_ref),
         )),
-        ";",
+        choice($._body, ";"),
       ),
 
     allocate_clause: ($) =>
       choice(
-        seq("allocate", $._feature_ref, "to", $._feature_ref),
+        seq("allocate", $._feature_ref, optional($.binding),
+            "to", $._feature_ref, optional($.binding)),
         seq("allocate", "(", commaSep1(seq(
           $.identifier, token(seq("::", ">")), $._feature_ref,
         )), ")"),
@@ -1051,7 +1055,7 @@ module.exports = grammar({
           $._feature_ref,
           optional($._type_relationships),
           optional($.multiplicity),
-          ";"),
+          choice($._body, ";")),
 
     expose_statement: ($) =>
       seq(

@@ -130,3 +130,22 @@ derivation can re-audit after any grammar change.
   load-bearing in sysml-core's extract_expr. Prereq: expand expression
   corpus coverage (mixed precedence cases), then refactor with alias()
   per branch and explicit prec design.
+
+### Round 5 (2026-08-14): the official corpus parses completely
+
+Methodology shift (user mandate): validate exclusively against
+human-created models. The full OMG release corpus (251 files:
+training + validation + examples) is the oracle.
+
+- Baseline was 242/251; the 9 failures decomposed into 8 constructs,
+  all fixed as transcriptions of official usage: transition/succession
+  then-targets with bodies, perform value assignment, render with body,
+  allocate ::> end bindings (statement + clause forms), action assign
+  effects, flow typed payloads with bodies.
+- Result: 251/251. The validation and examples trees are imported into
+  test/examples/ (339 files swept per commit) so regressions against
+  OMG-authored code fail CI at file granularity.
+- STATE_COUNT 16577 (+172 for the new coverage), corpus 208 tests.
+- Still open: expression-corpus lockdown from official files ->
+  postfix merge; _type_relationships ownership; pilot-implementation
+  CI validation (the strongest oracle, unbuilt).
