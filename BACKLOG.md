@@ -81,3 +81,26 @@ Experiment log:
 - Round 3 candidates: _type_relationships interior redesign (2992),
   then_succession/action_usage tail sharing (2820/2448), end_feature
   (1408), expression family, remaining ~50 conflicts.
+
+### Round 3 results (2026-08-13)
+
+- Blanket collapse of 2-line multiplicity/type-rel stacks (25 sites):
+  DEAD END — every site conflicts; the short positional pairs are
+  load-bearing disambiguation (auto-exclusion loop excluded 12 rules
+  then diverged). Principle: only qualifier-context stacks collapse
+  safely.
+- Type-rel-first 4-line stacks (11 sites found post-round-2): 8 of 11
+  collapse cleanly (interface/allocation/flow usage, end_feature,
+  return_statement, subject/actor/objective declarations); excluded
+  standalone_redefines (conflicts with metadata_body_usage redefines)
+  and feature_usage x2 (conflicts with enum_member).
+- Ship: 18360 -> 16468 states (-10.3%; -32.7% cumulative),
+  LARGE_STATE_COUNT 4232, parser.c 39.4 MB.
+- Diagnostic from the exclusions: collapses fail exactly where a rule
+  is reachable inside another rule's trailing type-relationship
+  position — "which rule owns the next :> X" is the real ambiguity.
+  Round 4's _type_relationships interior redesign should solve
+  ownership properly (e.g. attach type-rels at one canonical layer)
+  instead of per-site collapse. Also queued: expression family
+  (~2850), kerml_usage remainder (1984), qualified_name/feature_chain
+  unification (CST-breaking; needs sysml-core migration).

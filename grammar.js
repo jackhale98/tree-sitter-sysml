@@ -462,10 +462,7 @@ module.exports = grammar({
       seq(
         "interface",
         optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        repeat($._feature_qualifier),
-        optional($._type_relationships),
+        repeat(choice($.multiplicity, $._type_relationship, $._feature_qualifier)),
         optional(choice(
           $.connect_clause,
           seq($._feature_ref, "to", $._feature_ref),
@@ -515,10 +512,7 @@ module.exports = grammar({
       seq(
         "allocation",
         optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        repeat($._feature_qualifier),
-        optional($._type_relationships),
+        repeat(choice($.multiplicity, $._type_relationship, $._feature_qualifier)),
         optional($.allocate_clause),
         choice($._body, ";"),
       ),
@@ -527,10 +521,7 @@ module.exports = grammar({
       seq(
         "flow",
         optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        repeat($._feature_qualifier),
-        optional($._type_relationships),
+        repeat(choice($.multiplicity, $._type_relationship, $._feature_qualifier)),
         optional(seq("of", $._feature_ref, optional($.multiplicity))),
         optional(choice(
           seq("from", optional($.multiplicity), $._feature_ref, "to", optional($.multiplicity), $._feature_ref),
@@ -567,10 +558,7 @@ module.exports = grammar({
         optional($.multiplicity),
         optional(choice("ref", "item", "port", "part", "attribute", "feature", "occurrence", "action", "connection", "flow")),
         optional(field("name", $.identifier)),
-        optional($._type_relationships),
-        optional($.multiplicity),
-        repeat($._feature_qualifier),
-        optional($._type_relationships),
+        repeat(choice($.multiplicity, $._type_relationship, $._feature_qualifier)),
         optional($.value_assignment),
         choice($._body, ";"),
       ),
@@ -592,7 +580,8 @@ module.exports = grammar({
         // Without prefix: name and type are required
         seq(
           field("name", $.identifier),
-          $._type_relationships,
+          $._type_relationship,
+          optional($._type_relationships),
           optional($.multiplicity),
           repeat($._feature_qualifier),
           optional($._type_relationships),
@@ -1060,10 +1049,7 @@ module.exports = grammar({
       seq("return",
           optional(choice("attribute", "part", "port", "ref", "feature")),
           optional(field("name", $.identifier)),
-          optional($._type_relationships),
-          optional($.multiplicity),
-          repeat($._feature_qualifier),
-          optional($._type_relationships),
+          repeat(choice($.multiplicity, $._type_relationship, $._feature_qualifier)),
           optional($.value_assignment),
           choice($._body, ";")),
 
@@ -1129,26 +1115,17 @@ module.exports = grammar({
 
     subject_declaration: ($) =>
       seq("subject", optional(field("name", $.identifier)),
-          optional($._type_relationships),
-          optional($.multiplicity),
-          repeat($._feature_qualifier),
-          optional($._type_relationships),
+          repeat(choice($.multiplicity, $._type_relationship, $._feature_qualifier)),
           optional($.value_assignment), choice($._body, ";")),
 
     actor_declaration: ($) =>
       seq("actor", optional(field("name", $.identifier)),
-          optional($._type_relationships),
-          optional($.multiplicity),
-          repeat($._feature_qualifier),
-          optional($._type_relationships),
+          repeat(choice($.multiplicity, $._type_relationship, $._feature_qualifier)),
           optional($.value_assignment), choice($._body, ";")),
 
     objective_declaration: ($) =>
       seq("objective", optional(field("name", $.identifier)),
-          optional($._type_relationships),
-          optional($.multiplicity),
-          repeat($._feature_qualifier),
-          optional($._type_relationships),
+          repeat(choice($.multiplicity, $._type_relationship, $._feature_qualifier)),
           optional($.value_assignment), choice($._body, ";")),
 
     // KerML bare keyword usage (e.g. `class A { }`, `feature f;`, `type T;`)
