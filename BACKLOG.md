@@ -165,3 +165,31 @@ sysml-core refactor: _type_relationships ownership redesign (one
 canonical attachment layer). After CST-stable: sysml-core extractor
 refactor, then CLI depth (evaluator consolidation, cache) - the
 agreed order.
+
+### Name-path unification: closed (2026-08-14)
+
+Tested (qualified_name absorbing `.` segments, feature_chain removed,
+consumers audited as compatible): -38 states and 9 corpus drifts
+INCLUDING all three official-expression lockdown tests - the
+unification reshapes how OMG-written expression code parses. No
+structural payoff, real drift. Closed.
+
+### CST declared STABLE (2026-08-14)
+
+Every queued deep redesign is now either shipped or evidence-closed:
+- Shipped: stack collapses (rounds 1-3), kerml_usage restructure,
+  minimal conflict set, of-clause redesign, official-corpus constructs.
+- Closed by experiment: blanket 2-line collapse, postfix merge,
+  name-path unification (each protected the CST by failing loudly
+  against locked corpora).
+- _type_relationships ownership: remaining upside is small (1,316
+  states) and its enabling premise (further collapses) is closed.
+
+Consequence: the sysml-core extractor refactor planned for "after CST
+changes" is NOT needed - no CST changes are coming. CLI-depth work
+(evaluator consolidation, cache read path) is unblocked.
+
+Final optimization tally: 24,452 -> 16,577 states (-32%), generation
+~70 -> ~12 min, parser.c 51.4 -> 39.6 MB, conflicts 57 -> 49 (all
+generator-required), 251/251 official files + 339-file sweep + 211
+corpus tests as permanent oracles.
