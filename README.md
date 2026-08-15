@@ -111,6 +111,14 @@ parser_config.sysml = {
 
 Copy `queries/` to your editor's runtime queries directory as `sysml/`.
 
+### Pairing with the language server
+
+The grammar handles syntax; semantics (diagnostics, navigation, hover,
+completions) come from
+[`sysml-lsp`](https://github.com/jackhale98/sysml-cli), which embeds
+this grammar. Per-editor setup for both pieces together:
+[Editor Setup](https://github.com/jackhale98/sysml-cli/blob/main/docs/editors.md).
+
 ## Building from source
 
 ```sh
