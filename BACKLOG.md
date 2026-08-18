@@ -193,3 +193,39 @@ Final optimization tally: 24,452 -> 16,577 states (-32%), generation
 ~70 -> ~12 min, parser.c 51.4 -> 39.6 MB, conflicts 57 -> 49 (all
 generator-required), 251/251 official files + 339-file sweep + 211
 corpus tests as permanent oracles.
+
+### satisfy_statement ambiguity: deferred with evidence (2026-08-18)
+
+Found while debugging a user report of a "requirement that doesn't
+exist in the model". In `satisfy_statement` every element after
+`satisfy` is optional, so a bare `satisfy` is itself a valid statement.
+GLR can therefore parse
+
+    satisfy requirement X by Y;
+
+two ways: as one satisfy statement, or as an empty `satisfy` followed
+by a sibling `requirement_usage` named X. It chose DIFFERENTLY on two
+identical adjacent lines of test/fixtures/simple-vehicle.sysml — line
+171 split (producing a phantom requirement usage and losing the
+satisfy edge), line 172 did not.
+
+Attempted fix: make the reference mandatory
+(`optional($._feature_ref)` -> `$._feature_ref`), which every satisfy
+form in the official corpus satisfies. REVERTED: generation had not
+finished after 54 minutes against a ~12 minute baseline, i.e. a
+state-space blowup, and the change was not worth that cost because:
+
+The input that triggered it is not conformant. The OMG pilot reads
+`satisfy requirement X by Y;` as DECLARING an untyped requirement usage
+named X (it warns "Duplicate of other owned member name"), not as
+referencing the requirement def X. The conformant forms are
+`satisfy X by Y;` (reference) and `satisfy requirement x : X by Y;`
+(declaring, as in the corpus: `satisfy requirement req1 : Req1 by
+system;`). With the fixtures corrected to conformant text, both
+statements parse identically and correctly as `satisfy_statement` with
+a `typed_by` child, and the file has zero parse errors.
+
+If revisited: try `prec.dynamic` to bias GLR toward the complete
+satisfy parse rather than restructuring the optional chain — dynamic
+precedence steers runtime resolution without enlarging the tables,
+which is what the mandatory-reference version did.
