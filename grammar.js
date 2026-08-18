@@ -1600,7 +1600,12 @@ module.exports = grammar({
 
     // --- Comments ---
 
-    line_comment: ($) => token(seq("//", /[^*\n][^\n]*/)),
+    // The body is optional so a bare `//` (a blank line inside a comment
+    // block) is a comment rather than a syntax error. The first body
+    // character still excludes `*` so this cannot claim the `//*` of a
+    // documentation comment; a complete `//* ... */` is a longer match
+    // and wins regardless.
+    line_comment: ($) => token(seq("//", optional(seq(/[^*\n]/, /[^\n]*/)))),
 
     block_comment: ($) =>
       token(choice(
