@@ -153,4 +153,25 @@ cp tree-sitter-sysml.so ~/.emacs.d/tree-sitter/libtree-sitter-sysml.so
 
 ## License
 
-GPL-3.0-or-later
+Licensed under either of
+
+- Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or
+  <https://www.apache.org/licenses/LICENSE-2.0>)
+- MIT license ([LICENSE-MIT](LICENSE-MIT) or
+  <https://opensource.org/licenses/MIT>)
+
+at your option (`Apache-2.0 OR MIT`).
+
+Unless you explicitly state otherwise, any contribution intentionally
+submitted for inclusion in this work shall be dual licensed as above,
+without any additional terms or conditions.
+
+### Third-party content
+
+The SysML v2 / KerML example models vendored under `test/examples/` are
+taken or adapted from the OMG
+[SysML-v2-Release](https://github.com/Systems-Modeling/SysML-v2-Release)
+repository and remain under their original licence, the Eclipse Public
+License 2.0 (EPL-2.0). They are test fixtures only: they are not part of the
+published grammar package (`package.json` and `Cargo.toml` do not include
+`test/`), and the dual licence above does not apply to them.

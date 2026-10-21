@@ -10,7 +10,7 @@
   ],
   "metadata": {
     "version": "0.6.0",
-    "license": "GPL-3.0-or-later",
+    "license": "Apache-2.0 OR MIT",
     "description": "Tree-sitter grammar for SysML v2 / KerML textual notation",
     "authors": [
       {
