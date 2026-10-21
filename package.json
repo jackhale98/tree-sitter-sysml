@@ -2,7 +2,7 @@
   "name": "tree-sitter-sysml",
   "version": "0.6.0",
   "description": "Tree-sitter grammar for SysML v2 / KerML textual notation",
-  "license": "GPL-3.0-or-later",
+  "license": "Apache-2.0 OR MIT",
   "main": "bindings/node",
   "types": "bindings/node",
   "keywords": [
@@ -21,7 +21,9 @@
     "prebuilds/**",
     "bindings/node/*",
     "queries/*",
-    "src/**"
+    "src/**",
+    "LICENSE-APACHE",
+    "LICENSE-MIT"
   ],
   "dependencies": {
     "node-addon-api": "^7.1.0",

@@ -216,10 +216,16 @@ module.exports = grammar({
         optional("assert"),
         optional("not"),
         "satisfy",
-        optional("requirement"),
-        optional($._feature_ref),
-        optional($._type_relationships),
-        optional(seq("by", $._feature_ref)),
+        // prec.dynamic: prefer the parse that consumes the content as part
+        // of this statement over a truncated `satisfy` followed by a
+        // phantom sibling usage (see BACKLOG.md). A production gets one
+        // dynamic precedence (not a sum), so the values rise along the
+        // chain: the more of the chain a parse consumes, the higher it
+        // ranks. Dynamic precedence only steers GLR resolution at runtime.
+        optional(prec.dynamic(1, "requirement")),
+        optional(prec.dynamic(2, $._feature_ref)),
+        optional(prec.dynamic(3, $._type_relationships)),
+        optional(prec.dynamic(4, seq("by", $._feature_ref))),
         optional($.requirement_body),
         optional(";"),
       ),

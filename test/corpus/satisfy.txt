@@ -1,0 +1,107 @@
+=====================================
+Satisfy with unqualified reference
+=====================================
+
+satisfy R by s;
+
+---
+
+(source_file
+  (satisfy_statement
+    (qualified_name
+      (identifier))
+    (qualified_name
+      (identifier))))
+
+=====================================
+Satisfy requirement declaring a typed usage
+=====================================
+
+satisfy requirement r : R by s;
+
+---
+
+(source_file
+  (satisfy_statement
+    (qualified_name
+      (identifier))
+    (typed_by
+      type: (qualified_name
+        (identifier)))
+    (qualified_name
+      (identifier))))
+
+=====================================
+Satisfy requirement keyword stays one statement
+=====================================
+
+satisfy requirement X by Y;
+satisfy requirement X by Y;
+
+---
+
+(source_file
+  (satisfy_statement
+    (qualified_name
+      (identifier))
+    (qualified_name
+      (identifier)))
+  (satisfy_statement
+    (qualified_name
+      (identifier))
+    (qualified_name
+      (identifier))))
+
+=====================================
+Satisfy requirement keyword inside a part body
+=====================================
+
+part def V {
+  satisfy requirement X by Y;
+  satisfy requirement X by Y;
+}
+
+---
+
+(source_file
+  (definition
+    name: (identifier)
+    (definition_body
+      (satisfy_statement
+        (qualified_name
+          (identifier))
+        (qualified_name
+          (identifier)))
+      (satisfy_statement
+        (qualified_name
+          (identifier))
+        (qualified_name
+          (identifier))))))
+
+=====================================
+Negated satisfy
+=====================================
+
+not satisfy R by s;
+
+---
+
+(source_file
+  (satisfy_statement
+    (qualified_name
+      (identifier))
+    (qualified_name
+      (identifier))))
+
+=====================================
+Bare satisfy of a requirement
+=====================================
+
+satisfy R;
+
+---
+
+(source_file
+  (satisfy_statement
+    (qualified_name
+      (identifier))))

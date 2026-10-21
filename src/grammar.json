@@ -866,8 +866,12 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "STRING",
-              "value": "requirement"
+              "type": "PREC_DYNAMIC",
+              "value": 1,
+              "content": {
+                "type": "STRING",
+                "value": "requirement"
+              }
             },
             {
               "type": "BLANK"
@@ -878,8 +882,12 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "SYMBOL",
-              "name": "_feature_ref"
+              "type": "PREC_DYNAMIC",
+              "value": 2,
+              "content": {
+                "type": "SYMBOL",
+                "name": "_feature_ref"
+              }
             },
             {
               "type": "BLANK"
@@ -890,8 +898,12 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "SYMBOL",
-              "name": "_type_relationships"
+              "type": "PREC_DYNAMIC",
+              "value": 3,
+              "content": {
+                "type": "SYMBOL",
+                "name": "_type_relationships"
+              }
             },
             {
               "type": "BLANK"
@@ -902,17 +914,21 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "by"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_feature_ref"
-                }
-              ]
+              "type": "PREC_DYNAMIC",
+              "value": 4,
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "by"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "_feature_ref"
+                  }
+                ]
+              }
             },
             {
               "type": "BLANK"

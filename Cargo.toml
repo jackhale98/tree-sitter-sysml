@@ -2,7 +2,7 @@
 name = "tree-sitter-sysml"
 description = "Sysml grammar for tree-sitter"
 version = "0.6.0"
-license = "MIT"
+license = "Apache-2.0 OR MIT"
 readme = "README.md"
 keywords = ["incremental", "parsing", "tree-sitter", "sysml"]
 categories = ["parsing", "text-editors"]
@@ -11,7 +11,7 @@ edition = "2021"
 autoexamples = false
 
 build = "bindings/rust/build.rs"
-include = ["bindings/rust/*", "grammar.js", "queries/*", "src/*"]
+include = ["bindings/rust/*", "grammar.js", "queries/*", "src/*", "LICENSE-APACHE", "LICENSE-MIT"]
 
 [lib]
 path = "bindings/rust/lib.rs"
