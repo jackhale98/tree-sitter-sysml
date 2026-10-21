@@ -229,3 +229,45 @@ If revisited: try `prec.dynamic` to bias GLR toward the complete
 satisfy parse rather than restructuring the optional chain — dynamic
 precedence steers runtime resolution without enlarging the tables,
 which is what the mandatory-reference version did.
+
+#### Update: prec.dynamic applied (2026-10-21)
+
+Tried the suggestion above and it works. `satisfy_statement` now tags each
+optional element of the chain with a rising dynamic precedence
+(`requirement` 1, reference 2, type relationships 3, `by` clause 4). A
+production carries a single dynamic precedence rather than a sum, so rising
+values make "consumes more of the chain" outrank "truncated satisfy plus a
+phantom sibling".
+
+Evidence (`tree-sitter parse --debug` on `satisfy requirement X by Y;`):
+
+- Before: two accepted trees (one `satisfy_statement`, or an empty
+  `satisfy_statement` plus `requirement_usage`) with EQUAL dynamic
+  precedence, resolved by `select_earlier`. That is the arbitrary,
+  context-dependent choice behind the line 171 / 172 report.
+- After: `select_higher_precedence ... prec:4 over other_prec:0`, so the
+  complete satisfy form wins deterministically.
+
+I could not reproduce an actual wrong tree with the committed parser on any
+in-repo input (it chose the right tree every time, by luck of
+`select_earlier`), so the new corpus tests in test/corpus/satisfy.txt pin
+the intended shapes but would also have passed before the change. The
+debug-trace evidence above is the discriminator.
+
+Cost, measured with tree-sitter-cli 0.24.7 (ABI 14): STATE_COUNT
+16577 -> 16697 (+0.7%), LARGE_STATE_COUNT 4252 -> 4372, parser.c 39.8 ->
+40.7 MB, generation ~4 min wall on a 4-core container (the CI comment's
+"~70 minutes" and the "~12 minutes" above predate or ignore this
+hardware; regenerating the unmodified grammar took the same ~4 min and
+reproduced the committed parser byte for byte). Parse trees for all 364
+.sysml/.kerml files under test/examples are identical before and after;
+217 corpus tests and the parse sweep pass with the baseline unchanged.
+
+A first attempt tagged all four elements with 1. That regressed
+`satisfy requirement R;` (split into `satisfy requirement` + expression
+statement `R;`) because equal values tie. Hence the rising values.
+
+Note when comparing parsers by hand: tree-sitter 0.24 caches the compiled
+library by language name, so two checkouts of the same grammar share one
+`sysml.so`. Set `TREE_SITTER_LIBDIR` per checkout or you will compare a
+parser with itself.
